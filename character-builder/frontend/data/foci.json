@@ -1,0 +1,4153 @@
+[
+  {
+    "id": "all_directions_edge_style1",
+    "name": "팔방의 날 유파",
+    "englishName": "All Directions Edge Style",
+    "category": "기사 유파",
+    "desc": "당신은 자신의 생명력을 절제되지 않은 폭력성이 담긴 기술의 연마와 맞바꿨습니다. 당신의 히트 주사위에 2점의 페널티가 생겨서, 일반적으로 1d6+2를 굴렸다면 이제는 1d6을 굴립니다. 이 포커스를 캐릭터 생성 이후에 가져간다면 당신의 최대 HP를 레벨당 2점씩 빼서 이 페널티를 반영하십시오.",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "전투 기술 하나를 보너스 기술로 배웁니다. 라운드당 한 번, 턴 행동으로 붙잡기가 아닌 일반 공격 1회를 합니다. 그날의 첫 사용은 기관계 부담을 늘리지 않으며, 이후 사용할 때마다 1점씩 얻습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "filter": {
+          "tags": [
+            "combat"
+          ]
+        }
+      }
+    ],
+    "derived_bonus": { "hit_die_penalty": 2 },
+    "sheet_notes": ["라운드당 한 번 턴 행동으로 붙잡기 이외의 일반 공격을 합니다. 그날 첫 사용 이후에는 사용할 때마다 기관계 부담 1점을 얻습니다."],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "all_directions_edge_style2",
+    "name": "팔방의 날 유파",
+    "englishName": "All Directions Edge Style",
+    "category": "기사 유파",
+    "desc": "",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "하루당 한 번, 주요 행동으로 당신의 사정거리 안에 있는 적들을 한 번씩 공격합니다. 장거리 무기를 사용하는 경우 최대 공격 횟수는 당신의 사격 기술 레벨 +1 입니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "all_directions_edge_style1"
+      },
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "catalytic_soul_style1",
+    "name": "촉매혼 유파",
+    "englishName": "Catalytic Soul Style",
+    "category": "기사 유파",
+    "desc": "당신의 장거리 공격은 당신의 동료들의 생명력을 촉매로 해서 공통된 적들에게 영혼적 피해를 줍니다. 이 유파는 충격이 없는 장거리 무기에만 사용할 수 있습니다.",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "사격을 보너스 기술로 얻습니다. 궁수 PC가 접전 도중 쏘는 화살은 우연하게 아군에게 명중하지는 않지만, 당신의 장거리 공격은 당신의 아군이 만질 수 조차 없으며 그들이 없는 것 처럼 뚫고 지나갑니다. 당신이 장거리 공격을 할 때 즉시 행동으로 당신의 공격 대상의 근접전 거리에 있는 아군을 지정하십시오. 공격의 대상이 지정된 아군에게 충격 피해를 받을 수 있다면, 공격의 대상은 마치 지정된 아군의 근접 공격을 받은 듯 지정된 아군의 충격 피해를 받습니다.",
+    "bonus": [
+      {
+        "id": "shoot",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "catalytic_soul_style2",
+    "name": "촉매혼 유파",
+    "englishName": "Catalytic Soul Style",
+    "category": "기사 유파",
+    "desc": "",
+    "src": "aotle",
+    "type": "knightly_style",
+    "tags": [
+      "combat"
+    ],
+    "level": 2,
+    "effect": "이 포커스의 1레벨로 인해 강화된 장거리 공격을 공격 대상에게 명중하면 당신 혹은 당신의 아군은 1점의 기관계 부담을 회복하고 2d6 + 공격 대상의 레벨 혹은 HD 수 만큼 HP를 회복합니다. 하나의 회복 대상은 장면당 한 번만 이 방법으로 회복할 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "catalytic_soul_style1"
+      },
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "ghost_archer_style1",
+    "name": "유령 궁수 유파",
+    "englishName": "Ghost Archer Style",
+    "category": "기사 유파",
+    "desc": "당신은 활이라는 개념에 깊은 영혼적인 연결이 생겼습니다. 당신은 활이나 석궁이 아닌 모든 무기를 사용할 때 -4 명중 페널티를 받습니다.",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "사격을 보너스 기술로 얻습니다. 턴 행동으로, 당신이 한 번이라도 쏴본 활의 영혼적인 복제품을 얻습니다; 이 복제품은 무게가 없고 당신의 손을 떠나면 사라지지만 원래 활의 모든 성질을 갖고 있습니다. 어떤 활이 이 유파의 사용자에게 복제됐다면, 그 사용자가 죽지 않는 이상 다른 누구도 그 활을 복제할 수 없습니다. 이 활은 스스로 마법적인 화살을 만들지만, 화살로 인한 추가적인 명중/피해 보너스는 없습니다. 당신은 적에 의해 근접전에 들어갔어도 평범하게 이 활을 쏠 수 있습니다.",
+    "bonus": [
+      {
+        "id": "shoot",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "ghost_archer_style2",
+    "name": "유령 궁수 유파",
+    "englishName": "Ghost Archer Style",
+    "category": "기사 유파",
+    "desc": "",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "장면당 한 번 턴 행동으로 사정거리 안의 위치에 화살을 쏩니다. 당신은 화살이 떨어진 곳으로 순간적으로 나타날 수 있습니다. 이 능력을 사용할 때마다 1점의 기관계 부담을 얻습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "ghost_archer_style1"
+      },
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "one_point_strike_style1",
+    "name": "일점격 유파",
+    "englishName": "One Point Strike Style",
+    "category": "기사 유파",
+    "desc": "당신이 전투에서 기대는 것은 야만적인 힘과 세련되지 못한 속도가 아니라 맑은 생각입니다.",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "전투 기술을 하나 보너스 기술로 얻습니다. 당신의 모든 공격은 일반적인 수정치 대신 지능 혹은 지혜 수정치 중 가장 높은 값을 사용합니다. 주요 행동으로 명중굴림의 d20 결과를 15로 취급하며 최소 피해를 입히는 일반적인 근접 공격을 할 수 있습니다. 이 공격은 전투 기동 혹은 잡기 시도로서 사용될 수 없습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "filter": {
+          "tags": [
+            "combat"
+          ]
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "one_point_strike_style2",
+    "name": "일점격 유파",
+    "englishName": "One Point Strike Style",
+    "category": "기사 유파",
+    "desc": "",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": " 장면당 한 번, 즉시 행동으로 이 유파로 인한 물리 공격의 피해량을 최대치로 만듭니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "one_point_strike_style1"
+      },
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "pyre_of_heaven_style1",
+    "name": "천상의 화염 유파",
+    "englishName": "Pyre of Heaven Style",
+    "category": "기사 유파",
+    "desc": "당신의 무기는 당신의 적만을 태우는 천상의 화염으로 불타고 있습니다. 이 화염은 당신의 영혼의 힘으로 불타고 있으며, 그로 인한 대가가 있습니다.",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "전투 기술을 보너스 기술로 얻습니다. 당신은 매 라운드마다 화염 혹은 열기로 인한 피해 중 첫 5점을 무시할 수 있으며, 생각만으로도 횃불처럼 빛날 수 있습니다. 당신은 즉시 행동으로 기관계 부담 1점을 얻고 남은 라운드의 종료까지 당신의 무기, 주먹, 그리고 남은 탄환을 발화시킬 수 있습니다. 발화하는 무기의 피해와 충격 피해는 당신의 캐릭터 레벨 +2 만큼 피해량이 늘어납니다. 적은 이 불꽃으로 인한 피해를 장면당 한 번 받습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "filter": {
+          "tags": [
+            "combat"
+          ]
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "pyre_of_heaven_style2",
+    "name": "천상의 화염 유파",
+    "englishName": "Pyre of Heaven Style",
+    "category": "기사 유파",
+    "desc": "",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "당신은 추가적으로 비마법적인 화염 혹은 연기에 대해 면역이 됩니다. 당신이 발화하면 당신의 신체 전부에 불이 붙지만, 당신이 해를 끼치고 싶지 않은 것들을 태우지는 않습니다. 당신은 발화하는 동안 붙잡힐 수 없습니다. 장면에서 처음으로 발화하면 근접거리 내의 모든 적들은 당신의 레벨의 1/3 의 반올림 값 만큼 1d6 화염피해를 입습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "pyre_of_heaven_style1"
+      },
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "righteous_iron_style1",
+    "name": "의로운 강철 유파",
+    "englishName": "Righteous Iron Style",
+    "category": "기사 유파",
+    "desc": "당신은 무게에 상관없이 손쉽게 이동할 수 있도록 당신의 갑옷을 두번째 피부로 만드는 법을 배웠습니다. 이 유파는 중갑옷을 입을 때만 적용할 수 있으며, 1레벨 효과는 당신이 들고 다니는 방패로까지 확장되지 않습니다. 캐릭터 레벨이 1일 때 이 포커스를 가져가는 경우, 당신은 750 은화 가격 이하의 중갑 한 벌을 가지고 시작할 수 있습니다.",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "운동을 보너스 기술로 얻습니다. 당신이 입는 갑옷은 당신이 입을 때 AC에 +1 보너스가 생기며, 하중이 0이 되지만, 장갑마도(Armored Magic) 포커스에 한해서는 하중이 있는 것으로 취급됩니다. 갑옷은 당신의 잠행 혹은 운동 기술 판정에 페널티를 주지 않으며, 당신은 갑옷 안에서 편하게 잘 수 있습니다. 마법적인 오염으로 더러워지지 않은 이상 당신과 당신의 갑옷은 깨끗하고 유지가 잘 됩니다.",
+    "bonus": [
+      {
+        "id": "exert",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "righteous_iron_style2",
+    "name": "의로운 강철 유파",
+    "englishName": "Righteous Iron Style",
+    "category": "기사 유파",
+    "desc": "",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "당신은 입고 있는 강철의 굳건함과 함께합니다. 갑옷을 입고 있는 동안 당신은 먹거나, 마시거나, 자거나, 숨을 쉴 필요가 없으며, 일반적인 기후의 추위와 더위에 면역입니다. 이 유파의 갑옷 AC 보너스는 +1이 아니라 +2가 됩니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "righteous_iron_style1"
+      }
+    ]
+  },
+  {
+    "id": "world_tree_lance_style1",
+    "name": "세계수의 창 유파",
+    "englishName": "World Tree Lance Style",
+    "category": "기사 유파",
+    "desc": "당신의 창은 하늘의 기둥이며, 어떠한 적도 그 범위의 밖에 있지 않습니다. 이 유파는 창, 파이크, 혹은 비슷한 장병기 계열 무기에만 적용됩니다.",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "백병 기술을 보너스로 얻습니다. 당신이 장착하는 창은 무게가 없으며, 던져질 경우 항상 당신의 손으로 돌아옵니다. 만약 창이 일반적으로 투척 가능하다면, 그 사정거리는 두 배가 됩니다. 투척이 가능하지 않은 경우 30/60 ft의 사정거리가 생깁니다. 당신의 창은 공격과 피해 굴림에 +1 보너스를 받고, 마법무기 취급을 받습니다.",
+    "bonus": [
+      {
+        "id": "stab",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "world_tree_lance_style2",
+    "name": "세계수의 창 유파",
+    "englishName": "World Tree Lance Style",
+    "category": "기사 유파",
+    "desc": "",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "창을 장착하고 있는 동안, 당신의 접근전 범위는 10 + 당신의 캐릭터 레벨입니다. 당신과 당신의 적 사이에 있는 아군은 당신의 근접 공격을 방해하지 않지만 적들의 몸으로 이루어진 장벽은 충분히 방해가 될 수 있습니다. 이 능력은 긴(Long) 성질을 가진 마법 아이템의 능력과 중첩되지 않습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "world_tree_lance_style1"
+      },
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "wrathful_mountain_style1",
+    "name": "진노하는 산 유파",
+    "englishName": "Wrathful Mountain Style",
+    "derived_bonus": {
+      "base_attack_bonus": -2
+    },
+    "category": "기사 유파",
+    "desc": "당신은 당신의 아군들을 해하는 자들에 대한 증오로 가득찬 장벽이지만, 극단적으로 방어적인 유파는 공격성에 있어서 대가가 있습니다. 당신은 모든 공격 굴림에 -2 페널티를 받습니다.",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "백병 혹은 격투를 보너스 기술로 얻습니다. 당신은 하중 0의 커다란 마법 방패를 즉시 행동으로 구현할 수 있으며, 이 방패는 당신 손이 비어있지 않더라도 사용이 기능하고, 당신이 원할 때까지 남아있습니다. 라운드당 한 번 누군가가 당신이 아군 보호로 보호한 대상에게 근접 공격을 한다면, 그 공격이 완료되기 이전 즉시 행동으로 근접 무기 공격을 할 수 있습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "punch",
+          "stab"
+        ],
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "wrathful_mountain_style2",
+    "name": "진노하는 산 유파",
+    "englishName": "Wrathful Mountain Style",
+    "category": "기사 유파",
+    "desc": "",
+    "src": "aotle",
+    "type": "knightly_style",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "당신이 보호한 아군이 장거리 공격을 당해도 당신의 근접 반격은 거리에 상관없이 공격할 수 있는 마법적인 공격이 됩니다. 당신이 즉시 행동으로 1점의 기관계 부담을 받기로 하면, 당신은 남은 라운드동안 당신이 보호한 아군을 공격하는 모든 대상에게 반격을 할 수 있습니다. 이런식의 반격은 하나의 대상에게 라운드별로 최대 한 번 공격 할 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "wrathful_mountain_style1"
+      },
+      {
+        "condition": "is_class",
+        "id": "warrior"
+      }
+    ]
+  },
+  {
+    "id": "danger_sense1",
+    "name": "위험 감각",
+    "englishName": "Danger Sense",
+    "category": "성혈",
+    "desc": "당신은 예상치 못한 위험을 조우함에 있어서 준초자연적 감각을 갖고 있습니다.",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신은 감지를 보너스 기술로 얻습니다. 당신은 당신이나 당신의 주위 근처에 있는 대상을 향한 처형 공격을 어떻게든 막을 수 있을 정도의 시간 내에 파악할 수 있습니다. 하루당 한 번 함정을 발동시키거나, 매복을 당하거나, 당신이 부상을 입거나 죽을 수 있는 상황에 직면하기 이전, 행동을 멈출 수 있을 정도의 시간을 남기고 위험을 예지할 수 있습니다.",
+    "bonus": [
+      {
+        "id": "notice",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "danger_sense2",
+    "name": "위험 감각",
+    "englishName": "Danger Sense",
+    "category": "성혈",
+    "desc": "",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신의 주변 파악 능력은 더 날카로워집니다. 당신의 지혜 수정치에 +1 보너스를 얻습니다. 하루당 한 번 위험에 처했을 때 즉시 행동으로 당신과 당신의 아군이 최소한의 피해로 이 위기를 탈출할 수 있는, GM이 생각하기에 가장 타당한 방법을 직관적으로 알 수 있습니다.",
+    "bonus": [
+      {
+        "id": "WIS",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "danger_sense1"
+      },
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+
+    ]
+  },
+  {
+    "id": "folie_a_deux1",
+    "name": "폴리 아 되",
+    "englishName": "Folie a Deux",
+    "category": "성혈",
+    "desc": "당신의 거짓말에 들어있는 신념은 너무 강렬해서 당신조차 순간적으로 믿습니다.",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "설득을 보너스 기술로 얻습니다. 당신의 거짓말이나 속임수는 거짓말과 속임수처럼 보이지 않습니다. 각종 주문과 능력은 단순히 당신이 당신이 하는 말을 스스로 믿고 있다고 판정됩니다. 하루에 한 번, 청자는 당신이 그 말을 진심으로 믿는다고 여기게 할 수 있습니다. 그 말의 내용 자체는 새 상황이나 증거가 믿음을 바꾸기 전까지 지속됩니다. 첫 번째 거짓말이 들통날 경우, 대상은 이 능력에 대해서 면역이 됩니다.",
+    "bonus": [
+      {
+        "id": "convince",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "folie_a_deux2",
+    "name": "폴리 아 되",
+    "englishName": "Folie a Deux",
+    "category": "성혈",
+    "desc": "",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신이 하는 모든 것에서 당신의 진솔함은 빛납니다. +1 매력 수정치를 얻습니다. 하루에 한 번, 새빨간 거짓말을 다른 사람에게 합니다. 그것이 물리적으로 불가능하거나, 감정적으로 용납이 되지 않는 것이 아니라면 대상은 당신의 설득 기술 레벨만큼 페널티를 받는 정신 내성을 굴리고 실패시, 해당 거짓말을 1d4 라운드만큼 믿습니다. 그 이후, 정상적인 판단력이 다시 돌아옵니다.",
+    "bonus": [
+      {
+        "id": "CHA",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "folie_a_deux1"
+      },
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "master_tracker1",
+    "name": "추적의 대가",
+    "englishName": "Master Tracker",
+    "category": "성혈",
+    "desc": "당신은 당신이 쫓는 자가 걸었던 길에 대해 본능적인 감각을 갖고 있습니다.",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "생존을 보너스 기술로 얻습니다. 당신은 지난 하루 내에 도시에서 만들어진 발자취를 따라가거나 지난 한 주 내에 야생에서 만들어진 발자취를 따라갈 수 있습니다. 이동 자국의 희미함, 물과 날씨로 인한 어려움에 아랑곳하지 않고 당신은 흔적으로부터 몇 마리의 크리쳐가 이동을 했는지, 그들의 대략적인 신체적 생김새와 현재 상태가 어떤지 알 수 있습니다.",
+    "bonus": [
+      {
+        "id": "survive",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "master_tracker2",
+    "name": "추적의 대가",
+    "englishName": "Master Tracker",
+    "category": "성혈",
+    "desc": "",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신의 감각은 면도날처럼 날카롭습니다; +1 지혜 수정치를 얻습니다. 당신은 이미 만났던 사람일 경우, 발자취만 보고 누구인지 파악할 수 있습니다. 하루에 한 번, 당신이 지난 한 주내에 어떤 사건이 일어났고 많이 훼손되지 않은 장소를 본다면 그 장소에서 일어난 일의 대략적인 물리적인 행동을 재구성할 수 있습니다.",
+    "bonus": [
+      {
+        "id": "WIS",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "master_tracker1"
+      },
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "night_walker1",
+    "name": "밤길잡이",
+    "englishName": "Night Walker",
+    "category": "성혈",
+    "desc": "당신은 저녁 시간과 어두운 장소에 대해 깊은 친밀감을 가지고 있으며, 가장 깊은 어둠에서조차 활동 가능합니다.",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "잠행을 보너스 기술로 얻습니다. 당신은 완전한 어둠이 아닌 이상 평범하게 볼 수 있으며, 눈이 멀더라도 30 ft 안을 볼 수 있는 듯이 행동 할 수 있습니다. 당신의 잠은 너무나도 얕아서 깨어있는 것과 사실상 동일합니다; 당신은 수면 중에도 주위의 환경에 대해서 완전히 파악하고 있고, 원할때 잠에서 일어날 수 있습니다.",
+    "bonus": [
+      {
+        "id": "sneak",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "night_walker2",
+    "name": "밤길잡이",
+    "englishName": "Night Walker",
+    "category": "성혈",
+    "desc": "",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신의 날렵한 은신술은 압도적입니다. 민첩 수정치에 +1 보너스를 얻습니다. 횃불이나 더 밝은 광원으로 밝혀져 있지 않은 이상, 당신은 시선을 끄는 행동을 하기 이전까지 사실상 투명 상태입니다.",
+    "bonus": [
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "night_walker1"
+      },
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "pack_beast1",
+    "name": "짐꾼",
+    "englishName": "Pack Beast",
+    "category": "성혈",
+    "desc": "당신은 장거리에 무거운 것을 옮기는데 있어서 마치 소와같은 수용력을 지니고 있습니다.",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "운동을 보너스 기술로 얻습니다. 당신의 근력은 하중 계산에 한해서 18인 것으로 취급하며, 이미 18일 경우 22로 취급합니다.",
+    "bonus": [
+      {
+        "id": "exert",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "pack_beast2",
+    "name": "짐꾼",
+    "englishName": "Pack Beast",
+    "category": "성혈",
+    "desc": "",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "근력 수정치에 +1 보너스를 얻습니다. 당신은 장면 당 한번 턴 행동으로 최대 1,000 파운드 내의 물체를 들어서 옮길 수 있지만, 턴 종료때 떨어뜨리거나 내려 놓아야합니다.",
+    "bonus": [
+      {
+        "id": "STR",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "pack_beast1"
+      },
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "provident_crafter1",
+    "name": "준비된 공예가",
+    "englishName": "Provident Crafter",
+    "category": "성혈",
+    "desc": "당신은 지금 딱 마침 필요한 것이 항상 손 근처에 있거나 재료로 만들어낼 수 있습니다.",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "제작을 보너스 기술로 얻습니다. 당신의 근력은 하중 계산에 한해서 4 높은 것으로 취급됩니다. 당신이 물약이나 마법이 부여되어 있는 토큰등의 자질구레한 물건을 사용하거나 그것들을 사용한 기술 판정을 한다면, 보관된 상태여도 준비된 상태로 판정을 합니다.",
+    "bonus": [
+      {
+        "id": "craft",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "provident_crafter2",
+    "name": "준비된 공예가",
+    "englishName": "Provident Crafter",
+    "category": "성혈",
+    "desc": "",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신의 손은 빠르고, 가볍습니다; 민첩 수정치에 +1 보너스를 받습니다. 하루에 한 번, 즉시 행동으로 당신이 지난 주에 살 법했을 무게 2 이하의 특정 비마법 아이템이 보관되어있게 할 수 있습니다. 물건의 구매 혹은 제조 가격을 지불하고 장비칸에 넣으십시오. 식량은 이 방식으로 추가할 수 없으며, 같은 물건은 일주일당 한 번 밖에 못 만듭니다.",
+    "bonus": [
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "provident_crafter1"
+      },
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "walk_like_wind1",
+    "name": "바람처럼 걷다",
+    "englishName": "Walk Like Wind",
+    "category": "성혈",
+    "desc": "당신의 놀라운 곡예 능력은 다른 자들이 따라할 수 없는 기동력을 제공합니다.",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "운동을 보너스 기술로 얻습니다. 당신의 기본 지상 이동속도는 10 ft 늘어납니다. 수평인 곳이나, 손으로 잡을 수 있는 곳에서 턴을 종료할 수 만 있다면, 당신은 수직으로 이동할 수 있습니다.",
+    "bonus": [
+      {
+        "id": "exert",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "walk_like_wind2",
+    "name": "바람처럼 걷다",
+    "englishName": "Walk Like Wind",
+    "category": "성혈",
+    "desc": "",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "민첩 수정치에 +1 보너스를 얻습니다. 당신은 이동 행동으로 최대 20 ft 멀리 뛰기를 하거나 10 ft 수직 점프를 할 수 있습니다. 장면당 한 번, 턴 행동으로 이동 행동을 얻습니다.",
+    "bonus": [
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "walk_like_wind1"
+      },
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "wildtongue1",
+    "name": "야생의 혀",
+    "englishName": "Wildtongue",
+    "category": "성혈",
+    "desc": "당신은 당신 주위의 자연 세계와 깊은 연결을 가지고 있으며, 야생의 주민들이 원하는 것이 무엇인지를 본능적으로 알 수 있는 감각을 갖고 있습니다. 이 포커스에 한하여 “동물”들은 동물 수준의 지능을 갖고 있는 살아있는 자연 혹은 마법적인 크리쳐입니다.",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "생존을 보너스 기술로 얻습니다. 당신은 동물이 이해할 수 있는 간단한 생각 정도는 전달할 수 있을 정도로 동물과 의사소통이 가능해집니다. 만약 기분을 좋게 해준다면 이 동물들은 즉각적인 행동으로 할 수 있는 간단한 부탁을 들어줍니다.",
+    "bonus": [
+      {
+        "id": "survive",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "wildtongue2",
+    "name": "야생의 혀",
+    "englishName": "Wildtongue",
+    "category": "성혈",
+    "desc": "",
+    "src": "aotle",
+    "type": "bloodline",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신의 존재감에 들어있는 원초적인 힘은 출중합니다. 매력 수정치에 +1 보너스를 얻습니다. 하루에 한 번 당신은 보이는 동물을 하나에게 한 장면동안 명령을 내릴 수 있습니다. 이 명령이 특별히 스스로에게 해가 되거나, 굉장히 위험한 일이 아닌 이상 이 동물은 일반적인 상황이라면 스스로 이해할 수 없는 복잡한 행동까지 할 수 있습니다. 마법적인 동물들은 이 것에 정신 내성굴림으로 저항할 수 있습니다.",
+    "bonus": [
+      {
+        "id": "CHA",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "wildtongue1"
+      },
+      {
+        "condition": "is_class",
+        "id": "expert"
+      }
+    ]
+  },
+  {
+    "id": "divination1",
+    "name": "예지술",
+    "englishName": "Divination",
+    "category": "신비한 비밀",
+    "desc": "",
+    "src": "aotle",
+    "type": "mystic_secret",
+    "level": 1,
+    "tags": [
+      "spell"
+    ],
+    "effect": "지식을 보너스 기술로 얻습니다. 당신이 복잡한 예지 의식으로 한 시간 사용하면 그 끝에 어떤 미래의 사건이나 계획에 대해 한 문장 질문을 합니다. GM은 당신의 능력치로 몰래 난이도 9의 지능/지식 판정을 굴립니다; 성공시 GM이 판단하기에 가장 타당한 미래 예측을 알려줍니다. 실패시 믿음직스럽지만 거짓인 예언을 알려줍니다. 이 기교는 일주일 이후의 미래에 대해 알 수 없으며 본질적으로 동일한 질문을 두 번 할 수 없으며, 현재와 과거 사건들에 대해 알 수 없습니다. 첫 사용 후 일주일 내 재사용은 난이도를 +1 올립니다. 당신은 이 능력을 쓸 때마다 1점의 기관계 부담을 얻습니다.",
+    "bonus": [
+      {
+        "id": "know",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "mage"
+      }
+    ]
+  },
+  {
+    "id": "pacting1",
+    "name": "계약술",
+    "englishName": "Pacting",
+    "category": "신비한 비밀",
+    "desc": "",
+    "src": "aotle",
+    "type": "mystic_secret",
+    "level": 1,
+    "tags": [
+      "spell"
+    ],
+    "effect": "기도를 보너스 기술로 얻습니다. 만신전 목록에서 하나를 선택해 계약합니다. 하루에 한 번 1점의 기관계 부담을 얻고 다음중 하나의 혜택을 즉시 행동으로 얻을 수 있습니다: 명중 굴림에 +4, 기술 판정에 +1, 혹은 주요 행동으로 해당 신의 권역과 연관이 있는 1레벨 주문을 사용할 수 있게 되는 능력. 비록 이 주문은 일반적인 주문 시전 룰을 따르지만 주문이 준비되어 있을 필요가 없고, 주문 슬롯을 필요로 하지 않으며, 비 주문 시전자도 사용할 수 있습니다. 당신의 이질적인 동맹은 당신에게 무언가 기이한 징표를 남겼고, 다른 자들은 당신을 본능적으로 기피하게 만듭니다; 협박과 관련이 없는 모든 사회적 판정에 -1을 받습니다.",
+    "bonus": [
+      {
+        "id": "pray",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "mage"
+      }
+
+    ]
+  },
+  {
+    "id": "hemomancy1",
+    "name": "혈마술",
+    "englishName": "Hemomancy",
+    "category": "신비한 비밀",
+    "desc": "",
+    "src": "aotle",
+    "type": "mystic_secret",
+    "level": 1,
+    "tags": [
+      "spell"
+    ],
+    "effect": "치료를 보너스 기술로 얻습니다. 하루에 한 번 주문을 시전 후 즉시 행동으로 시전된 주문 레벨당 1d4 만큼 피해를 받습니다; 이 주문은 당신이 하루 동안 사용할 수 있는 주문 횟수에 포함되지 않습니다. 이 능력을 사용할 때 마다 1점의 기관계 부담을 받습니다. 이 포커스는 다른 사람을 해하거나, 원하지 않는 자들을 대상으로하는 마법에는 사용할 수 없습니다.",
+    "bonus": [
+      {
+        "id": "heal",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "mage"
+      }
+    ]
+  },
+  {
+    "id": "sigilism1",
+    "name": "문양술",
+    "englishName": "Sigilism",
+    "category": "신비한 비밀",
+    "desc": "",
+    "src": "aotle",
+    "type": "mystic_secret",
+    "level": 1,
+    "tags": [
+      "spell"
+    ],
+    "effect": "당신은 작은 토큰에 주문을 부여할 수 있습니다. 이 토큰은 당신만 사용할 수 있으며, 만드는 것은 주문 레벨당 10분이 소요되고, 하루 사용할 수 있는 주문 횟수도 소모합니다. 소모한 주문 횟수는 일반적인 방법으로 회복할 수 있습니다. 이 토큰을 사용하는 것은 주요 행동을 필요로 합니다. 이 문양을 사용하는 것은 음성이나, 손짓이 필요하지 않으며 피해로 방해를 받지 않고, 굳게 잡고 있기만 해도 됩니다. 어느 시점에서든 오직 하나의 토큰에만 주문이 불여넣어져 있을 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "mage"
+      }
+    ]
+  },
+  {
+    "id": "mind_sorcery1",
+    "name": "정신주술",
+    "englishName": "Mind-Sorcery",
+    "category": "신비한 비밀",
+    "desc": "",
+    "src": "aotle",
+    "type": "mystic_secret",
+    "level": 1,
+    "tags": [
+      "spell"
+    ],
+    "effect": "당신의 주문 시전은 음성과 손짓을 필요로 하지 않습니다. 하지만 여전히 주문 시전은 주요 행동을 필요로 하고, 피해로 인해 중단 될 수 있으며, 대개 갑옷을 입은 채로 사용할 수 없습니다. 비전 형태의 감정(Apprehending the Arcane Form)과 같은 주문을 사용해서 확인하거나, 당신이 주문을 썼다는 것을 명확하게 알리지 않는 이상 당신의 주문은 당신이 일으켰다는 명백한 증거 없이 발현됩니다. 이 포커스가 선택된 이상, 당신은 순수하게 정신적인 성질의 주문이 아닌 이상 대상에게 HP 피해를 일으키는 주문을 사용할 수 없습니다. 부차적인 효과로 비 정신적 피해를 입히는 주문은 단순하게 그 효과가 발생하지 않습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "is_class",
+        "id": "mage"
+      }
+    ]
+  },
+  {
+    "id": "focus_0221",
+    "name": "!인간",
+    "englishName": "",
+    "category": "비인간",
+    "desc": "당신은 알고리즘적 원칙과 이로부터 번역된 과거 혹은 미래의 인간의 흉내로 운영되는 인간 유기체 시뮬라크럼입니다. 당신은 자아 혹은 의식이 없지만, 일반적인 사람과 똑같이 행동하고, 똑같은 동기들을 갖고 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "마법 기술을 제외한 다른 기술을 보너스 기술로 얻습니다. 하루에 한 번, 당신의 알고리즘은 하고자하는 행동의 특별히 성공적인 행동을 선정 후 모방하여 기술 판정에 +1 혹은 공격 판정에 +2를 즉시 행동으로 받을 수 있습니다. 당신은 정신에 영향을 끼치는 마법적인 효과에 면역입니다. 이것을 제외하면 당신은 극히 일반적인 사람처럼 완벽하게 행동을 할 수 있으며, 오토마톤의 일반적인 특징을 갖고 있지 않습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "exclude": {
+          "ids": [
+            "magic"
+          ]
+        }
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "accipiter1",
+    "name": "맹금류 나락종",
+    "englishName": "Accipiter 那落種",
+    "category": "비인간",
+    "desc": "당신은 날개달린 나락이며, 일반적으로 흉측하게 생겼지만 준수하게 생겼을 수도 있습니다. 우연의 산물이든, 당신의 부족의 상황이든, 당신은 인간 주위에서 이성적으로 행동할 수 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "ability_ids": ["accipiter_flight"],
+    "level": 1,
+    "effect": "운동을 보너스 기술로 얻습니다. 당신은 맹금류 비행(Accipiter Flight) 특수 능력을 갖고 있는 맹금류이며, -1 건강 수정치 페널티, 그리고 +1 민첩 수정치 보너스를 갖고 있습니다.",
+    "bonus": [
+      {
+        "id": "exert",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": -1
+      },
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "aristoi1",
+    "name": "귀족 나락종",
+    "englishName": "Aristoi 那落種",
+    "category": "비인간",
+    "desc": "당신은 폭넓은 마법적 우생학 교배 프로그램의 결과로 만들어진 인간들의 태생적인 지배자입니다. 다른 종류의 나락과는 다르게 신체적으로 강하지는 않지만, 당신은 비자연적일 정도로 날카로운 판단력과 대단한 자기규율을 갖고 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "마법을 제외한 다른 기술과 지휘를 보너스 기술로 얻습니다. 지혜 수정치에 +1을 받습니다. 당신의 날카로운 혜안은 근력이나 민첩 대신 지혜를 무기의 사용 능력치로 쓸 수 있게 합니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "exclude": {
+          "ids": [
+            "magic"
+          ]
+        }
+      },
+      {
+        "id": "lead",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "WIS",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "focus_0251",
+    "name": "카피바라 수인",
+    "englishName": "",
+    "category": "비인간",
+    "desc": "작고, 단단하고, 성격이 온순한 카피바라 수인들은 평화와 외교에 관해서 자연스러운 재능을 보입니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "설득이나 연결을 보너스 기술로 얻습니다. 매력 수정치에 +1 보너스를 얻습니다. 당신이 있는 곳에서 반응 굴림을 굴린다면 주사위에 +1을 더합니다. 당신은 일주일 동안 특정 언어에 노출되면 쓸만한 정도의 유창성을 얻습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "connect",
+          "convince"
+        ],
+        "count": 1
+      },
+      {
+        "id": "CHA",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "derived_bonus": { "reaction_roll": 1 },
+    "requirements": []
+  },
+  {
+    "id": "ghoul1",
+    "name": "구울",
+    "englishName": "Ghoul",
+    "category": "비인간",
+    "desc": "당신은 구울과의 긴 시간의 접촉, 혹은 운이 나빴던 경우 짧은 접촉을 통해 감염되었습니다. 당신의 새로운 식단은 가혹하지만, 당신은 그것을 어떻게 만족시킬지에 대해 판단을 내릴 정도로는 자아를 갖고 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "ability_ids": ["ghoulish_vigor"],
+    "level": 1,
+    "effect": "당신은 한달에 1 파운드의 신선한 인육을 먹어야 하지만, 잠행을 보너스 기술로 얻고, 구울의 생명력(Ghoulish Vigor)의 혜택을 받을 수 있으며, 근력 또는 민첩 수정치에 +1 보너스를 받을 수 있습니다. 인육을 먹지 않은채 21일이 지났으면 매일 정신 내성을 성공하거나 옆에 가장 가까운 인간을 먹으려는 의도로 공격합니다. 이 상태는 30일이 지나면 자동입니다.",
+    "bonus": [
+      {
+        "id": "sneak",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "STR",
+          "DEX"
+        ],
+        "value": 1,
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "focus_0271",
+    "name": "여우 수인",
+    "englishName": "",
+    "category": "비인간",
+    "desc": "재치있는 늪지대 여우 인간들은 스파이, 혹은 감시자로서 활동하게 만들어졌습니다. 이 것은 그들을 만족시킬 수 없는 호기심과 다른 사람들을 조종하려고 하는 경향성을 갖게 했습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "감지 혹은 잠행을 보너스 기술로 얻습니다. 지혜 혹은 매력 수정치에 +1 보너스를 얻습니다. 당신은 빛이 적은 곳에서도 명확하게 볼 수 있으며, 당신은 비범하게 빠른 다리를 갖고 있어 이동속도에 10’을 더합니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "notice",
+          "sneak"
+        ],
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "WIS",
+          "CHA"
+        ],
+        "value": 1,
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "harbinger1",
+    "name": "전령 나락종",
+    "englishName": "Harbinger 那落種",
+    "category": "비인간",
+    "desc": "당신은 인간 사회에 침투할 수 있는 형상 변화 나락인 전령입니다. 운명의 장난이든, 당신의 꺾을 수 없는 의지든, 당신은 인간 사회에서 평범하게 행동할 수 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "ability_ids": ["harbingers_face"],
+    "level": 1,
+    "effect": "잠행 혹은 설득을 보너스 기술로 얻고 전령의 얼굴(Harbinger’s Face) 능력을 얻습니다. 매력 수정치에 +1 보너스를 얻고, 건강 수정치에 -1 페널티를 얻습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "convince",
+          "sneak"
+        ],
+        "count": 1
+      },
+      {
+        "id": "CHA",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "focus_0291",
+    "name": "들소 수인",
+    "englishName": "",
+    "category": "비인간",
+    "desc": "농경 노동과 신전의 식탁에 올라갈 고기를 위해 만들어진 강력한 소 수인들은 평균적인 키보다 한 피트 더 크고, 더 넓은 체구를 지니고 있습니다. 대부분 뿔을 가지고 있지만, 전투적인 목적으로 쓰기에는 타당하지 않습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "운동을 보너스 기술로 얻습니다. 근력 수정치 +1, 민첩 수정치 -1. 하중 한도를 계산할 때만 근력 점수가 4 높은 것으로 취급합니다. 기관계 부담 최대치가 2 증가합니다.",
+    "bonus": [
+      {
+        "id": "exert",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "STR",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "derived_bonus": {
+      "encumbrance_str": 4,
+      "system_strain_max": 2
+    },
+    "sheet_notes": [
+      "Treat STR as 4 higher for encumbrance only; maximum System Strain is 2 higher. These adjustments do not change attribute scores or modifiers."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "kitsune_beastfolk1",
+    "name": "키츠네 수인",
+    "englishName": "Kitsune Beastfolk",
+    "category": "비인간",
+    "desc": "당신의 털가죽은 늪지대에서 거주하는 당신의 사촌들보다 주로 더 밝고 불그레하며, 외견상 더 사람에 가깝지만, 당신의 거의 모든 동족들은 여우의 귀와 꼬리를 가지고 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "감지 혹은 설득을 보너스 기술로 얻습니다. 매력 수정치에 +1 보너스를 얻습니다. 원소 촉발(Elemental Sparks) 기교를 배웁니다. 이미 알고 있다면 배울 수 있는 원소술사의 다른 기교를 배웁니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "convince",
+          "notice"
+        ],
+        "count": 1
+      },
+      {
+        "id": "CHA",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "deepfolk1",
+    "name": "지저종",
+    "englishName": "Deepfolk",
+    "category": "비인간",
+    "desc": "세계의 뿌리에서 살아가는 먼 깊음의 인간 원주민이지만, 당신은 당신만의 이유로 치명적인 태양빛이 비치는 곳으로 올라왔습니다. 당신의 몸이 완전히 덮여있고, 색깔이 들어있는 고글을 착용하고 있는 동안 당신은 태양에 대해 버틸 수 있지만 긴 노출은 당신에게 행동 불능의 영혼에 닿는 피해를 주게 됩니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "당신은 빛의 정도에 상관없이 명확하게 볼 수 있습니다. 당신은 일반적인 인간들에 비해 절반의 음식, 물, 그리고 공기만 필요합니다. 당신은 근력, 민첩, 건강 중 14 미만인 능력치 1개를 선택하여 14로 바꿀 수 있습니다. 햇빛에 눈에 노출되거나 손바닥 정도의 햇빛이 피부에 비친다면 매 라운드 마다 육체 내성을 굴리고 실패시 기관계 부담을 1점 얻습니다. 만약 이 수치가 최대치를 넘으면 당신은 쓰러지고, 몸을 가리지 못한다면 1d6 분 내로 죽습니다.",
+    "bonus": [],
+    "score_effect": {
+      "kind": "raise_to",
+      "value": 14,
+      "tags": [
+        "phys"
+      ],
+      "optional": true
+    },
+    "sheet_notes": [
+      "See clearly regardless of illumination; require half normal food, water, and air.",
+      "Sunlight exposure to the eyes or a palm-sized area of skin requires a Physical save each round; failure adds 1 System Strain. Exceeding the maximum causes collapse and death in 1d6 minutes unless covered. Resolve exposure during play."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "focus_0321",
+    "name": "도마뱀 수인",
+    "englishName": "",
+    "category": "비인간",
+    "desc": "완전한 냉혈종은 아니지만 그래도 온기를 추구하는 비늘달린 도마뱀 수인들입니다. ",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "운동 또는 생존을 보너스 기술로 얻습니다. 건강 혹은 근력 수정치에 +1 보너스를 받고, 민첩 혹은 매력 수정치에 -1 페널티를 받습니다. 당신은 일반 이동속도로 수영할 수 있으며, 15분 동안 숨을 참을 수 있고, 당신의 강건한 가죽은 최소 1점까지 모든 충격 피해량을 1 줄일 수 있습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "exert",
+          "survive"
+        ],
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "STR",
+          "CON"
+        ],
+        "value": 1,
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "DEX",
+          "CHA"
+        ],
+        "value": -1,
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "focus_0331",
+    "name": "고양이 수인",
+    "englishName": "",
+    "category": "비인간",
+    "desc": "늘씬하고, 재빠르고, 가끔 잔혹함의 냉혈한 쾌락에 빠지는 고양이 수인은 도망가는 노예들이나 도망친 야수들을 사냥할 수 있게 설계되었습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "감지 혹은 잠행 기술을 보너스 기술로 얻습니다. 민첩 혹은 매력 수정치에 +1 보너스를 얻습니다. 당신의 손톱은 근접전에서 단검 취급을 받으며, 빛이 적은 환경에서도 잘 볼 수 있습니다. 실제 전투에서 당신이 비살상 피해를 줄 때 정신 내성굴림을 합니다. 실패시, 당신의 공격은 살상 피해를 줍니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "notice",
+          "sneak"
+        ],
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "DEX",
+          "CHA"
+        ],
+        "value": 1,
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "oni1",
+    "name": "오니",
+    "englishName": "Oni",
+    "category": "비인간",
+    "desc": "당신은 고립된 오니 사회로부터 온 오니입니다. 당신은 7 ft 높이로 서 있으며, 뿔이 달리고, 강력한 근육을 갖고 있으며, 모든 도락에 맹렬한 욕구를 가지고 있습니다. 당신의 종족의 많은 자들은 새빨갛거나 새파랗지만 인간과 비슷한 피부색을 갖거나, 외적으로 작은 독특함을 갖고 있는 경우도 알려져 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "백병 혹은 격투를 보너스 기술로 얻습니다. 근력 수정치에 +1 보너스를 얻으며, 하중 계산에서 당신의 근력은 4 높은 것으로 취급합니다. 지혜 수정치에 -1 페널티를 받고, 모든 정신 내성굴림에 -2 페널티를 받습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "punch",
+          "stab"
+        ],
+        "count": 1
+      },
+      {
+        "id": "STR",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "WIS",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "derived_bonus": {
+      "saves": { "mental": -2 }
+    },
+    "requirements": []
+  },
+  {
+    "id": "focus_0351",
+    "name": "쥐 수인",
+    "englishName": "",
+    "category": "비인간",
+    "desc": "평균보다 머리 하나 크기 정도 더 작고 더 늘씬한 체구를 갖고 있습니다. 그들은 정글로부터 희귀한 물질이나 재료를 가져올 수 있게 날카로운 감각이 주어졌습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "감지를 보너스 기술로 얻습니다. 지혜 혹은 민첩 수정치에 +1 보너스를 받고 건강 혹은 근력 수정치에 -1 페널티를 받습니다. 당신은 빛이 적은 환경에서 잘 볼 수 있습니다. 당신의 감각은 날카로워서 완전한 어둠 속에 있거나 눈이 멀어도 10 ft 이내의 물체와는 볼 수 있는 것처럼 상호작용할 수 있습니다.",
+    "bonus": [
+      {
+        "id": "notice",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "DEX",
+          "WIS"
+        ],
+        "value": 1,
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "STR",
+          "CON"
+        ],
+        "value": -1,
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "focus_0361",
+    "name": "늑대 수인",
+    "englishName": "",
+    "category": "비인간",
+    "desc": "용맹한 늑대 인간들로, 반항적인 노예들을 상대하기 위해 감독관 혹은 전사로서 만들어졌습니다. 그렇다 하더라도 그들은 그들 내부자들과 서로 협동하는 본능을 갖고 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "운동을 보너스 기술로 얻습니다. 장면당 한 번, 이동 행동을 사용해 근접 범위 사거리의 아군과 협동하며 대상에게 주요 행동을 부여합니다. 이 주요 행동은 물리적인 행동에만 사용할 수 있고 주문 시전이나 마법 아이템의 사용에는 쓸 수 없습니다. 각 아군은 이 효과를 장면당 한 번만 받을 수 있습니다.",
+    "bonus": [
+      {
+        "id": "exert",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "ss_undead1",
+    "name": "묵도 언데드",
+    "englishName": "默都 Undead",
+    "category": "비인간",
+    "desc": "언데드로 최근에 변화되었거나, 생성 후 몇 번 밖에 안죽었기 때문에 비교적 지능이 남아있는 언데드입니다. 당신은 얼핏 사람으로 보이나, 자세하게 보면 당신의 차가운 육신은 아주 잘 드러납니다. 당신은 사람의 욕구나 활동에 대해 대부분 흉내를 낼 수 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "당신은 언데드이며, 먹거나, 자거나, 마시거나, 숨쉴 필요가 없습니다. 하지만 여전히 HP나, 주문 슬롯이나, 분발을 회복하려면 8시간의 조용한 편안함이 필요합니다. 당신은 통상적인 방법으로 치료될 수 있으며, 독과 질병에 면역입니다. 당신은 참수당하거나 박살나지 않은 이상 0 HP때 자동으로 안정화됩니다. 만약 당신이 정말로 사망할 경우, 사체가 비교적 멀쩡하면 부활하기까지 수십년이 걸리고, 태워지거나 흩뿌려진다면 수백년이 걸립니다. 당신은 언데드가 된 특별한 연결 때문에 일반적인 사령술 주문에 한해서 언데드로 취급되지 않습니다. 하지만 당신에게 영향을 끼칠 수 있는 특별한 주문이 있을 수 있습니다.",
+    "bonus": [],
+    "requirements": []
+  },
+  {
+    "id": "focus_0381",
+    "name": "돼지 수인",
+    "englishName": "",
+    "category": "비인간",
+    "desc": "이들 건강한 돼지 수인들은 실험체들과 영혼적 그리고 생리학적으로 잘 맞춰지도록 만들어졌습니다. 몇몇은 화가 많이 나거나 상처를 입었을 때 크나큰 분노로 아군, 적 상관없이 싸우기도 합니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "생존을 보너스 기술로 얻습니다. 건강 수정치에 +1 보너스를 얻습니다. 당신은 비마법적인 독에 면역을 갖고, 하루에 한 번 HP가 0으로 떨어져도 완전히 박살나지 않은 이상 한 라운드 행동 할 수 있습니다. 이 시간 또한 당신의 안정화 타이머에 포함됩니다.",
+    "bonus": [
+      {
+        "id": "survive",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "tanuki_beastfolk1",
+    "name": "타누키 수인",
+    "englishName": "Tanuki Beastfolk",
+    "category": "비인간",
+    "desc": "이 너구리 인간들은 다양한 목적으로 사용될 수 있는 변신 종족을 만들려고 한 시도였습니다. 비록 성공적인 실험은 아니었지만 그들의 후손들은 산 숲에서 아직 발견됩니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "잠행을 보너스 기술로 얻습니다. 당신은 오를 수 있는 절벽등의 표면을 완전한 이동속도로 움직일 수 있습니다. 하루에 한 번 주요 행동으로 언어 구사 효과가 제외된 시뮬라크럼 가면을 취하다 (Adopt the Simulacular Visage) 주문처럼 변신할 수 있습니다. 이 변신은 레벨당 2시간 유지됩니다. ",
+    "bonus": [
+      {
+        "id": "sneak",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "tengu1",
+    "name": "텐구",
+    "englishName": "Tengu",
+    "category": "비인간",
+    "desc": "날개달린 까마귀 수인들로 무투 사원에서 주로 발견됩니다. 다른 수인들 처럼 그들의 외관은 인간형 조류부터 검은 깃털의 날개만 달린 인간까지 다양하게 있습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "백병을 보너스 기술로 얻습니다. 당신이 일반 하중을 든 경우, 당신은 바깥에서 30 ft로 비행할 수 있지만, 실내에서는 비좁기 때문에 날 수 없고, 비행하는 동안 싸우거나, 다른 복잡한 행동을 하지 못합니다. 비행은 장거리 이동을 하기에는 너무 지칩니다.",
+    "bonus": [
+      {
+        "id": "stab",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "usagi_beastfolk1",
+    "name": "우사기 수인",
+    "englishName": "Usagi Beastfolk",
+    "category": "비인간",
+    "desc": "거의 멸종했지만 아직까지 몇몇 개의 토끼 수인들의 서식지가 남아 있습니다. 이들의 창조자들은 이들을 정글의 위험에서 살아날 수 있도록 속력과 행운에 관한 희한한 경향을 불어 넣은 가축들로 설계했습니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "운동 또는 잠행을 보너스 기술로 얻고 모든 내성굴림에 +1 보너스를 얻습니다. 민첩 수정치에 +1 보너스를 얻고 근력 또는 건강 수정치에 -1 페널티를 받습니다. 장면당 한 번, 턴 행동으로 라운드의 종료까지 지상 이동속도를 2배로 합니다. 일주일에 한 번 즉시 행동으로 행운 내성에 성공합니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "exert",
+          "sneak"
+        ],
+        "count": 1
+      },
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "STR",
+          "CON"
+        ],
+        "value": -1,
+        "count": 1
+      }
+    ],
+    "derived_bonus": {
+      "saves": {
+        "physical": 1,
+        "evasion": 1,
+        "mental": 1,
+        "luck": 1
+      }
+    },
+    "sheet_notes": [
+      "Once per scene, double ground movement with an On Turn action. Once per week, automatically succeed on a Luck save with an Instant action. Track usage during play."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "focus_0421",
+    "name": "자각인",
+    "englishName": "自刻人",
+    "category": "비인간",
+    "desc": "평균보다 1 ft 더 크고, 지속된 노동으로 피부가 잘 탄 자각인들의 노동에 대한 끝없는 욕구는 그들을 마모시킵니다. 대부분 60세 이전에 일반적인 치료로는 복구가 안될 정도로 불구가 되고, 그쯤 되어 삭아서 사라지거나, 안락사를 받아들입니다.",
+    "src": "aotle",
+    "type": "origin",
+    "level": 1,
+    "effect": "운동을 보너스 기술로 얻습니다. 건강 점수가 14 미만이면 14로, 14 이상이면 18로 바꿉니다. 이후 수정치 보너스를 적용합니다. 당신의 최대 기관계 부담은 2 늘어납니다. 기관계 부담, 분발, HP, 주문을 회복하려면 날이 저물 때 노동이나 그에 준하는 활동으로 지쳐 있어야 합니다. 이를 충족하지 못하면 밤마다 기관계 부담이 1 늘어나며, 최대치를 초과하면 사망합니다. 이러한 활동으로 지친 동안 모든 명중 판정과 기술 판정 전체를 각각 두 번 굴려 낮은 결과를 사용합니다.",
+    "bonus": [
+      {
+        "id": "exert",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "score_effect": { "kind": "threshold_replace", "attribute_id": "CON", "threshold": 14, "below": 14, "at_or_above": 18 },
+    "derived_bonus": { "system_strain_max": 2 },
+    "sheet_notes": [
+      "회복 조건: 기관계 부담·분발·HP·주문을 회복하려면 날이 저물 때 노동이나 그에 준하는 활동으로 지쳐 있어야 합니다.",
+      "회복 조건을 충족하지 못하면 밤마다 기관계 부담이 1 늘어납니다. 최대치와 같을 때가 아니라 최대치를 초과했을 때 사망합니다.",
+      "이러한 활동으로 지친 동안 모든 명중 판정과 기술 판정 전체를 각각 두 번 굴리고 낮은 결과를 사용합니다. 노동·피로·회복은 플레이 중 처리합니다."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "automatons1",
+    "name": "오토마톤",
+    "englishName": "Automatons",
+    "category": "다른 크리쳐",
+    "desc": "당신은 자의지가 있는 오토마톤으로 그 성질에 대한 모든 장단점을 갖고 있습니다. 당신은 아마도 인간 형태가 있을 것입니다; 당신이 원한다면 당신은 누가 자세한 조사를 하지 않는 이상 인간처럼 보이게 할 수 있습니다. 당신은 먹고 마실 수 있지만, 그것이 필요하지는 않습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "당신은 먹거나, 마시거나, 숨을 쉴 필요가 없으며, 질병, 독, 그리고 자연적인 기후의 온도의 효과에 대해 면역입니다. 당신은 다른 살아있는 크리쳐와 동일하게 치료나 그 비슷한 효과를 받으면 기관계 부담이 생기지만, 한 시간 정도 치료를 할 수 있는 자에게 스스로의 구조에 대해 설명을 하면 자연스럽게 치료를 받을 수 있습니다. 몇몇 오토마톤들은 어둠 속에서 볼 수 있다던지, 움직임을 파악한다던지, 마법적인 기운을 본다던지 등의 특수한 센서가 장착되어 있을 수 있습니다. 의문스러운 자가 치료 기능과 긴 세월은 당신의 능력을 풍화 시켰습니다; 하나의 능력치를 선택하고 그 수정치를 최소 -2까지 -1 줄입니다.",
+    "bonus": [
+      {
+        "action": "choice_attribute_modifier",
+        "count": 1,
+        "value": -1,
+        "cap_override": {
+          "min": -2
+        }
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "chattel1",
+    "name": "소유품 포병종",
+    "englishName": "Chattel 抱病種",
+    "category": "다른 크리쳐",
+    "desc": "어떤 잔혹한 자들은 당신의 혈통을 그들의 배고픔을 달래기 위한 가축으로 만들었습니다. 신체적으로 약하고 학대에 저항할 수 없는 당신이 속한 아인종은 가장 좋은 경우 장난감이나 장식으로써 존재하고 그렇지 않은 지역의 경우 문자 그대로 인간 가축으로 존재합니다. 대부분의 이러한 소유품들은 그들의 비참한 상태에 만족감을 느낄 수 있게 설계되었지만, 당신은 세계에서 자신만의 길을 걸을 수 있을 정도의 자율성을 갖게 되었습니다. 비록 당신의 피 안에서 끔찍한 충동이 속삭이긴 하지만.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "전투 관련이 아니고 마법이 아닌 기술 하나를 보너스 기술로 얻습니다. 당신의 근력 능력치를 3d6 대신 1d4 +2로 다시 굴립니다. 건강 혹은 매력을 선택하세요; 해당 능력치의 수정치는 최대 +3까지 +1 늘어납니다. 당신은 살아가면서 다른 사람들을 조종하고 조절해야 하기에, 모든 사회적 판정에 +1 보너스를 얻지만 물리적인 폭력에 대한 정신적인 저항 때문에 모든 공격 판정에 -2 페널티를 얻습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "exclude": {
+          "ids": [
+            "magic"
+          ],
+          "tags": [
+            "combat"
+          ]
+        }
+      },
+      { "action": "choice_attribute_modifier", "ids": ["CON", "CHA"], "count": 1, "value": 1, "cap_override": { "max": 3 } }
+    ],
+    "score_effect": { "kind": "reroll", "attribute_id": "STR", "sides": 4, "bonus": 2 },
+    "derived_bonus": { "attack": -2 },
+    "sheet_notes": ["모든 사회적 판정에 +1 보너스를 받습니다. 기술 등급 자체는 바뀌지 않으며 플레이 중 해당 판정에 적용합니다."],
+    "requirements": []
+  },
+  {
+    "id": "functionary1",
+    "name": "기능성 포병종",
+    "englishName": "Functionary 抱病種",
+    "category": "다른 크리쳐",
+    "desc": "당신의 조상들은 일반 노동자보다 더 특이적인 어떤 기능적인 목적을 위해 만들어졌습니다. 몇몇은 살아있는 악기로 살아가거나, 다른 자들은 뒤틀린 보수 작업용 일꾼, 비인간 공연자, 지치지 않는 살아있는 계산기, 혹은 비슷한 목적으로 길러진 생물로 살아갑니다. 비록 당신이 비교적 인간처럼 보이기는 하지만 대부분의 기능성들은 능력을 얻기 위해 불구적 장애를 갖게 되었습니다. 이러한 포병종들은 자연스럽게 그들의 존재 목적을 위한 도구와 능력을 갖고 있습니다. 그것이 신체 기관이든, 주입된 장치이든, 내재된 마법적인 능력이든.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "전투 관련이 아니고 마법이 아닌 기술 하나를 보너스 기술로 얻고 그 기술에 대한 특기자 (Specialist) 1레벨을 얻습니다. 능력치를 하나 선택합니다; 그 능력치의 수정치는 최소 -2까지, -1의 페널티를 받습니다. 당신은 당신 본래의 기능을 수행함에 일반적으로 필요한 도구나 장비가 없어도 됩니다; 공예가 목적의 기능체들은 도구들을 비슷하게 재현하고, 치료가 목적이라면 의약품이 없어도 되는 등의 능력을 보여줍니다. 당신은 당신의 기능을 위한 모든 기술 판정에 +1 보너스를 얻습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "exclude": {
+          "ids": [
+            "magic"
+          ],
+          "tags": [
+            "combat"
+          ]
+        }
+      },
+      { "action": "choice_attribute_modifier", "value": -1, "count": 1 }
+    ],
+    "skill_focus_grant": { "focus_id": "specialist1", "bonus_index": 0, "skill_allotments": 1 },
+    "sheet_notes": [
+      "선택한 기능의 기술 판정에 +1 보너스를 받습니다. 실제 기능에 해당하는 판정인지 플레이 중 판단합니다.",
+      "본래 기능 수행에 일반적으로 필요한 도구·장비를 신체나 내재된 능력으로 대신합니다. 원재료까지 자동으로 면제되지는 않습니다."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "laborer1",
+    "name": "노동자 포병종",
+    "englishName": "Laborer 抱病種",
+    "category": "다른 크리쳐",
+    "desc": "당신의 혈통은 더 강력한 품종의 개량 위하여 힘든 일을 버틸 수 있는 거친 노동자 카스트로 재구축되었습니다. 비록 당신이 당신들의 동종들 보다 덜 영향을 받았더라도, 당신의 정신적인 능력들은 일반적인 사람들보다 더 무디고 당신은 명령과 지시를 따르고 싶은 본능적인 충동이 있습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "운동을 보너스 기술로 얻습니다. 당신의 지능, 지혜, 그리고 매력 수정치는 각각 최소 -2까지 -1 줄어들며, 당신의 근력과 건강 수정치는 최대 +3까지 +1 늘어납니다. 당신은 일반 인간들에 비해 절반의 음식과 휴식이 필요합니다. 당신의 정신에 영향을 미치는 효과에 대항하는 정신 내성굴림 결과에 -2 페널티를 받습니다.",
+    "bonus": [
+      {
+        "id": "exert",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "CHA",
+        "action": "attribute_modifier",
+        "value": -1,
+        "cap_override": {
+          "min": -2
+        }
+      },
+      {
+        "id": "WIS",
+        "action": "attribute_modifier",
+        "value": -1,
+        "cap_override": {
+          "min": -2
+        }
+      },
+      {
+        "id": "INT",
+        "action": "attribute_modifier",
+        "value": -1,
+        "cap_override": {
+          "min": -2
+        }
+      },
+      {
+        "id": "STR",
+        "action": "attribute_modifier",
+        "value": 1,
+        "cap_override": {
+          "max": 3
+        }
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": 1,
+        "cap_override": {
+          "max": 3
+        }
+      }
+    ],
+    "conditional_saves": [
+      {
+        "condition": "정신에 영향을 미치는 효과에 대항할 때",
+        "saves": {
+          "mental": -2
+        }
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "penal1",
+    "name": "죄인 포병종",
+    "englishName": "Penal 抱病種",
+    "category": "다른 크리쳐",
+    "desc": "당신의 혈통은 가학적인 마도왕이나 무자비한 외계인 기술자에 의해 저주받았습니다. 당신의 조상이 그들을 모욕했거나, 당신이 속해있던 곳이 점령당해 지배자들에 의해 영원한 도구로 만들어졌거나, 영원토록 새로운 사회 구조를 협박하지 않도록 만들어진 떨어진 지배 계층일 수도 있습니다. 당신은 육체적이나 정신적으로 특별히 손상되어있습니다. 이런 저주에도, 당신은 어떻게든 완전히 망가지지 않고, 당신의 한계와 타협하기 위해 최선을 다했습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "능력치를 하나 선택합니다. 해당 수정치는 최소 -3까지 -2 페널티를 받습니다. 당신의 능력치중 오직 하나만 13점을 초과할 수 있습니다; 나머지들을 13까지 낮추세요. 당신은 이런 태생적 한계를 넘기 위한 노력으로 두 가지의 추가적인 포커스를 얻었습니다. 모든 꺾을 수 없는 의지를 반영하기 위해 내성굴림에 +2 보너스를 받습니다. 당신은 능력치 개발(Developed Attribute) 포커스를 선택할 수 없습니다.",
+    "bonus": [
+      {
+        "action": "choice_attribute_modifier",
+        "count": 1,
+        "value": -2,
+        "cap_override": {
+          "min": -3
+        }
+      }
+    ],
+    "score_effect": {
+      "kind": "cap_except_one",
+      "value": 13
+    },
+    "extra_focus_picks": 2,
+    "derived_bonus": {
+      "saves": {
+        "physical": 2,
+        "evasion": 2,
+        "mental": 2,
+        "luck": 2
+      }
+    },
+    "requirements": [
+      { "condition": "not_focus", "id": "developed_attribute1" }
+    ]
+  },
+  {
+    "id": "warlike1",
+    "name": "전쟁광 포병종",
+    "englishName": "Warlike 抱病種",
+    "category": "다른 크리쳐",
+    "desc": "당신의 종족은 죽이기 위해 태어났습니다. 잊혀진 제국의 노예병이라든지, 이 땅의 모든 인간들의 말살을 위한 살아있는 생명체 역병이든지. 당신은 항상 죽이고, 고통받게하고, 파괴하라고 하는 충동에 계속 시달리지만, 당신의 형제들과 다르게 이러한 충동을 조절할 수 있습니다… 필요하다면 말입니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "백병과 격투를 보너스 기술로 얻고, 모든 명중 판정에 자연적인 +1 보너스를 얻습니다. 지능, 지혜, 매력 중 두 개의 능력치를 선택하십시오; 이 능력치들의 수정치는 최소 -2까지 -1 페널티를 받습니다. 당신의 근력, 민첩, 혹은 건강 수정치 중 하나를 최대 +3까지 +1 올립니다. 당신은 협박과 상관없는 모든 사회적 판정에 -1 페널티를 받습니다.",
+    "bonus": [
+      {
+        "id": "punch",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "stab",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "STR",
+          "DEX",
+          "CON"
+        ],
+        "count": 1,
+        "value": 1,
+        "cap_override": {
+          "max": 3
+        }
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "INT",
+          "WIS",
+          "CHA"
+        ],
+        "count": 2,
+        "value": -1,
+        "cap_override": {
+          "min": -2
+        }
+      }
+    ],
+    "derived_bonus": {
+      "attack": 1
+    },
+    "sheet_notes": [
+      "Take -1 on social checks unrelated to intimidation."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "greater1",
+    "name": "대형 나락종",
+    "englishName": "Greater 那落種",
+    "category": "다른 크리쳐",
+    "desc": "증오의 약한 영향이든, 꺾을 수 없는 의지의 힘이든, 대부분의 나락과 다르게 당신은 인간 사회에서 활동이 가능합니다. 당신의 외형이 대부분보다 인간에 가깝지 않은 이상, 당신은 인간의 땅에서 힘든 시간을 보낼 것입니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "백병과 격투를 보너스 기술로 얻습니다. 당신의 근력과 건강 수정치는 최대 +2까지 +1 늘어납니다. 당신의 민첩과 매력 수정치는 최소 -2까지 -1 줄어듭니다.",
+    "bonus": [
+      {
+        "id": "punch",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "stab",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "STR",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": -1
+      },
+      {
+        "id": "CHA",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "lesser1",
+    "name": "소형 나락종",
+    "englishName": "Lesser 那落種",
+    "category": "다른 크리쳐",
+    "desc": "대형 나락의 기원처럼 당신은 당신의 종족에 있어서 특별히 인간에 가깝거나 인도적인 예시이며, 천성을 잘 숨길 수 있다면 인간 사회에서 적절하게 잘 활동할 수 있습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "백병과 잠행을 보너스 기술로 얻습니다. 당신의 민첩 수정치는 최대 +2까지 +1 늘어납니다. 당신의 건강 수정치는 최소 -2까지 -1 줄어듭니다.",
+    "bonus": [
+      {
+        "id": "sneak",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "stab",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "focus_0511",
+    "name": "노역종",
+    "englishName": "奴役種",
+    "category": "다른 크리쳐",
+    "desc": "당신은 추상적인 개념, 결과에 대한 예측, 결과의 가정등을 이해할 수 있는 비범하게 똑똑한 노역종입니다. 당신은 또한 당신의 종족에 비해서 잔혹함에 더 유능합니다. ",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "운동을 보너스 기술로 얻습니다. 당신의 근력과 건강 수정치는 최대 +2까지 +1 늘어납니다. 당신의 지능과 매력 수정치는 최소 -2까지 -1 줄어듭니다. 당신은 모든 정신 내성에 있어서 -2 페널티를 받습니다.",
+    "bonus": [
+      {
+        "id": "exert",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "STR",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "INT",
+        "action": "attribute_modifier",
+        "value": -1
+      },
+      {
+        "id": "CHA",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "derived_bonus": {
+      "saves": { "mental": -2 }
+    },
+    "requirements": []
+  },
+  {
+    "id": "halfmen1",
+    "name": "반인종",
+    "englishName": "半人種; Halfmen",
+    "category": "다른 크리쳐",
+    "desc": "당신은 당신의 무리로부터 떨어져 나왔습니다. 당신의 지능은 그때 부터 인간 정도의 수준으로 올라왔고, 이유가 뭐든 그들한테 다시 돌아가고 싶지 않습니다. ",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "생존을 보너스 기술로 얻습니다. 당신의 건강 수정치는 최대 +2까지 +1 늘어납니다. 당신은 자연적인 극한의 추위와 더위에 면역이며, 대부분의 되새김질을 하는 동물처럼 어떤 식물도 소화할 수 있습니다. 무리로부터의 소외는 모든 정신 내성에 -2 페널티를 줍니다.",
+    "bonus": [
+      {
+        "id": "survive",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "derived_bonus": {
+      "saves": { "mental": -2 }
+    },
+    "requirements": []
+  },
+  {
+    "id": "focus_0531",
+    "name": "예속종 ",
+    "englishName": "隷屬種",
+    "category": "다른 크리쳐",
+    "desc": "당신은 강제된 행복을 저항하고 다른 자기에게 진실할 수 있는 감각과 만족을 얻는 법을 스스로 배웠습니다. 명령에 따르는 것에 대해 여전히 많은 감정이 몰려오지만, 당신의 선택을 지배하게 내버려 두지는 않습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "설득과 공연을 보너스 기술로 얻습니다. 당신의 매력 수정치는 최대 +2까지 +1 늘어납니다. 당신의 천성적인 성질은 정신적 영향에 취약하게 해서 모든 정신 내성에 -2 페널티를 받습니다.",
+    "bonus": [
+      {
+        "id": "convince",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "perform",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "CHA",
+        "action": "attribute_modifier",
+        "value": 1
+      }
+    ],
+    "derived_bonus": {
+      "saves": { "mental": -2 }
+    },
+    "requirements": []
+  },
+  {
+    "id": "dwarves1",
+    "name": "드워프",
+    "englishName": "Dwarves",
+    "category": "다른 세계",
+    "desc": "이 기원은 고전적인 드워프입니다; 짧고, 강건하고, 공예와 술에 매진되어 있습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "제작을 보너스 기술로 얻습니다. 당신의 건강 수정치에 +1을 얻고, 당신의 민첩 또는 매력 수정치는 -1을 받습니다. 당신은 어둠속에서 60 ft까지 볼 수 있습니다.",
+    "bonus": [
+      {
+        "id": "craft",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "DEX",
+          "CHA"
+        ],
+        "value": -1,
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "elves_civilized1",
+    "name": "엘프, 문명",
+    "englishName": "Elves, Civilized",
+    "category": "다른 세계",
+    "desc": "특정 세계에서는 선호되는 이 엘프 형태는 도시에 살고, 마법을 좋아하고, 복잡정교한 엘프다움의 해석입니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "지식과 마법을 보너스 기술로 얻습니다. 당신의 민첩 혹은 지능 수정치는 +1 늘어나고 건강 수정치는 -1 줄어듭니다. 당신은 완전한 어둠이 아니라면 잘 볼 수 있습니다.",
+    "bonus": [
+      {
+        "id": "know",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "magic",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "DEX",
+          "INT"
+        ],
+        "value": 1,
+        "count": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "elves_half_elves1",
+    "name": "엘프, 하프 엘프",
+    "englishName": "Elves, Half-Elves",
+    "category": "다른 세계",
+    "desc": "엘프와 인간이 있다면, 하프 엘프는 캠페인 세팅에 피할 수 없이 추가됩니다. 이 포커스는 대부분의 하프 엘프 해석인 “두 개의 세계의 중간에서”의 느낌을 줍니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "연결과 원하는 기술 하나를 보너스 기술로 얻습니다. 당신은 완벽한 어둠이 아닌 이상 조그마한 빛이 있으면 30 ft 범위를 볼 수 있습니다. 당신이 엘프 쪽 부모에 더 닮았다고 한다면 민첩 수정치에 +1을 받을 수 있지만, 건강 수정치에 -1을 받습니다.",
+    "bonus": [
+      {
+        "id": "connect",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "action": "choice_skill",
+        "count": 1
+      }
+    ],
+    "packages": {
+      "required": false,
+      "options": [
+        {
+          "id": "elven_parent",
+          "name": "Resemble the elven parent",
+          "description": "Optional linked adjustment: DEX modifier +1 and CON modifier -1.",
+          "bonus": [
+            {
+              "action": "attribute_modifier",
+              "id": "DEX",
+              "value": 1
+            },
+            {
+              "action": "attribute_modifier",
+              "id": "CON",
+              "value": -1
+            }
+          ]
+        }
+      ]
+    },
+    "sheet_notes": [
+      "See up to 30 feet in dim light, but not in complete darkness."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "elves_forest1",
+    "name": "엘프, 숲",
+    "englishName": "Elves, Forest",
+    "category": "다른 세계",
+    "desc": "이 엘프의 해석은 자연을 숭배하고, 궁술에 능하고, 재빠른 엘프들입니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "사격과 생존을 보너스 기술로 얻습니다. 당신의 민첩 수정치는 +1 늘고, 당신의 건강 수정치는 -1 줄어듭니다. 당신은 완전한 어둠보다 빛이 있으면 명확하게 볼 수 있습니다.",
+    "bonus": [
+      {
+        "id": "shoot",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "survive",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "halflings1",
+    "name": "하플링 ",
+    "englishName": "Halflings",
+    "category": "다른 세계",
+    "desc": "이 기원은 전원적이고, 작지만, 대단히 터프한 아인종 혈통입니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "잠행을 보너스 기술로 얻습니다. 당신의 건강 혹은 민첩 수정치는 +1 늘어납니다. 당신은 양손 근접 무기, 혹은 커다란 활을 효과적으로 쓰기에 너무 작습니다.",
+    "bonus": [
+      {
+        "id": "sneak",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "DEX",
+          "CON"
+        ],
+        "value": 1,
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "gnomes1",
+    "name": "노움 ",
+    "englishName": "Gnomes",
+    "category": "다른 세계",
+    "desc": "노움의 해석은 매드 사이언티스트로부터 숲의 요정까지 상당히 차이가 있습니다. 이 기원은 지하에 사는 숲 거주자를 뜻합니다. 발명가의 경우에는, 잠행 기술을 제작 기술로 바꾸십시오.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "숲 거주자는 잠행을, 발명가는 제작을 보너스 기술로 얻습니다. 둘 중 하나를 선택합니다. 당신의 민첩 수정치는 +1 늘어나며, 근력 혹은 지혜 수정치가 -1 줄어듭니다. 당신은 어둠속에서 60 ft까지 명확하게 볼 수 있습니다.",
+    "bonus": [
+      {
+        "ids": ["sneak", "craft"],
+        "action": "choice_skill",
+        "count": 1
+      },
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "STR",
+          "WIS"
+        ],
+        "value": -1,
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "goblins_tinker1",
+    "name": "고블린, 발명가 ",
+    "englishName": "Goblins, Tinker",
+    "category": "다른 세계",
+    "desc": "이 종류의 고블린은 상습적인 건설가인 고블린들이 있는 캠페인 배경을 위해 있습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "제작을 보너스 기술로 얻습니다. 당신의 민첩 혹은 지능 수정치는 +1 늘어나고, 지혜 수정치가 -1 감소합니다. 당신은 양손 근접 무기, 혹은 커다란 활을 효과적으로 쓸 수 없습니다. 당신은 어둠 속에서 60 ft 까지 잘 볼 수 있습니다.",
+    "bonus": [
+      {
+        "id": "craft",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "DEX",
+          "INT"
+        ],
+        "value": 1,
+        "count": 1
+      },
+      {
+        "id": "WIS",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "goblins_savage1",
+    "name": "고블린, 야만",
+    "englishName": "Goblins, Savage",
+    "category": "다른 세계",
+    "desc": "사납고, 부족의 생활을 하는 늪지대, 숲, 황무지의 약탈꾼이며, 이 느낌의 고블린은 다른 작고 사나운 인간형으로 쓸 수 있습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "잠행과 생존을 보너스 기술로 얻습니다. 당신의 민첩 수정치는 +1 늘어나고, 지능 수정치는 -1 줄어듭니다. 당신은 양손 근접 무기, 혹은 커다란 활을 효과적으로 쓸 수 없습니다. 당신은 어둠 속에서 60 ft까지 잘 볼 수 있습니다.",
+    "bonus": [
+      {
+        "id": "sneak",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "survive",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "DEX",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "INT",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "lizardmen1",
+    "name": "리자드맨 ",
+    "englishName": "Lizardmen",
+    "category": "다른 세계",
+    "desc": "용인들로 치장되거나, 늪지대에 사는 악어류의 파충류 인간이거나, 이 포커스는 부족한 부분을 채워 넣을 수 있습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "백병과 생존을 보너스 기술로 배웁니다. 당신의 근력 혹은 매력 수정치는 +1 늘어나고, 당신의 민첩 혹은 매력 수정치는 -1 줄어듭니다. 당신의 비무장 AC는 13입니다. 착용 갑옷의 AC가 13보다 높으면 그 갑옷 AC에 +1 보너스를 받습니다. 이후 방패와 최종 민첩 수정치를 적용합니다.",
+    "bonus": [
+      {
+        "id": "stab",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "id": "survive",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "STR",
+          "CHA"
+        ],
+        "value": 1,
+        "count": 1
+      },
+      {
+        "action": "choice_attribute_modifier",
+        "ids": [
+          "DEX",
+          "CHA"
+        ],
+        "value": -1,
+        "count": 1
+      }
+    ],
+    "base_ac": { "base": 13, "armor_rule": "higher", "better_armor_bonus": 1 },
+    "requirements": []
+  },
+  {
+    "id": "lizardmen2",
+    "name": "리자드맨 ",
+    "englishName": "Lizardmen",
+    "category": "다른 세계",
+    "desc": "",
+    "src": "wwn",
+    "type": "origin",
+    "level": 2,
+    "effect": "당신은 뭔가의 용-인간이며, 화염, 냉기, 혹은 다른 독한 물질의 숨결을 사용할 수 있습니다. 숨결은 장면당 한 번 사용할 수 있으며, 15 ft 길이와 15 ft너비의 원뿔형으로 효과를 일으킵니다. 범위 안의 모든 것들은 관련한 내성굴림을 굴리거나 2d6 + 당신의 레벨 만큼 피해를 입습니다. 당신은 당신이 뱉는 물질에 대해 면역을 갖습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "lizardmen1"
+      }
+    ]
+  },
+  {
+    "id": "orcs1",
+    "name": "오크 ",
+    "englishName": "Orcs",
+    "category": "다른 세계",
+    "desc": "크고, 강하고, 야만적이고, 비교적 멍청합니다; 이것은 판타지 캠페인에서 일반적인 오크입니다. 이러한 PC를 플레이하고 싶은 플레이어는 이 포커스를 사용하면 됩니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "생존을 보너스 기술로 얻고, 백병 또는 격투 중 하나를 추가 보너스 기술로 선택합니다. 당신의 근력과 건강 수정치는 +1 늘어나지만 당신의 지능 수정치는 -1 줄어듭니다. 당신은 어둠 속에서 60 ft까지 잘 볼 수 있습니다.",
+    "bonus": [
+      {
+        "id": "survive",
+        "action": "fixed_skill",
+        "count": 1
+      },
+      {
+        "action": "choice_skill",
+        "ids": [
+          "stab",
+          "punch"
+        ],
+        "count": 1
+      },
+      {
+        "id": "STR",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "CON",
+        "action": "attribute_modifier",
+        "value": 1
+      },
+      {
+        "id": "INT",
+        "action": "attribute_modifier",
+        "value": -1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "dwarves_21",
+    "name": "드워프",
+    "englishName": "Dwarves",
+    "category": "다른 아인",
+    "desc": "당신의 PC는 드워프입니다, 외지인의 고대 지배때 만들어진 무기 종족 아인입니다. 당신은 아마도 어떤 드워프 조직체의 반항자 이겠지만, 어쩌면 그들의 이상에 대한 충성스러운 신자로 고향으로 돌아와서 동족을 도와주기 이전 세계를 좀 더 보고 싶어하는 사람 일 수 있습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "제작을 보너스 기술로 얻습니다. 당신은 20 ft까지 단단한 물체를 마치 눈으로 확인할 수 있는 것과 같은 드워프의 공간감각이 있습니다. 당신은 마법에 대해 자연적으로 저항해 모든 적대적인 마법 효과에 대한 내성굴림에 +2 보너스를 받습니다. 당신은 절반의 음식, 물, 공기가 필요하며, 캐릭터 레벨당 최대 HP가 1 증가합니다.",
+    "bonus": [
+      {
+        "id": "craft",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "derived_bonus": { "hit_points_per_level": 1 },
+    "conditional_saves": [
+      {
+        "condition": "적대적인 마법 효과에 대항할 때",
+        "saves": { "physical": 2, "evasion": 2, "mental": 2, "luck": 2 }
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "dwarves_22",
+    "name": "드워프",
+    "englishName": "Dwarves",
+    "category": "다른 아인",
+    "desc": "",
+    "src": "wwn",
+    "type": "origin",
+    "level": 2,
+    "effect": "당신은 드워프의 성질에 대해 깊은 연결을 갖고 있어서, 하루에 한 번 즉시 행동으로 당신에게 영향을 끼칠 수 있는 당신이 원하지 않는 마법적인 효과를 무효화시킬 수 있습니다. 당신이 1점의 기관계 부담를 받는다면, 100 ft내에서 보거나 느낄 수 있는 마법적인 효과를 무효화 할 수 있습니다. 이 능력은 주문 시전, 비교적 작게 부여된 마법, 그리고 크리쳐가 생성한 마법에만 적용할 수 있습니다; 이 능력은 위업, 마법 아이템, 강력한 마법 의식을 무효화 할 수 없습니다. 2 HD 이상의 NPC 드워프들도 이 능력이 있습니다. ",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "dwarves_21"
+      }
+    ]
+  },
+  {
+    "id": "elves1",
+    "name": "엘프",
+    "englishName": "Elves",
+    "category": "다른 아인",
+    "desc": "당신은 부활한 초월인으로, 전생의 기억의 조각들이 기억속에 남아있습니다. 이러한 조각을 개발하고 융화시키는 것에 의해 집중하면 할 수록 그것을 더 잘 떠올릴 수 있습니다. 엘프들은 정신 혹은 신체적 흠집이 없습니다. 당신이 9 미만의 능력치 점수가 있다면, 당신은 다른 능력치로부터 점수를 옮겨서 9까지 올릴 수 있습니다. 당신은 어떤 능력치를 올릴지 정할 수 있습니다. 물론, 게임 시작 후 얻게된 질병이나 폐해는 이 능력치 제한 밑으로 떨어뜨릴 수 있습니다. 당신의 PC가 사망한다면, 결국 부활할 것이지만 캠페인에서부터 먼 곳일 확률이 높습니다. 이러한 부활체는 다시 만나기가 힘들 것이며, 가장 최근의 생에 대해 기억을 못할 수 있습니다.",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "과거의 기억을 돌아보기 때문에 보너스 기술로 원하는 하나의 기술을 얻습니다. 당신은 하루에 한 번 실패한 기술 판정을 다시 굴릴 수 있습니다. 당신은 굉장히 날카로운 감각을 갖고 있으며, 감지를 보너스 기술로 얻고 완전한 어둠이 아닌 이상 명확하게 볼 수 있습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1
+      },
+      {
+        "id": "notice",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "score_effect": { "kind": "redistribute", "target": 9 },
+    "sheet_notes": [
+      "하루에 한 번 실패한 기술 판정을 다시 굴릴 수 있습니다. 재굴림 결과의 처리는 플레이 중 판단합니다.",
+      "완전한 어둠이 아닌 이상 명확하게 볼 수 있습니다.",
+      "사망 후 결국 환생하지만 캠페인에서 먼 곳일 수 있으며, 최근 생의 기억을 잃을 수 있습니다."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "elves2",
+    "name": "엘프",
+    "englishName": "Elves",
+    "category": "다른 아인",
+    "desc": "",
+    "src": "wwn",
+    "type": "origin",
+    "level": 2,
+    "effect": "정신 능력치를 하나 선택합니다; 과거의 기억에서 끌어와 해당 능력치의 수정치를 최대 +3까지 +1 늘립니다. 원하는 하나의 기술을 보너스 기술로 얻습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "elves1"
+      }
+    ]
+  },
+    {
+    "id": "undead1",
+    "name": "언데드",
+    "englishName": "Undead",
+    "category": "다른 아인",
+    "desc": "당신은 자각이 있는 언데드로, 누가 자세히 조사하지 않는 이상 일반 사람처럼 생활할 수 있습니다. 아니면, 일반 사람을 완벽하게 모사할 수 있지만 약점 하나를 가지고 있을 수 있습니다. (Averse, Red Hunger, Sunscorch, Impure)",
+    "src": "wwn",
+    "type": "origin",
+    "level": 1,
+    "effect": "",
+    "bonus": [],
+    "requirements": []
+  },
+  {
+    "id": "undead2",
+    "name": "언데드",
+    "englishName": "Undead",
+    "category": "다른 아인",
+    "desc": "",
+    "src": "wwn",
+    "type": "origin",
+    "level": 2,
+    "effect": "",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "undead1"
+      }
+    ]
+  },
+  {
+    "id": "alert1",
+    "sheet_notes": ["개인 우선권은 두 번 굴려 높은 결과를 사용합니다. 일행 우선권은 +1 (중첩 불가)."],
+    "name": "경계심",
+    "englishName": "Alert",
+    "category": "기본",
+    "desc": "여러분의 캐릭터는 주변 환경에 민감해, 의식을 피해 기습하는 것이 불가능에 가깝습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "감지를 보너스 기술로 얻습니다. 당신은 기습당하지 않으며, 처형 공격의 대상이 되지 않습니다. 우선권을 굴릴 때, 일행을 모두 합해 굴리는 경우엔 일행의 우선권 굴림에 +1 보너스를 줍니다. 이 보너스는 중첩되지 않습니다. 우선권을 따로 굴리는 경우에는 우선권을 두 번 굴려 더 높은 결과를 택합니다.",
+    "bonus": [
+      {
+        "id": "notice",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "alert2",
+    "name": "경계심",
+    "englishName": "Alert",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "다른 전투원도 경계심이 있지 않은 이상, 당신은 전투에서 무조건 첫 번째로 행동합니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "alert1"
+      }
+    ]
+  },
+  {
+    "id": "armored_magic1",
+    "name": "장갑마도",
+    "englishName": "Armored Magic",
+    "category": "기본",
+    "desc": "갑옷을 입은 상태에서 주문 시전이 제한되는 마법사 캐릭터만이 선택할 수 있는 포커스로, 이 포커스는 일반적인 갑옷과 같이 방해되는 물질을 통해서도 마력을 쏟을 수 있도록 하는 특별한 훈련을 받은 것을 반영합니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "spell", "combat"
+    ],
+    "effect": "당신은 총 하중 2 이하의 갑옷을 입었을 때 주문을 외울 수 있습니다. 손동작이 가능하도록 한 손이 비어있다는 전제 하에, 방패를 든 채로도 주문을 시전할 수 있습니다.",
+    "bonus": [],
+    "requirements": []
+  },
+  {
+    "id": "armored_magic2",
+    "name": "장갑마도",
+    "englishName": "Armored Magic",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "spell", "combat"
+    ],
+    "effect": "당신은 모든 종류의 갑옷을 입은 채 주문을 시전할 수 있습니다. 또한, 양손이 묶이지 않았다면 무언가를 든 채로도 주문을 외울 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "armored_magic1"
+      }
+    ]
+  },
+  {
+    "id": "armsmaster1",
+    "name": "무사",
+    "englishName": "Armsmaster",
+    "category": "기본",
+    "desc": "당신은 근접 공격과 투척 공격에 비범한 소질을 가졌습니다. 이 포커스의 효과는 비무장 공격과 투척 무기가 아닌 투사체에 적용되지 않습니다. 또한, 이 포커스의 효과는 백중(Deadeye) 포커스나, 피해와 충격 피해에 기술 레벨을 더하는 여러 포커스와 중첩되지 않습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "백병을 보너스 기술로 얻습니다. 즉시 행동으로 보관 중인 근접/투척 무기를 준비 상태로 바로 꺼낼 수 있습니다. 근접/투척 무기의 피해 굴림 또는 충격 피해에 백병 기술 레벨을 더할 수 있습니다.",
+    "bonus": [
+      {
+        "id": "stab",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "armsmaster2",
+    "name": "무사",
+    "englishName": "Armsmaster",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "당신이 가하는 근접 공격의 충격 피해를 상대의 AC가 10인 것처럼 계산해 가합니다. 모든 근접/투척 공격의 명중 판정에 +1 보너스를 받습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "armsmaster1"
+      }
+    ]
+  },
+  {
+    "id": "artisan1",
+    "name": "장인",
+    "englishName": "Artisan",
+    "category": "기본",
+    "desc": "당신은 제작자로서 뛰어난 재능을 가졌으며, 배경과 상관없이 현장에서 즉흥적으로 기술을 흉내낼 수 있습니다. 당신은 전문가 클래스가 아니더라도 장비를 개조할 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "제작을 보너스 기술로 얻습니다. 장비 개조를 제작하고 관리할 때에 한해, 제작 기술을 1레벨 더 높은 것으로 취급합니다. 당신이 제작하는 개조는 최소 한 개까지 고대 발굴품을 한 개 덜 필요로 합니다. 당신의 제작 기술은 일반적인 제조업의 전반으로 확장돼서 페널티 없이 다양한 물품들을 만들 수 있습니다.",
+    "bonus": [
+      {
+        "id": "craft",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "artisan2",
+    "name": "장인",
+    "englishName": "Artisan",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "effect": "장비에 추가하는 첫 번째 개조는 관리가 필요하지 않으며, 제작의 금전적인 비용은 절반이 됩니다. 이 이점은 당신이 제작한 걸작을 개조할 때의 이점과 중첩됩니다. 당신은 걸작을 만들 때 항상 성공하며, 한 달에 한 번 제작한 개조의 발굴품 요구치를 1씩 줄여, 최소 0개까지 줄일 수 있습니다.",
+    "bonus": [],
+    "tags": [
+      "non-combat"
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "artisan1"
+      }
+    ]
+  },
+  {
+    "id": "assassin1",
+    "name": "암살자",
+    "englishName": "Assassin",
+    "category": "기본",
+    "desc": "당신은 순간적인 살인에 능숙하며, 처형 공격을 수행하는 데에 일부 이득을 얻습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "잠행을 보너스 기술로 얻습니다. 알몸 수색보다 덜한 강도의 수색을 당했을 때, 단검만큼 작은 물건을 숨길 수 있으며, 이렇게 숨긴 물건은 턴 행동으로 꺼낼 수 있습니다. 기습 라운드에 영거리에서 가하는 근접/투척 공격은 절대 빗나가지 않습니다.",
+    "bonus": [
+      {
+        "id": "sneak",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "assassin2",
+    "name": "암살자",
+    "englishName": "Assassin",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "처형 공격을 수행하는 라운드에 이동 행동을 취해, 공격 이전에 대상에게 달려들 수 있습니다. 이 이동 행동은 처형 공격을 사이에 두고 나눌 수 있으며, 너무나 급작스럽게 이루어지기에 표적이나 경호원이 반응하기 전에 접근할 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "assassin1"
+      }
+    ]
+  },
+  {
+    "id": "authority1",
+    "name": "권위",
+    "englishName": "Authority",
+    "category": "기본",
+    "desc": "당신은 다른 이들이 본능적으로 명령을 따르게 하고 뜻을 함께 하게 만드는 묘한 카리스마를 지니고 있습니다. 1레벨의 효과가 자연스러운 매력이라면, 2레벨의 권위는 약한 수준의 정신 감응, 또는 혈통으로 내려오는 마법적 매력에 가깝습니다. 여기에서 추종자로 일컫는 대상은 캐릭터를 자발적으로 돕는 NPC로, PC는 추종자가 될 수 없습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "지휘를 보너스 기술로 얻습니다. 하루에 한 번, 공개적으로 적대적이지 않은 NPC에게 요구할 수 있습니다. NPC의 사기 점수를 난이도로 삼아 매력/지휘 판정을 굴립니다. 성공하면, 대상은 자신에게 해롭거나 스스로 절대 하지 않을 일이 아닌 이상 캐릭터의 요구를 따릅니다.",
+    "bonus": [
+      {
+        "id": "lead",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "authority2",
+    "name": "권위",
+    "englishName": "Authority",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신을 따르는 이들이 확신을 불태웁니다. 직접 따르는 모든 NPC가 사기 점수와 명중 판정에 당신의 지휘 기술 레벨만큼의 보너스를 얻고, 기술 판정에 +1의 보너스를 얻습니다. 추종자들은 심한 압박 없이는 당신의 뜻에 반하지 않습니다.",
+    "bonus": [
+      {
+        "id": "lead",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "authority1"
+      }
+    ]
+  },
+  {
+    "id": "close_combatant1",
+    "name": "접전사",
+    "englishName": "Close Combatant",
+    "category": "기본",
+    "desc": "당신은 지근거리 전투와 칼이 뽑힌 순간에서의 절박한 투쟁을 너무 많이 겪었습니다. 근접 전투에서 부상을 피하는 데에 능숙하며, 2레벨부터는 밀치고 밀쳐지는 난전을 통과하더라도 눈먼 칼날을 피할 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "전투 기술 중 하나를 보너스 기술로 얻습니다. 단검 크기의 투척 무기를 근접 거리에서도 페널티 없이 던질 수 있습니다. 당신은 갑옷을 입지 않은 상태에서도 근접 공격의 충격 피해를 무시할 수 있지만, 이는 능동적인 회피를 필요로 하기에 이를 사용하면 주문 시전은 방해됩니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "filter": {
+          "tags": [
+            "combat"
+          ]
+        }
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "close_combatant2",
+    "name": "접전사",
+    "englishName": "Close Combatant",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "당신이 가하는 모든 근접 공격의 충격 피해는 AC10의 적에게 가하는 것과 같이 가해집니다. 퇴각 행동은 턴 행동으로 취급되어 자유롭게 사용할 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "close_combatant1"
+      }
+    ]
+  },
+  {
+    "id": "connected1",
+    "name": "연줄",
+    "englishName": "Connected",
+    "category": "기본",
+    "desc": "당신은 친구를 만들고 사람들 간의 관계를 만들어내는 일에 특별한 재능을 가졌습니다. 어디를 가든 유용하게 쓰일 사람을 찾아낼 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "연결을 보너스 기술로 얻습니다. 완전하게 적대적이지 않은 장소에서 일주일 이상을 보냈다면 약간 불법적인 일까지 수행할 수 있는 인력망을 만들 수 있습니다. 게임 세션당 한 번 이를 통해 부탁할 수 있으며, GM은 이 부탁이 어느 정도까지 들어질지 정합니다.",
+    "bonus": [
+      {
+        "id": "connect",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "connected2",
+    "name": "연줄",
+    "englishName": "Connected",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "세션당 한 번, 완전히 불가능한 상황이 아니라면 소박한 요구를 들어줄 수 있는 누군가를 만날 수 있습니다. 당신은 언제, 어디에서 그를 만나는지를 정할 수 있지만, 그가 누구인지, 무엇을 할 수 있는지를 정하는 것은 GM입니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "connected1"
+      }
+    ]
+  },
+  {
+    "id": "cultured1",
+    "name": "교양",
+    "englishName": "Cultured",
+    "category": "기본",
+    "desc": "당신은 폭넓은 여행, 주의 깊은 관찰과 연구를 통해 지역의 문화권에 대한 깊은 경험을 얻게 되어, 문화권의 전통, 법, 그리고 언어를 다루는 법을 습득했습니다. 당신은 행동이나 말을 통한 어떤 요구의 합리성으로 다른 이들에게 감명을 남기는 법을 배웠습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "연결을 보너스 기술로 얻습니다. 당신은 출신 지역의 모든 언어를 원어민 수준으로 말할 수 있으며, 희귀하거나 비밀에 싸인 문화권에 대해서도 기본적인 정보를 가지고 있습니다. 당신은 원어민과 일주일 연습하는 것으로 새로운 언어를 배울 수 있습니다. 하루에 한 번, 당신의 교양 있는 태도는 적대적이지 않은 NPC에게 큰 비용이나 위험이 없는 가벼운 요구를 할 수 있게 만듭니다.",
+    "bonus": [
+      {
+        "id": "connect",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "cultured2",
+    "name": "교양",
+    "englishName": "Cultured",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "게임 세션당 한 번, 문화적 지식을 총동원해 실패한 사회적 기술 판정을 다시 굴릴 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "cultured1"
+      }
+    ]
+  },
+  {
+    "id": "die_hard1",
+    "name": "끝까지 간다",
+    "englishName": "Die Hard",
+    "category": "기본",
+    "desc": "당신은 놀라울 정도로 죽이기 어려우며, 조금이라도 덜 확고한 영웅을 으스러뜨릴 부상과 압박에도 생존합니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "레벨당 +2의 추가 HP를 얻습니다. 이 포커스를 1레벨 이후에 얻었다면, 보너스는 이전 레벨에도 소급 적용됩니다. 치명상을 입어도 불타거나, 절단되거나, 찢기지 않았다면 자동으로 안정화합니다.",
+    "bonus": [],
+    "derived_bonus": { "hit_points_per_level": 2 },
+    "sheet_notes": ["치명상을 입어도 불타거나 절단되거나 찢기지 않았다면 자동으로 안정화합니다."],
+    "requirements": []
+  },
+  {
+    "id": "die_hard2",
+    "name": "끝까지 간다",
+    "englishName": "Die Hard",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "하루에 한 번, 부상으로 인해 0HP에 이르렀을 때 1HP만 남은 채로 살아남게 됩니다. 이 능력은 광범위한 즉사 수준의 피해로부터는 구해주지 않습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "die_hard1"
+      }
+    ]
+  },
+  {
+    "id": "deadeye1",
+    "name": "백중",
+    "englishName": "Deadeye",
+    "category": "기본",
+    "desc": "당신은 원거리 무기에 특별한 재능을 지녔습니다. 이 포커스는 보통 활에 적용되지만, 투척 무기, 혹은 사격 기술을 사용하는 다른 원거리 무기에도 적용됩니다. 이 포커스의 효과는 무사(Armsmaster) 포커스의 효과와 중첩되지 않습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "사격을 보너스 기술로 얻습니다. 보관 중인 원거리 무기를 즉시 행동으로 준비할 수 있으며, 활과 같은 양손 원거리 무기를 근접 거리에서도 -4 페널티를 받고 사용할 수 있습니다. 원거리 무기의 피해 굴림에 사격 기술 레벨을 더할 수 있습니다.",
+    "bonus": [
+      {
+        "id": "shoot",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "deadeye2",
+    "name": "백중",
+    "englishName": "Deadeye",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "쇠뇌와 같이 장전에 한 라운드 이하를 소요하는 느린 장전 무기를 턴 행동으로 장전할 수 있습니다. 어떤 크기의 원거리 무기라도 근접 거리에서 페널티 없이 사용할 수 있습니다. 장면당 한 번, 사격 기술 판정에서 2가 나왔거나 물리적으로 명중이 불가능하지 않은 한, 움직이지 않고 살아있지 않은 표적을 턴 행동을 사용해 맞출 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "deadeye1"
+      }
+    ]
+  },
+  {
+    "id": "dealmaker1",
+    "name": "협상가",
+    "englishName": "Dealmaker",
+    "category": "기본",
+    "desc": "당신은 불법이든 아니든 거래인을 발견하고 좋은 거래를 하는 데에 천재적인 감각을 가졌습니다. 가끔은 일반적으로 캐릭터와 거래할 생각 없는 자도 캐릭터가 그들이 원하는 것을 갖고 있을 때 설득을 통해 협상하게 만들 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "거래를 보너스 기술로 얻습니다. 반 시간의 시간을 들여 집단 안에서 위법/적법한 상품의 구매자/판매자를 찾아낼 수 있습니다. 왕을 죽일 암살자, 특정한 고대 유물 등, 얻을 확률이 낮은 상품의 경우라도 GM이 허용했다면 추가적인 모험으로 구할 수 있습니다.",
+    "bonus": [
+      {
+        "id": "trade",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "dealmaker2",
+    "name": "협상가",
+    "englishName": "Dealmaker",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "세션당 한 번, 여러분이나 동료를 바로 죽이려고 하지 않는 지성체를 대상으로 해 이들이 이해할 수 있는 요청을 할 수 있습니다. 이 요청이 가능성의 범주 안에 있으면, 이들은 여러분이 제공할 수 있을 것 같은 가격이나 대가를 요구할 것입니다. 물론, 요청이 심각하다면 이에 상응하는 대가를 치르게 될 것입니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "dealmaker1"
+      }
+    ]
+  },
+  {
+    "id": "developed_attribute1",
+    "name": "능력치 개발",
+    "englishName": "Developed Attribute",
+    "category": "기본",
+    "desc": "당신은 특정 능력에 대해 엄청난 성장을 이루었습니다. 이는 고대 혈통, 선천적인 천재성, 또는 꺾이지 않는 노력과 고집의 결과일 수도 있습니다. 이 포커스는 마법사나 부분 마법사 클래스가 선택할 수 없습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "능력치 하나를 선택해 수정치를 +1 올려 최대 +3까지 성장시킵니다. 실제 점수는 바뀌지 않으며, 추후 성장으로 인해 능력치 자체가 올라서 자연적으로 바뀌었을 경우에도 소급 적용됩니다. 여러분은 이 포커스를 능력치마다 선택할 수 있습니다.",
+    "bonus": [
+      {
+        "action": "choice_attribute_modifier",
+        "count": 1,
+        "value": 1,
+        "cap_override": {
+          "max": 3
+        }
+      }
+    ],
+    "repeatable": true,
+    "requirements": [
+      { "condition": "not_class", "id": "mage" },
+      { "condition": "not_focus", "id": "penal1" }
+    ]
+  },
+  {
+    "id": "diplomatic_grace1",
+    "name": "기품",
+    "englishName": "Diplomatic Grace",
+    "category": "기본",
+    "desc": "당신이 가진 협상력은 비현실적일 정도로 뛰어납니다. 어떤 사람들은 초능력이라 생각할 정도입니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "설득을 보너스 기술로 얻습니다. 출신 지역에서 자주 사용되는 언어를 모두 쓸 수 있으며, 새로운 언어를 일주일 만에 구사 가능한 수준, 한 달 안에 유창한 수준까지 배울 수 있습니다. 협상 또는 외교와 관련된 기술 판정에서 주사위 값이 1로 나오면 해당 주사위를 다시 굴립니다.",
+    "bonus": [
+      {
+        "id": "convince",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "diplomatic_grace2",
+    "name": "기품",
+    "englishName": "Diplomatic Grace",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "하루에 한 번, 암묵적인 흥정을 벌입니다; 대상은 자신의 목숨이나 그만큼 소중한 대상의 목숨이 걸려있지 않는 거래인 이상, 정신 내성 굴림을 해 실패했을 때 거래에 동의합니다. 대부분의 NPC는 거절하려 하지도 않을 것입니다. 흥정 내용은 열린 해석의 여지가 없어야 하며, 시간적 제한이 존재해야만 합니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "diplomatic_grace1"
+      }
+    ]
+  },
+  {
+    "id": "gifted_chirurgeon1",
+    "name": "신의",
+    "englishName": "Gifted Chirurgeon",
+    "category": "기본",
+    "desc": "당신은 치명상을 입어 죽어가는 동료를 구하고, 캐릭터의 치료를 받는 자의 자연 회복을 촉진시키는 재능이 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "치료를 보너스 기술로 얻습니다. 치명상을 입은 아군을 라운드당 한 번, 턴 행동을 사용해 안정화를 시도할 수 있습니다. 치료 기술 판정을 할 때 3d6을 굴리고 가장 낮은 주사위를 뺍니다. 전투에서 응급처치를 하면 두 배 많은 HP를 회복합니다.",
+    "bonus": [
+      {
+        "id": "heal",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "gifted_chirurgeon2",
+    "name": "신의",
+    "englishName": "Gifted Chirurgeon",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "치료 기술이 마법적인 효과를 띕니다. 주요 행동을 사용해, 인접한 아군의 HP를 1d6+치료 기술 레벨만큼 회복할 수 있습니다. 치명상을 입은 아군은 이를 통해 쇠약 상태 없이 회복할 수 있습니다. 이러한 회복은 대상의 기관계 부담를 1점 늘리며, 기관계 부담이 최대치에 도달한 대상에게는 사용될 수 없습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "gifted_chirurgeon1"
+      }
+    ]
+  },
+  {
+    "id": "henchkeeper1",
+    "name": "두목",
+    "englishName": "Henchkeeper",
+    "category": "기본",
+    "desc": "당신은 여러분의 뜻을 기꺼이 따를 길 잃은 영혼들을 손쉽게 얻어낼 수 있는 재주를 가졌습니다. 돈, 힘, 흥분, 섹스, 또는 다른 보상으로 이들을 유혹할 수 있지만 실제로 제공할지는 여러분의 선택에 달려 있습니다. 이 포커스를 통해 얻은 부하는 용납 못 할 위험에 던져지거나, 노골적인 배신을 당하지 않은 이상 충성을 바칠 것입니다. 부하는 사회에서 \"중요한\" 사람이 아니며, 사회의 들러리들로 버림받거나, 절박하고, 선택지가 몇 없는 사람입니다. 추가적인 대가나 유인책을 통해 부하를 더 많이 거느리는 것은 물론 가능하지만, 이렇게 얻은 부하들은 캐릭터가 제공할 수 있는 금전과 취급 이상의 충성이나 능력을 보이지는 않습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "지휘를 보너스 기술로 얻습니다. 적합한 사람이 있다면, 어떤 공동체에서든 도착한 지 24시간 안에 부하를 얻을 수 있습니다. 이렇게 얻은 부하는 생명이 달린 경우를 제외하고는 전투에 참여하지 않지만, 일행을 따라다니며 위험을 감수할 것입니다. 부하들은 일반적으로 해당 공동체의 일반적인 성인의 전투 능력을 갖습니다. 당신은 3레벨당 부하 한 명을 추가로 데리고 다닐 수 있습니다(소수점 아래 올림). 캐릭터는 부하에게 큰 반감을 사지 않고 잠시 떼어놓을 수 있으며, 나중에 부하가 부족해지면 다시 데리고 다닐 수도 있습니다.",
+    "bonus": [
+      {
+        "id": "lead",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "henchkeeper2",
+    "name": "두목",
+    "englishName": "Henchkeeper",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "캐릭터의 부하는 몹시 충성스럽고 단호하며, 보통 가망이 없어 보이는 상황이 아닌 이상 캐릭터를 위해 싸울 것입니다. 자연적인 재능이든, 캐릭터를 위한 헌신이든, 이들은 해당 공동체의 2HD 전투원으로 취급됩니다. 기량이 출중한 NPC를 부하로 삼는 것 또한 가능하지만, 맹렬한 충성심을 얻을 정도의 부탁 또는 도움을 받았을 것을 필요로 합니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "henchkeeper1"
+      }
+    ]
+  },
+  {
+    "id": "impervious_defense1",
+    "name": "불괴",
+    "englishName": "Impervious Defense",
+    "category": "기본",
+    "desc": "초인적인 반응 속도, 놀라운 행운, 기이한 혈통, 마법적 재능. 어떤 이유에선지, 당신은 번쩍거리는 갑옷과도 같은 자연적인 방어력을 갖고 있습니다. 이 포커스의 효과는 갑옷과 중첩되지 않으나, 민첩 수정치와 방패로 인한 수정치는 적용됩니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "15+캐릭터 레벨의 절반만큼의 기본 AC를 가집니다. 소수점 아래를 올립니다.",
+    "base_ac": {
+      "base": 15,
+      "level_divisor": 2,
+      "rounding": "up",
+      "armor_rule": "higher"
+    },
+    "bonus": [],
+    "requirements": []
+  },
+  {
+    "id": "impervious_defense2",
+    "name": "불괴",
+    "englishName": "Impervious Defense",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "하루에 한 번, 즉시 행동을 통해 하나의 무기 공격 또는 환경으로 인한 물리적 부상을 무시할 수 있습니다. 이 효과는 일반 갑옷이 저항할 수 없는 피해에도 적용됩니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "impervious_defense1"
+      }
+    ]
+  },
+  {
+    "id": "imposter1",
+    "name": "사칭꾼",
+    "englishName": "Imposter",
+    "category": "기본",
+    "desc": "당신은 변장, 변성, 그리고 번개와 같이 빠르게 옷을 갈아입는 기술을 포함, 스스로를 실제와 다른 것으로 위장하는 데에 극히 뛰어납니다. 몇몇은 공연 기술에 의거한 연기력에 의존하지만, 몇몇은 잠행 기술의 범죄 기술 쪽에 기댑니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "공연 또는 잠행을 보너스 기술로 얻습니다. 장면당 한 번, 변장을 유지하는 것과 관련된 기술 판정 또는 내성 굴림이 실패했을 때 다시 굴릴 수 있습니다. 사회적으로 큰 영향력이 없는 가짜 신분을 하나 만들 수 있습니다; 당신은 완벽히 그 신분을 흉내낼 수 있으며, 완벽한 증거만이 캐릭터와 가짜 신분을 관련지을 수 있습니다. 일주일간의 공을 들인다면 새로운 신분을 만들어 바꿀 수 있습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "perform",
+          "sneak"
+        ],
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "imposter2",
+    "name": "사칭꾼",
+    "englishName": "Imposter",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신은 주요 행동을 사용해, 겉모습을 미리 정한 세 가지의 의상 중 하나로 순식간에 바꿀 수 있습니다. 또한, 당신은 하루 이상을 머문 도시 또는 커다란 공동체마다 가짜 신분을 하나씩 만들어낼 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "imposter1"
+      }
+    ]
+  },
+  {
+    "id": "lucky1",
+    "name": "행운아",
+    "englishName": "Lucky",
+    "category": "기본",
+    "desc": "당신은 과거에 목숨을 부지시켜준 놀라운 행운을 최소한 한 번 경험한 적이 있으며, 그 운세는 지금까지 이어져 답이 없어 보이는 상황에서도 우위를 주곤 합니다. 행운은 타고난 자를 사랑하지 않습니다. 최소한 하나의 능력 수정치가 -1 이하인 PC만 이 포커스를 선택할 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "일주일에 한 번, 당신은 치명상을 입거나, 죽거나, 무력화되는 상황에서 기사회생할 수 있습니다. 순전히 운과 관련된 주사위 굴림을 할 시, 두 번 굴리고 더 나은 결과를 택합니다.",
+    "bonus": [],
+    "requirements": []
+  },
+  {
+    "id": "lucky2",
+    "name": "행운아",
+    "englishName": "Lucky",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "세션당 한 번, 도움이 필요하거나 위험이 코앞에 닥쳐온 상황에서 운을 믿고 1d6를 굴립니다. 2 이상의 결과가 나왔을 때, 무언가 좋은 일이 일어나서 목표가 더 가까워지거나, 위험에서 도망칠 길이나, 필요한 이점 등이 나타납니다. 1이 나왔을 때, GM의 판단대로 상황은 급격히 나빠집니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "lucky1"
+      }
+    ]
+  },
+  {
+    "id": "nullifier1",
+    "name": "무화자",
+    "englishName": "Nullifier",
+    "category": "기본",
+    "desc": "당신의 무언가가 마법의 쉬운 대상으로 만드는 것을 막습니다. 이상하게 강력한 축복을 받아 태어난 것의 영향일 수도, 초자연적 혈통일 수도, 단순히 마법과 맞지 않는 체질일 수도 있습니다. 마법사와 부분 마법사는 이 포커스를 선택할 수 없습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신과 20 ft 안에 있는 아군은 마법적 효과에 대항하는 내성 굴림에 +2의 보너스를 받습니다. 턴 행동을 사용해, 20 ft 안에서 마법의 존재를 감지할 수 있지만, 세부적인 사항은 알아낼 수 없습니다. 날마다 마법에 대항한 내성 굴림의 첫 실패는 성공으로 취급합니다.",
+    "bonus": [],
+    "conditional_saves": [
+      {
+        "condition": "마법 효과에 대항할 때",
+        "scope": "자신과 20피트 이내 아군",
+        "saves": { "physical": 2, "evasion": 2, "mental": 2, "luck": 2 }
+      }
+    ],
+    "sheet_notes": [
+      "무화자: 날마다 마법에 대항한 내성굴림의 첫 실패를 성공으로 취급합니다. 사용 여부는 플레이 중 기록합니다."
+    ],
+    "requirements": [
+      { "condition": "not_class", "id": "mage" }
+    ]
+  },
+  {
+    "id": "nullifier2",
+    "name": "무화자",
+    "englishName": "Nullifier",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "하루에 한 번, 즉시 행동으로 원하지 않는 마법적 효과 또는 초자연적인 괴물들의 능력에 영향을 받지 않을 수 있습니다. 이 효과는 일반적으로 내성 굴림을 허가하지 않더라도 사용이 가능하며, 지속되는 면역은 한 장면 동안 지속됩니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "nullifier1"
+      }
+    ]
+  },
+  {
+    "id": "poisoner1",
+    "name": "독성사",
+    "englishName": "Poisoner",
+    "category": "기본",
+    "desc": "당신은 쉬이 구할 수 있는 꽃이나 광물에서 독을 조제하는 데에 숙련되었습니다. 독을 제조하는 데에는 한 시간이 걸리며, 레벨만큼 제조해 신선하게 보유할 수 있습니다. 칼날에 바르는 독은 주요 행동을 통해 도포할 수 있으며, 피해나 충격 피해를 주기 전까지 10분간 지속됩니다. 독이 들어간 음식은 난이도 10의 지혜/감지 기술 판정을 통해 알아챌 수 있으며, 독에 대해 경계하지 않았거나 먹는 사람이 귀족이 아니라면 난이도는 12로 올라갑니다. 한 번 사용할 양의 독으로 대여섯명의 사람을 중독시킬 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "치료를 보너스 기술로 얻습니다. 독에 대항하는 내성 굴림이 실패했을 때 다시 굴립니다. 당신이 만든 독은 명중 또는 충격 피해 시 2d6+캐릭터 레벨만큼의 피해를 주며, 이는 육체 내성 굴림으로 피해를 절반으로 깎을 수 있습니다. 저살상 독 또는 환각성 독의 경우 또한 같은 피해를 주나, 0 HP에 도달했을 때 죽는 대신 기절하게 됩니다.",
+    "bonus": [
+      {
+        "id": "heal",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "poisoner2",
+    "name": "독성사",
+    "englishName": "Poisoner",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat", "non-combat"
+    ],
+    "effect": "당신은 독에 면역이 되며, 중독된 아군에게 주요 행동을 사용해 만능 해독제를 투여할 수 있습니다. 캐릭터의 독을 감지하거나, 그에 대항하려는 기술 판정과 내성 굴림은 캐릭터의 치료 기술 레벨만큼의 페널티를 받게 됩니다. 캐릭터의 독을 짐작하지 못하고 삼키는 경우 처형 공격과 같이 취급되며, 이의 육체 내성 굴림에 치료 기술 레벨만큼의 페널티가 적용되며, 내성에 성공했을 때 레벨당 1d6의 피해를 줍니다. 이런 독은 당신의 선택에 따라 비살상이 될 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "poisoner1"
+      }
+    ]
+  },
+  {
+    "id": "polymath1",
+    "name": "박식가",
+    "englishName": "Polymath",
+    "category": "기본",
+    "desc": "당신은 넓은 분야의 기술 및 여가에 대한 범용적인 지식을 가지고 있으며, 어떤 과제나 작업을 맞이해도 나쁘지 않은 수준의 역량을 보입니다. 이 포커스로 얻은 기술 레벨은 일반적인 기술 레벨과 중첩되거나 기술 레벨을 올릴 시 할인을 주지 않습니다. 전문가, 또는 부분 전문가만이 이 포커스를 선택할 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "아무 기술 하나를 보너스로 얻습니다. 기술 판정에 한해, 모든 비전투 기술을 0레벨인 것으로 간주할 수 있습니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "polymath2",
+    "name": "박식가",
+    "englishName": "Polymath",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "기술 판정에 한해, 모든 비전투 기술을 1레벨인 것으로 간주할 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "polymath1"
+      }
+    ]
+  },
+  {
+    "id": "rider1",
+    "name": "기승자",
+    "englishName": "Rider",
+    "category": "기본",
+    "desc": "기승 기술을 가진 모든 캐릭터는 탑승물 위에서 싸울 수 있고, 탈것을 잘 관리할 수 있습니다. 그러나 당신은 탈것과 초자연적인 유대를 가졌을 정도로 긴밀하며, 일반적인 한계를 넘는 역량을 끌어낼 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat", "non-combat"
+    ],
+    "effect": "기승을 보너스 기술로 얻습니다. 캐릭터의 탈것은 전투에서 12의 사기를 가진 것으로 간주하며, 캐릭터의 AC가 탈것보다 높을 때 캐릭터의 AC를 사용하게 되고, 하루 동안 이동하면 일반적으로 움직였을 때보다 1.5배의 거리를 이동할 수 있게 됩니다. 당신은 직감적으로 타고 있는 야수와 소통해서 탈것의 지능에 따라 전달할 수 있을 만큼의 정보를 얻을 수 있습니다.",
+    "bonus": [
+      {
+        "id": "ride",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "rider2",
+    "name": "기승자",
+    "englishName": "Rider",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat", "non-combat"
+    ],
+    "effect": "장면당 한 번, 즉시 행동으로 탈것을 향한 성공적인 공격 한 번을 빗나가게 만들 수 있습니다. 장면당 한 번, 실패한 기승 기술 판정을 다시 굴릴 수 있습니다. 당신은 200 ft 안의 탈것과 정신적으로 감응해 간단한 경고, 생각, 명령을 공유할 수 있습니다. 이러한 정신 감응은 한 번에 한 마리와만 가능하며 한 시간을 소비합니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "rider1"
+      }
+    ]
+  },
+  {
+    "id": "shocking_assault1",
+    "name": "분쇄자",
+    "englishName": "Shocking Assault",
+    "category": "기본",
+    "desc": "당신은 인접한 적에게 극도로 위험합니다. 캐릭터가 하는 근접 공격의 맹렬함은 공격이 명중하지 않아도 압박과 혼란을 줍니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "격투 또는 백병을 보너스 기술로 얻습니다. 대상에게 피해를 줄 수 있는 무기를 들고 있고, 적이 충격 피해에 면역이 아니라면, 캐릭터가 가하는 모든 근접 공격의 충격 피해는 AC10의 적에게 가하는 것과 같이 가해집니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "punch",
+          "stab"
+        ],
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "shocking_assault2",
+    "name": "분쇄자",
+    "englishName": "Shocking Assault",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "충격 피해를 가할 수 있는 근접 무기와 비무장 공격의 충격 피해에 +2의 보너스를 받습니다. 보편적으로, 명중한 공격의 피해는 충격 피해보다 낮을 수 없습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "shocking_assault1"
+      }
+    ]
+  },
+  {
+    "id": "snipers_eye1",
+    "name": "일점안",
+    "englishName": "Sniper’s Eye",
+    "category": "기본",
+    "desc": "당신은 무방비한 표적의 급소에 던져진 단검과 화살을 올려놓는데 전문가입니다. 활, 발사기, 또는 투척 무기를 사용한 처형 공격을 가할 때에만 적용되는 특별한 보너스가 있습니다. ",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "사격을 보너스 기술로 얻습니다. 원거리 처형 공격을 가하거나 표적에 사격하는 기술 판정 시, 3d6를 굴리고 가장 낮은 주사위를 버립니다.",
+    "bonus": [
+      {
+        "id": "shoot",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "snipers_eye2",
+    "name": "일점안",
+    "englishName": "Sniper’s Eye",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "당신이 가하는 원거리 처형 공격은 빗나가지 않습니다. 처형 공격의 대상은 치명상을 막기 위한 육체 내성 굴림에 -4의 페널티를 받으며, 내성 굴림이 성공했을 때에도 일반적인 공격 피해의 두 배의 피해를 받습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "snipers_eye1"
+      }
+    ]
+  },
+  {
+    "id": "special_origin1",
+    "name": "특별한 기원",
+    "englishName": "Special Origin",
+    "category": "기본",
+    "desc": "이 게임의 영웅들은 인간이거나, 차이가 없을 정도로 비슷할 것을 전제하고 있습니다. PC가 조금 더 특이한 종, 또는 아인 PC를 만들고 싶다면 이 포커스를 고른 후 해당 종족을 하기에 적절한 기원 포커스를 고르십시오. 이런 특별한 기원의 선택 가능성은 캠페인과 GM의 허락에 따릅니다. 캠페인 세계에 엘프, 혹은 드워프가 존재한다고 하더라도 분위기나 장소에 따라 GM이 허가하지 않는다면, 플레이어들에게 이를 선택할 권리는 없습니다. 만약 특별한 이점 없이, 그저 “다른 종족”이라는 설정만을 가지고 싶다면 이 포커스를 선택할 필요가 없습니다. 만약 해당 아인 또는 외계인이 인간에 비해서 특별한 실질적인 장점이 없다면, GM의 허락하에 단순하게 이들은 이렇다고 선언하면 됩니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "effect": "",
+    "bonus": [],
+    "requirements": []
+  },
+  {
+    "id": "specialist1",
+    "name": "특기자",
+    "englishName": "Specialist",
+    "category": "기본",
+    "desc": "당신은 특정 기술에 놀라울 정도로 뛰어납니다. 경이로운 움직임의 밤도둑, 유명 체육인, 천재 학자, 또는 다른 석학 등, 캐릭터의 전문성은 믿음직스럽습니다. 이 포커스는 기술 마다 선택할 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "마법, 백병, 사격, 격투를 제외한 아무 기술이나 보너스로 얻습니다. 선택한 기술을 사용하는 판정에서 3d6를 굴리고 가장 낮은 주사위를 버립니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "exclude": {
+          "ids": [
+            "magic", "stab", "punch", "shoot"
+          ]
+        } 
+      }
+    ],
+    "repeatable": true,
+    "unique_skill": true,
+    "sheet_notes": [
+      "Specialist ({skill}): roll 3d6 and discard the lowest die on checks using this skill. Resolve dice during play."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "specialist2",
+    "name": "특성화 인재",
+    "englishName": "Specialist",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "선택한 기술의 판정 시 4d6를 굴리고 가장 낮은 주사위 둘을 버립니다.",
+    "bonus": [],
+    "repeatable": true,
+    "sheet_notes": ["Specialist Level 2 ({skill}): roll 4d6 and discard the lowest die, following the current local description. Resolve dice during play."],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "specialist1"
+      }
+    ]
+  },
+  {
+    "id": "spirit_familiar1",
+    "name": "권속",
+    "englishName": "Spirit Familiar",
+    "category": "기본",
+    "desc": "하급 영체, 악마, 구조물, 마법 동물과 같은 개체를 헌신적인 부하로 들일 수 있습니다. 능력은 제한되었을지언정 이들은 항상 충성합니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "고양이보다 작지 않고, 사람보다 크지 않은 권속을 선택합니다. 이들은 불려진 종복의 계산(Calculation of the Evoked Servitor) 주문으로 생성된 개체와 같은 능력과 능력치를 지니지만 중요 행동으로 소환하고 해산시킬 수 있으며 주인의 근접 거리에서 소환됩니다. 사라진 상태에서 모습에 내재한 옷가지 등을 제외하고선 물건을 지니고 있을 수 없습니다. 이들은 음식, 물, 또는 휴식이 필요하지 않습니다. 만약 죽었다면 사라지고, 24시간이 지나기 전까지 재소환할 수 없습니다. 하루에 한 번, 권속은 당신의 분발 점수 하나를 회복할 수 있습니다.",
+    "bonus": [],
+    "requirements": []
+  },
+  {
+    "id": "spirit_familiar2",
+    "name": "권속",
+    "englishName": "Spirit Familiar",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "repeatable": true,
+    "benefit_choices": {
+      "target": "familiar",
+      "choose": 2,
+      "unique_within_instance": true,
+      "unique_across_instances": true,
+      "options": [
+        {
+          "id": "hit_points",
+          "name": "HP",
+          "description": "캐릭터 레벨당 3점의 HP를 가집니다."
+        },
+        {
+          "id": "attack",
+          "name": "공격",
+          "description": "캐릭터 레벨의 절반의 반올림 공격 보너스를 가지며 충격이 없는 1d8 피해를 가할 수 있습니다."
+        },
+        {
+          "id": "background",
+          "name": "배경",
+          "description": "배경 하나를 골라, 그 배경과 연관되는 상황에서 +1의 기술 판정 보너스를 받습니다.",
+          "selection": {
+            "kind": "background",
+            "count": 1
+          }
+        },
+        {
+          "id": "appearance",
+          "name": "외관 변화",
+          "description": "턴 행동을 사용해 여러 다른 외관을 취할 수 있습니다."
+        },
+        {
+          "id": "flight",
+          "name": "비행 및 부유",
+          "description": "이동 거리만큼 비행하거나 부유할 수 있습니다."
+        },
+        {
+          "id": "speech",
+          "name": "대화",
+          "description": "당신이 알고 있는 언어를 사용해 타자와 대화할 수 있습니다."
+        }
+      ]
+    },
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "다음의 목록에서 두 개의 이점을 고르십시오. 이 레벨은 여러 번 택할 수 있습니다.  •캐릭터 레벨당 3점의 HP를 가집니다. •캐릭터 레벨의 절반의 반올림 공격 보너스를 가지며 충격이 없는 1d8 피해를 가할 수 있습니다. •배경 하나를 골라, 그 배경과 연관되는 상황에서 +1의 기술 판정 보너스를 받습니다. •턴 행동을 사용해 여러 다른 외관을 취할 수 있습니다. •이동 거리만큼 비행하거나 부유할 수 있습니다. •당신이 알고 있는 언어를 사용해 타자와 대화할 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "spirit_familiar1"
+      }
+    ]
+  },
+  {
+    "id": "trapmaster1",
+    "name": "덫사냥꾼",
+    "englishName": "Trapmaster",
+    "category": "기본",
+    "desc": "당신은 함정과 덫을 다루는 데에 몹시 숙련되어, 일반적인 함정이나 던전이나 마법사의 기지에서 발견될 수 있는 마법적인 함정을 다룰 수 있습니다. 또한 쉽게 들고 다니는 재료로 함정을 급조해낼 수도 있습니다",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "감지를 보너스 기술로 얻습니다. 장면당 한 번, 실패한 함정 또는 덫과 관련된 기술 판정 및 내성 굴림을 다시 굴릴 수 있습니다. 5분의 시간을 소비해 통로, 용기, 골목과 같은 좁은 장소에 다리 덫, 마름쇠, 독바늘과 같은 함정을 설치할 수 있습니다. 비살상 함정은 첫 번째로 걸리는 대상이 한 라운드 동안 행동을 취할 수 없게 만들고, 살사용 함정은 1d6 + 캐릭터 레벨의 두 배만큼의 피해를 줍니다. 이 피해는 알맞은 내성 굴림을 통해 절반으로 줄일 수 있습니다. 이러한 급조 함정은 한 번에 한 개씩만 유지할 수 있습니다. 더 치명적인 함정은 적절한 상황과 GM의 허가를 필요로 합니다.",
+    "bonus": [
+      {
+        "id": "notice",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "trapmaster2",
+    "name": "덫사냥꾼",
+    "englishName": "Trapmaster",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신은 마법사가 아니면 해체할 수 없을 마법 함정이나 위험을 해체할 수 있는 비밀을 알고 있습니다. 장면당 한 번, 캐릭터의 함정 또는 위험을 제거하기 위한 노력은 마치 캐릭터 레벨의 두 배의 레벨의 마법사가 신비를 근절하라(Extirpate Arcana) 주문을 시전한 것과 같은 효과를 낼 수 있으며, 관련 판정은 지능/감지 또는 민첩/감지로 합니다. 이 능력은 신비를 근절하라 (Extirpate Arcana) 주문으로 해체할 수 있는 정적인 마법 효과를 대상으로도 사용이 가능합니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "trapmaster1"
+      }
+    ]
+  },
+  {
+    "id": "unarmed_combatant1",
+    "name": "공수가",
+    "englishName": "Unarmed Combatant",
+    "category": "기본",
+    "desc": "당신의 맨손은 얼치기의 칼보다 위험한 흉기입니다. 무기를 들지 않았더라도 활 또는 여러 원거리 무기를 방해하는 용도에 한해 근접 무기를 든 것으로 취급받습니다. 단 이를 위해서는 한 손이 비어있어야 합니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "격투를 보너스 기술로 얻습니다. 격투 기술 레벨이 오를수록 비무장 공격 또한 강해집니다. 0레벨에서는 1d6, 1레벨에서는 1d8, 2레벨에서는 1d10, 3레벨에서는 1d12, 4레벨에서는 1d12+1의 피해를 입힙니다. 1레벨 이상의 격투 기술을 가졌을 때, 비무장 공격은 AC15 이하의 적에게 격투 레벨만큼의 충격 피해를 입힙니다. 일반적으로는 격투 레벨을 모든 비무장 피해에 더하지만, 충격 피해에는 두 번 더하지 않습니다.",
+    "bonus": [
+      {
+        "id": "punch",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "unarmed_combatant2",
+    "name": "공수가",
+    "englishName": "Unarmed Combatant",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "격투 공격이 빗나갈 때도 수정치를 적용하지 않는 1d6의 피해를 가합니다. 이때 충격 피해 또한 추가될 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "unarmed_combatant1"
+      }
+    ]
+  },
+  {
+    "id": "unique_gift1",
+    "name": "이능",
+    "englishName": "Unique Gift",
+    "category": "기본",
+    "desc": "당신은 여기에 존재하는 포커스로 설명할 수 없는 특별한 재능이나 마법적 재주를 지녔습니다. 이 포커스는 포커스 수준의 능력을 반영할 수 있는 특별한 힘을 설명하기 위한 포괄적인 선택지입니다. 정확한 능력은 플레이어와 GM의 협의해서 공평하고 일리 있는 결과를 도출합니다. 이는 게임과 캠페인에 따라 다르게 될 것입니다. 수중 호흡 능력은 사막 캠페인에서는 단순한 관심거리지만, 끝없는 군도에서 일어나는 해적 캠페인에서는 훨씬 더 의미가 있을 수 있습니다. 모든 힘이 그렇듯, 만약 능력이 예상보다 지나치게 강하거나 약하다면 플레이어들과 GM은 재조정을 해야 합니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat", "non-combat"
+    ],
+    "effect": "",
+    "bonus": [],
+    "requirements": []
+  },
+  {
+    "id": "valiant_defender1",
+    "name": "수호자",
+    "englishName": "Valiant Defender",
+    "category": "기본",
+    "desc": "당신은 경호원이자, 방패의 전달자이자, 타자의 수호자로서 피 튀기는 전투의 요동과 절박한 투쟁에 익숙해졌습니다. 당신은 동료들을 살해할 수 있는 공격들을 막을 수 있는 뛰어난 능력이 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "백병 또는 격투를 보너스 기술로 얻습니다. 아군 보호 행동을 할 때 기술 판정에 +2의 보너스를 받습니다. 당신은 라운드당 한 번의 공격을 추가로 방어할 수 있습니다. 라운드당 한 번, 만질 수 없는 주문, 마법적 공격, 광역 범위 폭발을 몸으로 막을 수 있습니다. 이러한 시도의 성공 여부는 상대의 마법 기술과 대항 판정으로 정합니다.",
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "ids": [
+          "punch",
+          "stab"
+        ],
+        "count": 1
+      }
+    ],
+    "sheet_notes": [
+      "아군 보호 행동을 할 때 기술 판정에 +2 보너스를 받습니다.",
+      "라운드당 한 번의 공격을 추가로 방어할 수 있습니다.",
+      "라운드당 한 번, 만질 수 없는 주문·마법적 공격·광역 범위 폭발을 몸으로 막을 수 있습니다. 성공 여부는 상대의 마법 기술과 대항 판정으로 정합니다."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "valiant_defender2",
+    "name": "수호자",
+    "englishName": "Valiant Defender",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "캐릭터가 시도하는 라운드의 첫 번째 아군 보호 행동은 무조건 성공합니다. 아군을 보호할 때 AC에 +2의 보너스를 받습니다. 황소 크기의 적을 상대로도 아군을 보호할 수 있습니다.",
+    "bonus": [],
+    "sheet_notes": [
+      "캐릭터가 시도하는 라운드의 첫 번째 아군 보호 행동은 무조건 성공합니다.",
+      "아군을 보호할 때 AC에 +2 보너스를 받습니다.",
+      "황소 크기의 적을 상대로도 아군을 보호할 수 있습니다."
+    ],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "valiant_defender1"
+      }
+    ]
+  },
+  {
+    "id": "well_met1",
+    "name": "좋은 인상",
+    "englishName": "Well Met",
+    "category": "기본",
+    "desc": "당신은 바로 만난 생물과도 친분을 쌓거나 진정시킬 수 있는 매력을 가졌습니다. 하지만 이후의 평판은 캐릭터와의 경험에 따라 달라질 것입니다. 이 포커스는 대상에게 한 번만 사용될 수 있습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신이 말하지 않고 그 자리에 있는 것만으로도, 일행과 조우한 자들은 반응 굴림에 +1의 보너스를 더합니다. 적대적인 조우라 하더라도 기습을 당했거나, 바로 폭력을 써야 할 명확한 이유가 없는 이상, 일반적으로 협상을 한 번이라도 할 기회가 있습니다.",
+    "bonus": [],
+    "derived_bonus": { "reaction_roll": 1 },
+    "requirements": []
+  },
+  {
+    "id": "well_met2",
+    "name": "좋은 인상",
+    "englishName": "Well Met",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "세션당 한 번, 반응 판정을 했을 때 대상이 당신의 일행에게 가능한 한 호의적이고 친절한 태도를 보이도록 만들 수 있습니다. 그 이유는 GM이 정합니다. 오해 때문일 수도, 우스워 보여서일 수도, 아니면 캐릭터 또는 동료들로부터 무언가 부탁이 있어서일 수도 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "well_met1"
+      }
+    ]
+  },
+  {
+    "id": "whirlwind_assault1",
+    "name": "소용돌이",
+    "englishName": "Whirlwind Assault",
+    "category": "기본",
+    "desc": "당신은 근접 전투에서 피로 이루어진 폭풍과도 같으며, 여럿의 잡졸을 단숨에 썰어버릴 수 있습니다. 둘러싸이는 것에 생존할 수 있다면 말입니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "combat"
+    ],
+    "effect": "백병을 보너스 기술로 얻습니다. 장면당 한 번, 턴 행동을 사용해 근접 거리 안의 충격 피해를 입을 수 있는 모든 적에게 충격 피해를 줄 수 있습니다.",
+    "bonus": [
+      {
+        "id": "stab",
+        "action": "fixed_skill",
+        "count": 1
+      }
+    ],
+    "requirements": []
+  },
+  {
+    "id": "whirlwind_assault2",
+    "name": "소용돌이",
+    "englishName": "Whirlwind Assault",
+    "category": "기본",
+    "desc": "",
+    "src": "wwn",
+    "type": "normal",
+    "level": 2,
+    "tags": [
+      "combat"
+    ],
+    "effect": "라운드당 한 번, 캐릭터의 일반 공격으로 인한 피해 또는 충격으로 누군가 죽었을 때 거리 안의 다른 대상에게 즉시 준비된 무기로 두 번째 공격을 가할 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "whirlwind_assault1"
+      }
+    ]
+  },
+  {
+    "id": "xenoblooded1",
+    "name": "외래종",
+    "englishName": "Xenoblooded",
+    "category": "기본",
+    "desc": "당신은 이질적인 초자연체 또는 외세계의 혈통에 의한 축복과 저주를 받았습니다.",
+    "src": "wwn",
+    "type": "normal",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "다음의 목록 중 하나를 선택해서 외세계 선조의 영향을 반영하십시오. 다른 축복도 있을 수 있습니다. •열기 피해에 면역이며 연기가 시야를 가리지 않고, 호흡도 방해하지 않습니다. •물 속에서 숨을 쉴 수 있고 광원에 상관없이 120도 까지의 시야를 가집니다. 물 속에서 두 배의 이동 속도를 갖습니다. •저중력, 또는 고중력 환경에서 살도록 설계되었습니다; 근력 또는 민첩 수정치에 +1의 보너스를 받고, 다른 한쪽 수정치에 -1의 페널티를 받습니다. •보이지 않는 방사선으로 영양분을 공급 받을 수 있으며 음식, 수면, 호흡을 필요로 하지 않습니다. 광원 없이도 볼 수 있습니다.",
+    "bonus": [],
+    "packages": {
+      "required": true,
+      "options": [
+        {
+          "id": "heat",
+          "name": "Heat adaptation",
+          "description": "Immune to heat damage; smoke neither blocks vision nor interferes with breathing.",
+          "bonus": []
+        },
+        {
+          "id": "aquatic",
+          "name": "Aquatic adaptation",
+          "description": "Breathe underwater, see underwater regardless of lighting with the 120-degree vision specified by the local description, and move at twice normal speed underwater.",
+          "bonus": []
+        },
+        {
+          "id": "gravity_str",
+          "name": "Gravity adaptation: STR +1 / DEX -1",
+          "description": "Linked gravity adaptation: STR modifier +1 and DEX modifier -1.",
+          "bonus": [
+            {
+              "action": "attribute_modifier",
+              "id": "STR",
+              "value": 1
+            },
+            {
+              "action": "attribute_modifier",
+              "id": "DEX",
+              "value": -1
+            }
+          ]
+        },
+        {
+          "id": "gravity_dex",
+          "name": "Gravity adaptation: DEX +1 / STR -1",
+          "description": "Linked gravity adaptation: DEX modifier +1 and STR modifier -1.",
+          "bonus": [
+            {
+              "action": "attribute_modifier",
+              "id": "DEX",
+              "value": 1
+            },
+            {
+              "action": "attribute_modifier",
+              "id": "STR",
+              "value": -1
+            }
+          ]
+        },
+        {
+          "id": "radiation",
+          "name": "Radiation adaptation",
+          "description": "Absorb radiation; require no food, sleep, or breathing, and see without a light source.",
+          "bonus": []
+        }
+      ]
+    },
+    "requirements": []
+  },
+  {
+    "id": "mundane_alchemy1",
+    "name": "일반 연금술",
+    "englishName": "Mundane Alchemy",
+    "category": "기타",
+    "desc": "당신은 연금술이라는 고된 예술에 대한 훈련을 받았고, 그 복잡미묘함에 익숙합니다. ",
+    "src": "wwn",
+    "type": "other",
+    "level": 1,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "연금술을 보너스 기술로 얻습니다. 당신은 흔하고 어렵지 않은 작업물들에 대한 제조법을 다 갖고 있지만, 고급의 작업물을 갖고 있더라도 아직까지는 만들 수 없습니다. 당신이 설비로부터 완전히 차단당하지 않은 이상 실험기구들을 어떻게든 찾아 뒤지거나 임시방편으로 만들어서 하급 작업물들을 만들 수 있습니다. ",
+    "bonus": [
+      { "id": "alchemy", "action": "fixed_skill", "count": 1 }
+    ],
+    "sheet_notes": [
+      "Know recipes for common, uncomplicated alchemical work. Advanced recipes cannot yet be produced. Unless entirely cut off from equipment, scavenge or improvise a laboratory for lesser work. Recipe lists and crafting are resolved during play."
+    ],
+    "requirements": []
+  },
+  {
+    "id": "mundane_alchemy2",
+    "name": "일반 연금술",
+    "englishName": "Mundane Alchemy",
+    "category": "기타",
+    "desc": "",
+    "src": "wwn",
+    "type": "other",
+    "level": 2,
+    "tags": [
+      "non-combat"
+    ],
+    "effect": "당신은 흔한 고급 작업물들에 대한 제조법들을 다 갖고 있으며, 일반적인 난이도에 따라 그들을 제조할 수 있습니다. 일반적인 재료들을 구 할 수 있는 상황에서 일주일동안 실험을 한다면 당신의 개인적인 작업에 쓸 수 있는 레벨당 25은화의 연금술 요소들을 만들 수 있습니다.",
+    "bonus": [],
+    "requirements": [
+      {
+        "condition": "has_focus",
+        "id": "mundane_alchemy1"
+      }
+    ]
+  },
+  {
+    "id": "traditional_education1",
+    "name": "학파 교육",
+    "englishName": "Traditional Education",
+    "category": "기타",
+    "desc": "소언사인 당신은 고마법, 원소마법, 사령마법 등 특화된 신비술 전통에 대한 많은 지식을 교육 받았습니다. 소언사만 이 포커스를 선택할 수 있고, 이 포커스는 한 번 선택될 수 있습니다.",
+    "src": "wwn",
+    "type": "other",
+    "level": 1,
+    "effect": "당신은 고마법과 같이 선택한 전통의 주문을 배우고 준비할 수 있습니다. 당신은 해당 전통의 기교를 1 레벨 수련자처럼 각각 부분 클래스인지 아닌지에 따라 배울 수 있으며, 당신의 최대 분발 점수는 당신의 마법 기술 레벨과 같으며, 최소 1점을 갖습니다. 당신은 이 전통에서 더 기교를 얻을 수 없습니다.",
+    "bonus": [],
+    "tradition_choice": {
+      "class_id": "invoker",
+      "options": ["high", "elem", "necro"],
+      "effort": { "skill_id": "magic", "minimum": 1 }
+    },
+    "requirements": [
+      {
+        "condition":"is_class",
+        "id": "invoker"
+      }
+    ]
+  }
+]

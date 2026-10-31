@@ -1,0 +1,13 @@
+{
+  "character_level": 1,
+  "combinations": [
+    {
+      "classes": ["warrior", "warrior"],
+      "grant": ["killing_blow", "veterans_luck"]
+    },
+    {
+      "classes": ["expert", "expert"],
+      "grant": ["masterful_expertise"]
+    }
+  ]
+}

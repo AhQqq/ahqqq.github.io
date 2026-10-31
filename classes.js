@@ -1,1134 +1,57 @@
+const BLOCKED_CLASS_OPTIONS = {
+    "11": ["11", "300", "301", "302", "303", "304", "305", "306", "307", "308", "309", "310", "311"],
+    "21": ["21"],
+    "22": ["22"],
+    "300": ["11", "305"],
+    "301": ["11", "305"],
+    "302": ["11", "305"],
+    "303": ["11", "303"],
+    "304": ["11", "304"],
+    "305": ["11", "300", "301", "302"],
+    "306": ["11", "306"],
+    "307": ["11", "307"],
+    "308": ["11", "308"],
+    "309": ["11", "309"],
+    "310": ["11", "310"],
+    "311": ["11", "311"]
+}
+
+function getClassCombinationKey(class1, class2) {
+    let c1 = Math.min(class1, class2)
+    let c2 = Math.max(class1, class2)
+
+    return c1 + "-" + c2
+}
+
 function setupClassTable(){
 
-    let temp1 = $("#class1 option:selected").val()
-    let temp2 = $("#class2 option:selected").val()
-    let c1 = Math.min(temp1, temp2)
-    let c2 = Math.max(temp1, temp2)
-
-    let classTitle = ""
-    let hd_col = ""
-    let ab_col = ""
-    let focus_col = ""
-    let addit_col1 = ""
-    let addit_col2 = ""
-    let addit_col3 = ""
-    let addit_col4 = ""
-    let abi_id = []
-
-    if (c1 === 10 && c2 === 10){
-
-        classTitle = "전사"
-        hd_col = warrior_hp
-        ab_col = to_ten_ab
-        focus_col = focus_war
-        abi_id.push("s1000","s1001")
-
-    } else if (c1 === 10 && c2 === 11){
-        classTitle = "모험가 (전사/항마사)"
-        hd_col = warrior_hp
-        ab_col = to_ten_ab
-        focus_col = focus_war
-        addit_col1 = mageslayer_table
-        abi_id.push("s1100")
-
-    } else if (c1 === 10 && c2 === 20){
-        classTitle = "모험가 (전사/전문가)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war_exp
-        abi_id.push("s2001")
-
-    } else if (c1 === 10 && c2 === 21){
-        classTitle = "모험가 (전사/음유시인)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = bard_table
-        abi_id.push("s2100")
-
-    } else if (c1 === 10 && c2 === 22){
-        classTitle = "모험가 (전사/현인)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = wise_table
-        abi_id.push("s2200")
-
-    } else if (c1 === 10 && c2 === 300){
-        classTitle = "모험가 (전사/고마법사)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = partial_high_mage_table
-        abi_id.push("s30001")
-
-    } else if (c1 === 10 && c2 === 301){
-        classTitle = "모험가 (전사/원소술사)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = partial_elem_table
-        abi_id.push("s30101")
-
-    } else if (c1 === 10 && c2 === 302){
-        classTitle = "모험가 (전사/사령술사)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = partial_necro_table
-        abi_id.push("s30201")
-
-    } else if (c1 === 10 && c2 === 303){
-        classTitle = "모험가 (전사/치료사)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = healer_table
-        abi_id.push("s30300")
-
-    } else if (c1 === 10 && c2 === 304){
-        classTitle = "모험가 (전사/구도자)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = vowed_table
-        abi_id.push("s30400")
-
-    } else if (c1 === 10 && c2 === 305){
-        classTitle = "모험가 (전사/소언사)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = partial_adunic_table
-        abi_id.push("s30501")
-
-    } else if (c1 === 10 && c2 === 306){
-        classTitle = "모험가 (전사/변신술사)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = skinshifter_table
-        abi_id.push("s30600")
-
-    } else if (c1 === 10 && c2 === 307){
-        classTitle = "모험가 (전사/결투가)"
-        hd_col = expert_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = duelist_table
-        abi_id.push("s30700","s30701")
-
-    } else if (c1 === 10 && c2 === 308){
-        classTitle = "모험가 (전사/야수조련사)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = beastmaster_table
-        abi_id.push("s30800")
-
-    } else if (c1 === 10 && c2 === 309){
-        classTitle = "모험가 (전사/사제)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = priest_table
-        abi_id.push("s30900")
-
-    } else if (c1 === 10 && c2 === 310){
-        classTitle = "모험가 (전사/생각 귀족)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = thought_noble_table
-        abi_id.push("s31000")
-
-    } else if (c1 === 10 && c2 === 311){
-        classTitle = "모험가 (전사/저주받은 자)"
-        hd_col = warrior_hp
-        ab_col = to_seven_ab
-        focus_col = focus_war
-        addit_col1 = accursed_table
-        abi_id.push("s31100")
-
-    } else if (c1 === 11 && c2 === 20){
-        classTitle = "모험가 (항마사/전문가)"
-        hd_col = expert_hp
-        ab_col = to_seven_ab
-        focus_col = focus_exp
-        addit_col1 = mageslayer_table
-        abi_id.push("s1100","s2001")
-
-    } else if (c1 === 11 && c2 === 21){
-        classTitle = "모험가 (항마사/음유시인)"
-        hd_col = expert_hp
-        ab_col = to_seven_ab
-        focus_col = focus_mage
-        addit_col1 = mageslayer_table
-        addit_col2 = bard_table
-        abi_id.push("s1100","s2100")
-
-    } else if (c1 === 11 && c2 === 22){
-        classTitle = "모험가 (항마사/현인)"
-        hd_col = expert_hp
-        ab_col = to_seven_ab
-        focus_col = focus_mage
-        addit_col1 = mageslayer_table
-        addit_col2 = wise_table
-        abi_id.push("s1100","s2200")
-
-    } else if (c1 === 20 && c2 === 20){
-        classTitle = "전문가"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        abi_id.push("s2000","s2001")
-
-    } else if (c1 === 20 && c2 === 21){
-        classTitle = "모험가 (전문가/음유시인)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        abi_id.push("s2001","s2100")
-
-    } else if (c1 === 20 && c2 === 22){
-        classTitle = "모험가 (전문가/현인)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        abi_id.push("s2001","s2200")
-
-    } else if (c1 === 20 && c2 === 300){
-        classTitle = "모험가 (전문가/고마법사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = partial_high_mage_table
-        abi_id.push("s2001","s30001")
-
-    } else if (c1 === 20 && c2 === 301){
-        classTitle = "모험가 (전문가/원소술사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = partial_elem_table
-        abi_id.push("s2001","s30101")
-
-    } else if (c1 === 20 && c2 === 302){
-        classTitle = "모험가 (전문가/사령술사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = partial_necro_table
-        abi_id.push("s2001","s30201")
-
-    } else if (c1 === 20 && c2 === 303){
-        classTitle = "모험가 (전문가/치료사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = healer_table
-        abi_id.push("s2001","s30300")
-
-    } else if (c1 === 20 && c2 === 304){
-        classTitle = "모험가 (전문가/구도자)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = vowed_table
-        abi_id.push("s2001","s30400")
-
-    } else if (c1 === 20 && c2 === 305){
-        classTitle = "모험가 (전문가/소언사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = partial_adunic_table
-        abi_id.push("s2001","s30501")
-
-    } else if (c1 === 20 && c2 === 306){
-        classTitle = "모험가 (전문가/변신술사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = skinshifter_table
-        abi_id.push("s2001","s30600")
-
-    } else if (c1 === 20 && c2 === 307){
-        classTitle = "모험가 (전문가/결투가)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = duelist_table
-        abi_id.push("s2001","s30700")
-
-    } else if (c1 === 20 && c2 === 308){
-        classTitle = "모험가 (전문가/야수조련사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = beastmaster_table
-        abi_id.push("s2001","s30800")
-
-    } else if (c1 === 20 && c2 === 309){
-        classTitle = "모험가 (전문가/사제)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = priest_table
-        abi_id.push("s2001","s30900")
-
-    } else if (c1 === 20 && c2 === 310){
-        classTitle = "모험가 (전문가/생각 귀족)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = thought_noble_table
-        abi_id.push("s2001","s31000")
-
-    } else if (c1 === 20 && c2 === 311){
-        classTitle = "모험가 (전문가/저주받은 자)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = accursed_table
-        abi_id.push("s2001","s31100")
-
-    } else if (c1 === 21 && c2 === 22){
-        classTitle = "모험가 (음유시인/현인)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = wise_table
-        abi_id.push("s2100","s2200")
-
-    } else if (c1 === 21 && c2 === 300){
-        classTitle = "모험가 (음유시인/고마법사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = partial_high_mage_table
-        abi_id.push("s2100","s30001")
-
-    } else if (c1 === 21 && c2 === 301){
-        classTitle = "모험가 (음유시인/원소술사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = partial_elem_table
-        abi_id.push("s2100","s30101")
-
-    } else if (c1 === 21 && c2 === 302){
-        classTitle = "모험가 (음유시인/사령술사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = partial_necro_table
-        abi_id.push("s2100","s30201")
-
-    } else if (c1 === 21 && c2 === 303){
-        classTitle = "모험가 (음유시인/치료사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = healer_table
-        abi_id.push("s2100","s30300")
-
-    } else if (c1 === 21 && c2 === 304){
-        classTitle = "모험가 (음유시인/구도자)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = vowed_table
-        abi_id.push("s2100","s30400")
-
-    } else if (c1 === 21 && c2 === 305){
-        classTitle = "모험가 (음유시인/소언사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = partial_adunic_table
-        abi_id.push("s2100","s30501")
-
-    } else if (c1 === 21 && c2 === 306){
-        classTitle = "모험가 (음유시인/변신술사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = skinshifter_table
-        abi_id.push("s2100","s30600")
-
-    } else if (c1 === 21 && c2 === 307){
-        classTitle = "모험가 (음유시인/결투가)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = duelist_table
-        abi_id.push("s2100","s30700")
-
-    } else if (c1 === 21 && c2 === 308){
-        classTitle = "모험가 (음유시인/야수조련사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = beastmaster_table
-        abi_id.push("s2100","s30800")
-
-    } else if (c1 === 21 && c2 === 309){
-        classTitle = "모험가 (음유시인/사제)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = priest_table
-        abi_id.push("s2100","s30900")
-
-    } else if (c1 === 21 && c2 === 310){
-        classTitle = "모험가 (음유시인/생각 귀족)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s2100","s31000")
-
-    } else if (c1 === 21 && c2 === 311){
-        classTitle = "모험가 (음유시인/저주받은 자)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = bard_table
-        addit_col2 = accursed_table
-        abi_id.push("s2100","s31100")
-
-    } else if (c1 === 22 && c2 === 300){
-        classTitle = "모험가 (현인/고마법사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = partial_high_mage_table
-        abi_id.push("s2200","s30001")
-
-    } else if (c1 === 22 && c2 === 301){
-        classTitle = "모험가 (현인/원소술사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = partial_elem_table
-        abi_id.push("s2200","s30101")
-
-    } else if (c1 === 22 && c2 === 302){
-        classTitle = "모험가 (현인/사령술사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = partial_necro_table
-        abi_id.push("s2200","s30201")
-
-    } else if (c1 === 22 && c2 === 303){
-        classTitle = "모험가 (현인/치료사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = healer_table
-        abi_id.push("s2200","s30300")
-
-    } else if (c1 === 22 && c2 === 304){
-        classTitle = "모험가 (현인/구도자)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = vowed_table
-        abi_id.push("s2200","s30400")
-
-    } else if (c1 === 22 && c2 === 305){
-        classTitle = "모험가 (현인/소언사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = partial_adunic_table
-        abi_id.push("s2200","s30501")
-
-    } else if (c1 === 22 && c2 === 306){
-        classTitle = "모험가 (현인/변신술사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = skinshifter_table
-        abi_id.push("s2200","s30600")
-
-    } else if (c1 === 22 && c2 === 307){
-        classTitle = "모험가 (현인/결투가)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = duelist_table
-        abi_id.push("s2200","s30700")
-
-    } else if (c1 === 22 && c2 === 308){
-        classTitle = "모험가 (현인/야수조련사)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = beastmaster_table
-        abi_id.push("s2200","s30800")
-
-    } else if (c1 === 22 && c2 === 309){
-        classTitle = "모험가 (현인/사제)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = priest_table
-        abi_id.push("s2200","s30900")
-
-    } else if (c1 === 22 && c2 === 310){
-        classTitle = "모험가 (현인/생각 귀족)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s2200","s31000")
-
-    } else if (c1 === 22 && c2 === 311){
-        classTitle = "모험가 (현인/저주받은 자)"
-        hd_col = expert_hp
-        ab_col = to_five_ab
-        focus_col = focus_exp
-        addit_col1 = wise_table
-        addit_col2 = accursed_table
-        abi_id.push("s2200","s31100")
-
-    } else if (c1 === 300 && c2 === 300){
-        classTitle = "마법사 - 고마법사"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = full_high_mage_table
-        abi_id.push("s30000")
-
-    } else if (c1 === 300 && c2 === 301){
-        classTitle = "쌍 부분 마법사 (고마법사/원소술사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = dual_mage_table
-        addit_col2 = partial_high_mage_art
-        addit_col3 = partial_elem_art
-        abi_id.push("s30001","s30101")
-
-    } else if (c1 === 300 && c2 === 302){
-        classTitle = "쌍 부분 마법사 (고마법사/사령술사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = full_high_mage_table
-        addit_col2 = partial_high_mage_art
-        addit_col3 = partial_necro_art
-        abi_id.push("s30001","s30201")
-
-    } else if (c1 === 300 && c2 === 303){
-        classTitle = "모험가 (고마법사/치료사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_high_mage_table
-        addit_col2 = healer_table
-        abi_id.push("s30001","s30300")
-
-    } else if (c1 === 300 && c2 === 304){
-        classTitle = "모험가 (고마법사/구도자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_high_mage_table
-        addit_col2 = vowed_table
-        abi_id.push("s30001","s30400")
-
-    } else if (c1 === 300 && c2 === 306){
-        classTitle = "모험가 (고마법사/변신술사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_high_mage_table
-        addit_col2 = skinshifter_table
-        abi_id.push("s30001","s30600")
-
-    } else if (c1 === 300 && c2 === 307){
-        classTitle = "모험가 (고마법사/결투가)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_high_mage_table
-        addit_col2 = duelist_table
-        abi_id.push("s30001","s30700")
-
-    } else if (c1 === 300 && c2 === 308){
-        classTitle = "모험가 (고마법사/야수조련사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_high_mage_table
-        addit_col2 = beastmaster_table
-        abi_id.push("s30001","s30800")
-
-    } else if (c1 === 300 && c2 === 309){
-        classTitle = "모험가 (고마법사/사제)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_high_mage_table
-        addit_col2 = priest_table
-        abi_id.push("s30001","s30900")
-
-    } else if (c1 === 300 && c2 === 310){
-        classTitle = "모험가 (고마법사/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_high_mage_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30001","s31000")
-
-    } else if (c1 === 300 && c2 === 311){
-        classTitle = "모험가 (고마법사/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_high_mage_table
-        addit_col2 = accursed_table
-        abi_id.push("s30001","s31100")
-
-    } else if (c1 === 301 && c2 === 301){
-        classTitle = "마법사 - 원소술사"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = full_elem_table
-        abi_id.push("s30100")
-
-    } else if (c1 === 301 && c2 === 302){
-        classTitle = "쌍 부분 마법사 (원소술사/사령술사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = dual_mage_table
-        addit_col2 = partial_elem_art
-        addit_col3 = partial_necro_art
-        abi_id.push("s30101","s30201")
-
-    } else if (c1 === 301 && c2 === 303){
-        classTitle = "모험가 (원소술사/치료사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_elem_table
-        addit_col2 = healer_table
-        abi_id.push("s30101","s30300")
-
-    } else if (c1 === 301 && c2 === 304){
-        classTitle = "모험가 (원소술사/구도자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_elem_table
-        addit_col2 = vowed_table
-        abi_id.push("s30101","s30400")
-
-    } else if (c1 === 301 && c2 === 306){
-        classTitle = "모험가 (원소술사/변신술사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_elem_table
-        addit_col2 = skinshifter_table
-        abi_id.push("s30101","s30600")
-
-    } else if (c1 === 301 && c2 === 307){
-        classTitle = "모험가 (원소술사/결투가)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_elem_table
-        addit_col2 = duelist_table
-        abi_id.push("s30101","s30700")
-
-    } else if (c1 === 301 && c2 === 308){
-        classTitle = "모험가 (원소술사/야수조련사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_elem_table
-        addit_col2 = beastmaster_table
-        abi_id.push("s30101","s30800")
-
-    } else if (c1 === 301 && c2 === 309){
-        classTitle = "모험가 (원소술사/사제)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_elem_table
-        addit_col2 = priest_table
-        abi_id.push("s30101","s30900")
-
-    } else if (c1 === 301 && c2 === 310){
-        classTitle = "모험가 (원소술사/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_elem_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30101","s31000")
-
-    } else if (c1 === 301 && c2 === 311){
-        classTitle = "모험가 (원소술사/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_elem_table
-        addit_col2 = accursed_table
-        abi_id.push("s30101","s31100")
-
-    } else if (c1 === 302 && c2 === 302) {
-        classTitle = "마법사 - 사령술사"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = full_necro_table
-        abi_id.push("s30200")
-
-    } else if (c1 === 302 && c2 === 303){
-        classTitle = "모험가 (사령술사/치료사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_necro_table
-        addit_col2 = healer_table
-        abi_id.push("s30201","s30300")
-
-    } else if (c1 === 302 && c2 === 304){
-        classTitle = "모험가 (사령술사/구도자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_necro_table
-        addit_col2 = vowed_table
-        abi_id.push("s30201","s30400")
-
-    } else if (c1 === 302 && c2 === 306){
-        classTitle = "모험가 (사령술사/변신술사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_necro_table
-        addit_col2 = skinshifter_table
-        abi_id.push("s30201","s30600")
-
-    } else if (c1 === 302 && c2 === 307){
-        classTitle = "모험가 (사령술사/결투가)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_necro_table
-        addit_col2 = duelist_table
-        abi_id.push("s30201","s30700")
-
-    } else if (c1 === 302 && c2 === 308){
-        classTitle = "모험가 (사령술사/야수조련사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_necro_table
-        addit_col2 = beastmaster_table
-        abi_id.push("s30201","s30800")
-
-    } else if (c1 === 302 && c2 === 309){
-        classTitle = "모험가 (사령술사/사제)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_necro_table
-        addit_col2 = priest_table
-        abi_id.push("s30201","s30900")
-
-    } else if (c1 === 302 && c2 === 310){
-        classTitle = "모험가 (사령술사/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_necro_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30201","s31000")
-
-    } else if (c1 === 302 && c2 === 311){
-        classTitle = "모험가 (사령술사/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_necro_table
-        addit_col2 = accursed_table
-        abi_id.push("s30201","s31100")
-        
-    } else if (c1 === 303 && c2 === 304){
-        classTitle = "모험가 (치료사/구도자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = healer_table
-        addit_col2 = vowed_table
-        abi_id.push("s30300","s30400")
-
-    } else if (c1 === 303 && c2 === 305){
-        classTitle = "모험가 (치료사/소언사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = healer_table
-        addit_col2 = partial_adunic_table
-        abi_id.push("s30300","s30501")
-
-    } else if (c1 === 303 && c2 === 306){
-        classTitle = "모험가 (치료사/변신술사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = healer_table
-        addit_col2 = skinshifter_table
-        abi_id.push("s30300","s30600")
-
-    } else if (c1 === 303 && c2 === 307){
-        classTitle = "모험가 (치료사/결투가)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = healer_table
-        addit_col2 = duelist_table
-        abi_id.push("s30300","s30700")
-
-    } else if (c1 === 303 && c2 === 308){
-        classTitle = "모험가 (치료사/야수조련사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = healer_table
-        addit_col2 = beastmaster_table
-        abi_id.push("s30300","s30800")
-
-    } else if (c1 === 303 && c2 === 309){
-        classTitle = "모험가 (치료사/사제)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = healer_table
-        addit_col2 = priest_table
-        abi_id.push("s30300","s30900")
-
-    } else if (c1 === 303 && c2 === 310){
-        classTitle = "모험가 (치료사/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = healer_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30300","s31000")
-
-    } else if (c1 === 303 && c2 === 311){
-        classTitle = "모험가 (치료사/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = healer_table
-        addit_col2 = accursed_table
-        abi_id.push("s30300","s31100")
-        
-    } else if (c1 === 304 && c2 === 305){
-        classTitle = "모험가 (구도자/소언사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = vowed_table
-        addit_col2 = partial_adunic_table
-        abi_id.push("s30400","s30501")
-
-    } else if (c1 === 304 && c2 === 306){
-        classTitle = "모험가 (구도자/변신술사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = vowed_table
-        addit_col2 = skinshifter_table
-        abi_id.push("s30400","s30600")
-
-    } else if (c1 === 304 && c2 === 307){
-        classTitle = "모험가 (구도자/결투가)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = vowed_table
-        addit_col2 = duelist_table
-        abi_id.push("s30400","s30700")
-
-    } else if (c1 === 304 && c2 === 308){
-        classTitle = "모험가 (구도자/야수조련사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = vowed_table
-        addit_col2 = beastmaster_table
-
-    } else if (c1 === 304 && c2 === 309){
-        classTitle = "모험가 (구도자/사제)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = vowed_table
-        addit_col2 = priest_table
-        abi_id.push("s30400","s30900")
-
-    } else if (c1 === 304 && c2 === 310){
-        classTitle = "모험가 (구도자/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = vowed_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30400","s31000")
-
-    } else if (c1 === 304 && c2 === 311){
-        classTitle = "모험가 (구도자/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = vowed_table
-        addit_col2 = accursed_table
-        abi_id.push("s30400","s31100")
-
-    } else if (c1 === 305 && c2 === 305) {
-        classTitle = "마법사 - 소언사"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = full_adunic_table
-        abi_id.push("s30500")
-
-    } else if (c1 === 305 && c2 === 306){
-        classTitle = "모험가 (소언사/변신술사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_adunic_table
-        addit_col2 = skinshifter_table
-        abi_id.push("s30501", "s30600")
-
-    } else if (c1 === 305 && c2 === 307){
-        classTitle = "모험가 (소언사/결투가)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_adunic_table
-        addit_col2 = duelist_table
-        abi_id.push("s30501", "s30700")
-
-    } else if (c1 === 305 && c2 === 308){
-        classTitle = "모험가 (소언사/야수조련사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_adunic_table
-        addit_col2 = beastmaster_table
-        abi_id.push("s30501", "s30800")
-
-    } else if (c1 === 305 && c2 === 309){
-        classTitle = "모험가 (소언사/사제)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_adunic_table
-        addit_col2 = priest_table
-        abi_id.push("s30501", "s30900")
-
-    } else if (c1 === 305 && c2 === 310){
-        classTitle = "모험가 (소언사/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_adunic_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30501", "s31000")
-
-    } else if (c1 === 305 && c2 === 311){
-        classTitle = "모험가 (소언사/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = partial_adunic_table
-        addit_col2 = accursed_table
-        abi_id.push("s30501", "s31100")
-
-    } else if (c1 === 306 && c2 === 307){
-        classTitle = "모험가 (변신술사/결투가)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = skinshifter_table
-        addit_col2 = duelist_table
-        abi_id.push("s30600", "s30700")
-
-    } else if (c1 === 306 && c2 === 308){
-        classTitle = "모험가 (변신술사/야수조련사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = skinshifter_table
-        addit_col2 = beastmaster_table
-        abi_id.push("s30600", "s30800")
-
-    } else if (c1 === 306 && c2 === 309){
-        classTitle = "모험가 (변신술사/사제)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = skinshifter_table
-        addit_col2 = priest_table
-        abi_id.push("s30600", "s30900")
-
-    } else if (c1 === 306 && c2 === 310){
-        classTitle = "모험가 (변신술사/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = skinshifter_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30600", "s31000")
-
-    } else if (c1 === 306 && c2 === 311) {
-        classTitle = "모험가 (변신술사/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = skinshifter_table
-        addit_col2 = accursed_table
-        abi_id.push("s30600", "s31100")
-        
-    } else if (c1 === 307 && c2 === 308){
-        classTitle = "모험가 (결투가/야수조련사)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = duelist_table
-        addit_col2 = beastmaster_table
-        abi_id.push("s30700", "s30800")
-
-    } else if (c1 === 307 && c2 === 309){
-        classTitle = "모험가 (결투가/사제)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = duelist_table
-        addit_col2 = priest_table
-        abi_id.push("s30700", "s30900")
-
-    } else if (c1 === 307 && c2 === 310){
-        classTitle = "모험가 (결투가/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = duelist_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30700", "s31000")
-
-    } else if (c1 === 307 && c2 === 311) {
-        classTitle = "모험가 (결투가/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = duelist_table
-        addit_col2 = accursed_table
-        abi_id.push("s30700", "s31100")
-        
-    } else if (c1 === 308 && c2 === 309){
-        classTitle = "모험가 (야수조련사/사제)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = beastmaster_table
-        addit_col2 = priest_table
-        abi_id.push("s30800", "s30900")
-
-    } else if (c1 === 308 && c2 === 310){
-        classTitle = "모험가 (야수조련사/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = beastmaster_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30800", "s31000")
-
-    } else if (c1 === 308 && c2 === 311) {
-        classTitle = "모험가 (야수조련사/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = beastmaster_table
-        addit_col2 = accursed_table
-        abi_id.push("s30800", "s31100")
-        
-    } else if (c1 === 309 && c2 === 310){
-        classTitle = "모험가 (사제/생각 귀족)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = priest_table
-        addit_col2 = thought_noble_table
-        abi_id.push("s30900", "s31000")
-
-    } else if (c1 === 309 && c2 === 311) {
-        classTitle = "모험가 (사제/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = priest_table
-        addit_col2 = accursed_table
-        abi_id.push("s30900", "s31100")
-        
-    } else if (c1 === 310 && c2 === 311) {
-        classTitle = "모험가 (생각 귀족/저주받은 자)"
-        hd_col = mage_hp
-        ab_col = to_two_ab
-        focus_col = focus_mage
-        addit_col1 = thought_noble_table
-        addit_col2 = accursed_table
-        abi_id.push("s31000", "s31100")
+    let temp1 = Number($("#class1 option:selected").val())
+    let temp2 = Number($("#class2 option:selected").val())
+    let config = CLASS_COMBINATION_CONFIGS[getClassCombinationKey(temp1, temp2)]
+
+    if (!config) {
+        $('table').remove()
+        $('#cc').remove()
+        return
     }
 
+    let addit_cols = config.addit_cols || []
 
     $('table').remove()
-    let ct = genClassTable(classTitle, hd_col, ab_col, focus_col, addit_col1, addit_col2, addit_col3, addit_col4)
+    let ct = genClassTable(
+        config.classTitle,
+        config.hd_col,
+        config.ab_col,
+        config.focus_col,
+        addit_cols[0],
+        addit_cols[1],
+        addit_cols[2],
+        addit_cols[3]
+    )
     $('#ct').append(ct)
 
     $('#cc').remove()
-    let class_card = genClassAbilities(abi_id)
+    let class_card = genClassAbilities(config.abi_id || [])
     $("#class_card").append(class_card)
 
 }
@@ -1336,101 +259,14 @@ function genClassAbilities(ids){
 
 function blockClassChoice(id, to_block_select){
 
-    $( to_block_select).children().removeAttr('disabled');
+    $(to_block_select).children().removeAttr('disabled');
     $(to_block_select + " option[value='0']").attr('disabled', 'disabled')
 
-    /*
-        <option value="10">전사</option>
-        <option value="11">전사 - 항마사</option>
-        <option value="20">전문가</option>
-        <option value="21">전문가 - 음유시인</option>
-        <option value="22">전문가 - 현인</option>
-        <option value="300">마법사 - 고마법사</option>
-        <option value="301">마법사 - 원소술사</option>
-        <option value="302">마법사 - 사령술사</option>
-        <option value="303">마법사 - 치료사</option>
-        <option value="304">마법사 - 구도자</option>
-        <option value="305">마법사 - 소언사</option>
-        <option value="306">마법사 - 변신술사</option>
-        <option value="307">마법사 - 결투가</option>
-        <option value="308">마법사 - 야수조련사</option>
-        <option value="309">마법사 - 사제</option>
-        <option value="310">마법사 - 생각 귀족</option>
-        <option value="311">마법사 - 저주받은 자</option>
-     */
+    let blockedOptions = BLOCKED_CLASS_OPTIONS[id] || []
 
-    if(id === "11") {
-        $(to_block_select + " option[value='11']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='300']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='301']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='302']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='303']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='304']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='305']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='306']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='307']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='308']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='309']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='310']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='311']").attr('disabled', 'disabled');
-
-    } else if(id === "21"){
-        $( to_block_select + " option[value='21']").attr('disabled','disabled');
-
-    } else if(id === "22"){
-        $( to_block_select + " option[value='22']").attr('disabled','disabled');
-
-    } else if (id === "300"){
-        $( to_block_select + " option[value='11']").attr('disabled','disabled');
-        $( to_block_select + " option[value='305']").attr('disabled','disabled');
-
-    } else if (id === "301"){
-        $( to_block_select + " option[value='11']").attr('disabled','disabled');
-        $( to_block_select + " option[value='305']").attr('disabled','disabled');
-
-    } else if (id === "302"){
-        $( to_block_select + " option[value='11']").attr('disabled','disabled');
-        $( to_block_select + " option[value='305']").attr('disabled','disabled');
-
-    } else if (id === "303"){
-        $( to_block_select + " option[value='11']").attr('disabled','disabled');
-        $( to_block_select + " option[value='303']").attr('disabled','disabled');
-
-    } else if (id === "304"){
-        $( to_block_select + " option[value='11']").attr('disabled','disabled');
-        $( to_block_select + " option[value='304']").attr('disabled','disabled');
-
-    } else if (id === "305"){
-        $( to_block_select + " option[value='11']").attr('disabled','disabled');
-        $( to_block_select + " option[value='300']").attr('disabled','disabled');
-        $( to_block_select + " option[value='301']").attr('disabled','disabled');
-        $( to_block_select + " option[value='302']").attr('disabled','disabled');
-
-    } else if (id === "306") {
-        $(to_block_select + " option[value='11']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='306']").attr('disabled', 'disabled');
-
-    } else if (id === "307") {
-        $(to_block_select + " option[value='11']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='307']").attr('disabled', 'disabled');
-
-    } else if (id === "308") {
-        $(to_block_select + " option[value='11']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='308']").attr('disabled', 'disabled');
-
-    } else if (id === "309") {
-        $(to_block_select + " option[value='11']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='309']").attr('disabled', 'disabled');
-
-    } else if (id === "310") {
-        $(to_block_select + " option[value='11']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='310']").attr('disabled', 'disabled');
-
-    } else if (id === "311") {
-        $(to_block_select + " option[value='11']").attr('disabled', 'disabled');
-        $(to_block_select + " option[value='311']").attr('disabled', 'disabled');
-
-    }
+    blockedOptions.forEach(function(optionValue) {
+        $(to_block_select + " option[value='" + optionValue + "']").attr('disabled', 'disabled')
+    })
 }
 
 function genClassTable(class_title, hit_dice, ab, focus, addit_col1, addit_col2, addit_col3, addit_col4){
@@ -1639,4 +475,128 @@ let wise_table = [['비마법적 사제','마녀','예언자','기인'],
     ['<i>일반 기교</i> 중 1', '<i>예지 기교</i>와 <i>저주와 축복</i> 중 1', '<i>숙련된</i> 혹은 <i>연줄</i>','-'],
     ['-','-','-','자유 1'],
     ['<i>일반 기교</i> 중 1','<i>저주와 축복</i> 중 1','<i>예지 기교</i> 중 1','-']]
+
+
+const CLASS_COMBINATION_CONFIGS = {
+    "10-10": { classTitle: "\uc804\uc0ac", hd_col: warrior_hp, ab_col: to_ten_ab, focus_col: focus_war, addit_cols: [], abi_id: ["s1000", "s1001"] },
+    "10-11": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\ud56d\ub9c8\uc0ac)", hd_col: warrior_hp, ab_col: to_ten_ab, focus_col: focus_war, addit_cols: [mageslayer_table], abi_id: ["s1100"] },
+    "10-20": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uc804\ubb38\uac00)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war_exp, addit_cols: [], abi_id: ["s2001"] },
+    "10-21": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uc74c\uc720\uc2dc\uc778)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [bard_table], abi_id: ["s2100"] },
+    "10-22": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\ud604\uc778)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [wise_table], abi_id: ["s2200"] },
+    "10-300": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uace0\ub9c8\ubc95\uc0ac)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [partial_high_mage_table], abi_id: ["s30001"] },
+    "10-301": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uc6d0\uc18c\uc220\uc0ac)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [partial_elem_table], abi_id: ["s30101"] },
+    "10-302": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uc0ac\ub839\uc220\uc0ac)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [partial_necro_table], abi_id: ["s30201"] },
+    "10-303": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uce58\ub8cc\uc0ac)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [healer_table], abi_id: ["s30300"] },
+    "10-304": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uad6c\ub3c4\uc790)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [vowed_table], abi_id: ["s30400"] },
+    "10-305": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uc18c\uc5b8\uc0ac)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [partial_adunic_table], abi_id: ["s30501"] },
+    "10-306": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [skinshifter_table], abi_id: ["s30600"] },
+    "10-307": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uacb0\ud22c\uac00)", hd_col: expert_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [duelist_table], abi_id: ["s30700", "s30701"] },
+    "10-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [beastmaster_table], abi_id: ["s30800"] },
+    "10-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uc0ac\uc81c)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [priest_table], abi_id: ["s30900"] },
+    "10-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uc0dd\uac01 \uadc0\uc871)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [thought_noble_table], abi_id: ["s31000"] },
+    "10-311": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\uc0ac/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: warrior_hp, ab_col: to_seven_ab, focus_col: focus_war, addit_cols: [accursed_table], abi_id: ["s31100"] },
+    "11-20": { classTitle: "\ubaa8\ud5d8\uac00 (\ud56d\ub9c8\uc0ac/\uc804\ubb38\uac00)", hd_col: expert_hp, ab_col: to_seven_ab, focus_col: focus_exp, addit_cols: [mageslayer_table], abi_id: ["s1100", "s2001"] },
+    "11-21": { classTitle: "\ubaa8\ud5d8\uac00 (\ud56d\ub9c8\uc0ac/\uc74c\uc720\uc2dc\uc778)", hd_col: expert_hp, ab_col: to_seven_ab, focus_col: focus_mage, addit_cols: [mageslayer_table, bard_table], abi_id: ["s1100", "s2100"] },
+    "11-22": { classTitle: "\ubaa8\ud5d8\uac00 (\ud56d\ub9c8\uc0ac/\ud604\uc778)", hd_col: expert_hp, ab_col: to_seven_ab, focus_col: focus_mage, addit_cols: [mageslayer_table, wise_table], abi_id: ["s1100", "s2200"] },
+    "20-20": { classTitle: "\uc804\ubb38\uac00", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [], abi_id: ["s2000", "s2001"] },
+    "20-21": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uc74c\uc720\uc2dc\uc778)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table], abi_id: ["s2001", "s2100"] },
+    "20-22": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\ud604\uc778)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table], abi_id: ["s2001", "s2200"] },
+    "20-300": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uace0\ub9c8\ubc95\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [partial_high_mage_table], abi_id: ["s2001", "s30001"] },
+    "20-301": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uc6d0\uc18c\uc220\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [partial_elem_table], abi_id: ["s2001", "s30101"] },
+    "20-302": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uc0ac\ub839\uc220\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [partial_necro_table], abi_id: ["s2001", "s30201"] },
+    "20-303": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uce58\ub8cc\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [healer_table], abi_id: ["s2001", "s30300"] },
+    "20-304": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uad6c\ub3c4\uc790)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [vowed_table], abi_id: ["s2001", "s30400"] },
+    "20-305": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uc18c\uc5b8\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [partial_adunic_table], abi_id: ["s2001", "s30501"] },
+    "20-306": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [skinshifter_table], abi_id: ["s2001", "s30600"] },
+    "20-307": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uacb0\ud22c\uac00)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [duelist_table], abi_id: ["s2001", "s30700"] },
+    "20-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [beastmaster_table], abi_id: ["s2001", "s30800"] },
+    "20-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uc0ac\uc81c)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [priest_table], abi_id: ["s2001", "s30900"] },
+    "20-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uc0dd\uac01 \uadc0\uc871)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [thought_noble_table], abi_id: ["s2001", "s31000"] },
+    "20-311": { classTitle: "\ubaa8\ud5d8\uac00 (\uc804\ubb38\uac00/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [accursed_table], abi_id: ["s2001", "s31100"] },
+    "21-22": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\ud604\uc778)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, wise_table], abi_id: ["s2100", "s2200"] },
+    "21-300": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uace0\ub9c8\ubc95\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, partial_high_mage_table], abi_id: ["s2100", "s30001"] },
+    "21-301": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uc6d0\uc18c\uc220\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, partial_elem_table], abi_id: ["s2100", "s30101"] },
+    "21-302": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uc0ac\ub839\uc220\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, partial_necro_table], abi_id: ["s2100", "s30201"] },
+    "21-303": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uce58\ub8cc\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, healer_table], abi_id: ["s2100", "s30300"] },
+    "21-304": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uad6c\ub3c4\uc790)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, vowed_table], abi_id: ["s2100", "s30400"] },
+    "21-305": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uc18c\uc5b8\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, partial_adunic_table], abi_id: ["s2100", "s30501"] },
+    "21-306": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, skinshifter_table], abi_id: ["s2100", "s30600"] },
+    "21-307": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uacb0\ud22c\uac00)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, duelist_table], abi_id: ["s2100", "s30700"] },
+    "21-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, beastmaster_table], abi_id: ["s2100", "s30800"] },
+    "21-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uc0ac\uc81c)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, priest_table], abi_id: ["s2100", "s30900"] },
+    "21-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uc0dd\uac01 \uadc0\uc871)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, thought_noble_table], abi_id: ["s2100", "s31000"] },
+    "21-311": { classTitle: "\ubaa8\ud5d8\uac00 (\uc74c\uc720\uc2dc\uc778/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [bard_table, accursed_table], abi_id: ["s2100", "s31100"] },
+    "22-300": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uace0\ub9c8\ubc95\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, partial_high_mage_table], abi_id: ["s2200", "s30001"] },
+    "22-301": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uc6d0\uc18c\uc220\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, partial_elem_table], abi_id: ["s2200", "s30101"] },
+    "22-302": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uc0ac\ub839\uc220\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, partial_necro_table], abi_id: ["s2200", "s30201"] },
+    "22-303": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uce58\ub8cc\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, healer_table], abi_id: ["s2200", "s30300"] },
+    "22-304": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uad6c\ub3c4\uc790)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, vowed_table], abi_id: ["s2200", "s30400"] },
+    "22-305": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uc18c\uc5b8\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, partial_adunic_table], abi_id: ["s2200", "s30501"] },
+    "22-306": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, skinshifter_table], abi_id: ["s2200", "s30600"] },
+    "22-307": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uacb0\ud22c\uac00)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, duelist_table], abi_id: ["s2200", "s30700"] },
+    "22-308": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, beastmaster_table], abi_id: ["s2200", "s30800"] },
+    "22-309": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uc0ac\uc81c)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, priest_table], abi_id: ["s2200", "s30900"] },
+    "22-310": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uc0dd\uac01 \uadc0\uc871)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, thought_noble_table], abi_id: ["s2200", "s31000"] },
+    "22-311": { classTitle: "\ubaa8\ud5d8\uac00 (\ud604\uc778/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: expert_hp, ab_col: to_five_ab, focus_col: focus_exp, addit_cols: [wise_table, accursed_table], abi_id: ["s2200", "s31100"] },
+    "300-300": { classTitle: "\ub9c8\ubc95\uc0ac - \uace0\ub9c8\ubc95\uc0ac", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [full_high_mage_table], abi_id: ["s30000"] },
+    "300-301": { classTitle: "\uc30d \ubd80\ubd84 \ub9c8\ubc95\uc0ac (\uace0\ub9c8\ubc95\uc0ac/\uc6d0\uc18c\uc220\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [dual_mage_table, partial_high_mage_art, partial_elem_art], abi_id: ["s30001", "s30101"] },
+    "300-302": { classTitle: "\uc30d \ubd80\ubd84 \ub9c8\ubc95\uc0ac (\uace0\ub9c8\ubc95\uc0ac/\uc0ac\ub839\uc220\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [full_high_mage_table, partial_high_mage_art, partial_necro_art], abi_id: ["s30001", "s30201"] },
+    "300-303": { classTitle: "\ubaa8\ud5d8\uac00 (\uace0\ub9c8\ubc95\uc0ac/\uce58\ub8cc\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_high_mage_table, healer_table], abi_id: ["s30001", "s30300"] },
+    "300-304": { classTitle: "\ubaa8\ud5d8\uac00 (\uace0\ub9c8\ubc95\uc0ac/\uad6c\ub3c4\uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_high_mage_table, vowed_table], abi_id: ["s30001", "s30400"] },
+    "300-306": { classTitle: "\ubaa8\ud5d8\uac00 (\uace0\ub9c8\ubc95\uc0ac/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_high_mage_table, skinshifter_table], abi_id: ["s30001", "s30600"] },
+    "300-307": { classTitle: "\ubaa8\ud5d8\uac00 (\uace0\ub9c8\ubc95\uc0ac/\uacb0\ud22c\uac00)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_high_mage_table, duelist_table], abi_id: ["s30001", "s30700"] },
+    "300-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uace0\ub9c8\ubc95\uc0ac/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_high_mage_table, beastmaster_table], abi_id: ["s30001", "s30800"] },
+    "300-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uace0\ub9c8\ubc95\uc0ac/\uc0ac\uc81c)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_high_mage_table, priest_table], abi_id: ["s30001", "s30900"] },
+    "300-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uace0\ub9c8\ubc95\uc0ac/\uc0dd\uac01 \uadc0\uc871)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_high_mage_table, thought_noble_table], abi_id: ["s30001", "s31000"] },
+    "300-311": { classTitle: "\ubaa8\ud5d8\uac00 (\uace0\ub9c8\ubc95\uc0ac/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_high_mage_table, accursed_table], abi_id: ["s30001", "s31100"] },
+    "301-301": { classTitle: "\ub9c8\ubc95\uc0ac - \uc6d0\uc18c\uc220\uc0ac", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [full_elem_table], abi_id: ["s30100"] },
+    "301-302": { classTitle: "\uc30d \ubd80\ubd84 \ub9c8\ubc95\uc0ac (\uc6d0\uc18c\uc220\uc0ac/\uc0ac\ub839\uc220\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [dual_mage_table, partial_elem_art, partial_necro_art], abi_id: ["s30101", "s30201"] },
+    "301-303": { classTitle: "\ubaa8\ud5d8\uac00 (\uc6d0\uc18c\uc220\uc0ac/\uce58\ub8cc\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_elem_table, healer_table], abi_id: ["s30101", "s30300"] },
+    "301-304": { classTitle: "\ubaa8\ud5d8\uac00 (\uc6d0\uc18c\uc220\uc0ac/\uad6c\ub3c4\uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_elem_table, vowed_table], abi_id: ["s30101", "s30400"] },
+    "301-306": { classTitle: "\ubaa8\ud5d8\uac00 (\uc6d0\uc18c\uc220\uc0ac/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_elem_table, skinshifter_table], abi_id: ["s30101", "s30600"] },
+    "301-307": { classTitle: "\ubaa8\ud5d8\uac00 (\uc6d0\uc18c\uc220\uc0ac/\uacb0\ud22c\uac00)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_elem_table, duelist_table], abi_id: ["s30101", "s30700"] },
+    "301-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uc6d0\uc18c\uc220\uc0ac/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_elem_table, beastmaster_table], abi_id: ["s30101", "s30800"] },
+    "301-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uc6d0\uc18c\uc220\uc0ac/\uc0ac\uc81c)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_elem_table, priest_table], abi_id: ["s30101", "s30900"] },
+    "301-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uc6d0\uc18c\uc220\uc0ac/\uc0dd\uac01 \uadc0\uc871)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_elem_table, thought_noble_table], abi_id: ["s30101", "s31000"] },
+    "301-311": { classTitle: "\ub9c8\ubc95\uc0ac - \uc0ac\ub839\uc220\uc0ac", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_elem_table, accursed_table, full_necro_table], abi_id: ["s30200"] },
+    "302-303": { classTitle: "\ubaa8\ud5d8\uac00 (\uc0ac\ub839\uc220\uc0ac/\uce58\ub8cc\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_necro_table, healer_table], abi_id: ["s30201", "s30300"] },
+    "302-304": { classTitle: "\ubaa8\ud5d8\uac00 (\uc0ac\ub839\uc220\uc0ac/\uad6c\ub3c4\uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_necro_table, vowed_table], abi_id: ["s30201", "s30400"] },
+    "302-306": { classTitle: "\ubaa8\ud5d8\uac00 (\uc0ac\ub839\uc220\uc0ac/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_necro_table, skinshifter_table], abi_id: ["s30201", "s30600"] },
+    "302-307": { classTitle: "\ubaa8\ud5d8\uac00 (\uc0ac\ub839\uc220\uc0ac/\uacb0\ud22c\uac00)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_necro_table, duelist_table], abi_id: ["s30201", "s30700"] },
+    "302-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uc0ac\ub839\uc220\uc0ac/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_necro_table, beastmaster_table], abi_id: ["s30201", "s30800"] },
+    "302-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uc0ac\ub839\uc220\uc0ac/\uc0ac\uc81c)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_necro_table, priest_table], abi_id: ["s30201", "s30900"] },
+    "302-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uc0ac\ub839\uc220\uc0ac/\uc0dd\uac01 \uadc0\uc871)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_necro_table, thought_noble_table], abi_id: ["s30201", "s31000"] },
+    "302-311": { classTitle: "\ubaa8\ud5d8\uac00 (\uc0ac\ub839\uc220\uc0ac/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_necro_table, accursed_table], abi_id: ["s30201", "s31100"] },
+    "303-304": { classTitle: "\ubaa8\ud5d8\uac00 (\uce58\ub8cc\uc0ac/\uad6c\ub3c4\uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [healer_table, vowed_table], abi_id: ["s30300", "s30400"] },
+    "303-305": { classTitle: "\ubaa8\ud5d8\uac00 (\uce58\ub8cc\uc0ac/\uc18c\uc5b8\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [healer_table, partial_adunic_table], abi_id: ["s30300", "s30501"] },
+    "303-306": { classTitle: "\ubaa8\ud5d8\uac00 (\uce58\ub8cc\uc0ac/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [healer_table, skinshifter_table], abi_id: ["s30300", "s30600"] },
+    "303-307": { classTitle: "\ubaa8\ud5d8\uac00 (\uce58\ub8cc\uc0ac/\uacb0\ud22c\uac00)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [healer_table, duelist_table], abi_id: ["s30300", "s30700"] },
+    "303-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uce58\ub8cc\uc0ac/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [healer_table, beastmaster_table], abi_id: ["s30300", "s30800"] },
+    "303-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uce58\ub8cc\uc0ac/\uc0ac\uc81c)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [healer_table, priest_table], abi_id: ["s30300", "s30900"] },
+    "303-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uce58\ub8cc\uc0ac/\uc0dd\uac01 \uadc0\uc871)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [healer_table, thought_noble_table], abi_id: ["s30300", "s31000"] },
+    "303-311": { classTitle: "\ubaa8\ud5d8\uac00 (\uce58\ub8cc\uc0ac/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [healer_table, accursed_table], abi_id: ["s30300", "s31100"] },
+    "304-305": { classTitle: "\ubaa8\ud5d8\uac00 (\uad6c\ub3c4\uc790/\uc18c\uc5b8\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [vowed_table, partial_adunic_table], abi_id: ["s30400", "s30501"] },
+    "304-306": { classTitle: "\ubaa8\ud5d8\uac00 (\uad6c\ub3c4\uc790/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [vowed_table, skinshifter_table], abi_id: ["s30400", "s30600"] },
+    "304-307": { classTitle: "\ubaa8\ud5d8\uac00 (\uad6c\ub3c4\uc790/\uacb0\ud22c\uac00)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [vowed_table, duelist_table], abi_id: ["s30400", "s30700"] },
+    "304-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uad6c\ub3c4\uc790/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [vowed_table, beastmaster_table], abi_id: [] },
+    "304-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uad6c\ub3c4\uc790/\uc0ac\uc81c)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [vowed_table, priest_table], abi_id: ["s30400", "s30900"] },
+    "304-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uad6c\ub3c4\uc790/\uc0dd\uac01 \uadc0\uc871)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [vowed_table, thought_noble_table], abi_id: ["s30400", "s31000"] },
+    "304-311": { classTitle: "\ub9c8\ubc95\uc0ac - \uc18c\uc5b8\uc0ac", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [vowed_table, accursed_table, full_adunic_table], abi_id: ["s30500"] },
+    "305-306": { classTitle: "\ubaa8\ud5d8\uac00 (\uc18c\uc5b8\uc0ac/\ubcc0\uc2e0\uc220\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_adunic_table, skinshifter_table], abi_id: ["s30501", "s30600"] },
+    "305-307": { classTitle: "\ubaa8\ud5d8\uac00 (\uc18c\uc5b8\uc0ac/\uacb0\ud22c\uac00)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_adunic_table, duelist_table], abi_id: ["s30501", "s30700"] },
+    "305-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uc18c\uc5b8\uc0ac/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_adunic_table, beastmaster_table], abi_id: ["s30501", "s30800"] },
+    "305-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uc18c\uc5b8\uc0ac/\uc0ac\uc81c)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_adunic_table, priest_table], abi_id: ["s30501", "s30900"] },
+    "305-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uc18c\uc5b8\uc0ac/\uc0dd\uac01 \uadc0\uc871)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_adunic_table, thought_noble_table], abi_id: ["s30501", "s31000"] },
+    "305-311": { classTitle: "\ubaa8\ud5d8\uac00 (\uc18c\uc5b8\uc0ac/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [partial_adunic_table, accursed_table], abi_id: ["s30501", "s31100"] },
+    "306-307": { classTitle: "\ubaa8\ud5d8\uac00 (\ubcc0\uc2e0\uc220\uc0ac/\uacb0\ud22c\uac00)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [skinshifter_table, duelist_table], abi_id: ["s30600", "s30700"] },
+    "306-308": { classTitle: "\ubaa8\ud5d8\uac00 (\ubcc0\uc2e0\uc220\uc0ac/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [skinshifter_table, beastmaster_table], abi_id: ["s30600", "s30800"] },
+    "306-309": { classTitle: "\ubaa8\ud5d8\uac00 (\ubcc0\uc2e0\uc220\uc0ac/\uc0ac\uc81c)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [skinshifter_table, priest_table], abi_id: ["s30600", "s30900"] },
+    "306-310": { classTitle: "\ubaa8\ud5d8\uac00 (\ubcc0\uc2e0\uc220\uc0ac/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [skinshifter_table, thought_noble_table, skinshifter_table, accursed_table], abi_id: ["s30600", "s31100"] },
+    "307-308": { classTitle: "\ubaa8\ud5d8\uac00 (\uacb0\ud22c\uac00/\uc57c\uc218\uc870\ub828\uc0ac)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [duelist_table, beastmaster_table], abi_id: ["s30700", "s30800"] },
+    "307-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uacb0\ud22c\uac00/\uc0ac\uc81c)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [duelist_table, priest_table], abi_id: ["s30700", "s30900"] },
+    "307-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uacb0\ud22c\uac00/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [duelist_table, thought_noble_table, duelist_table, accursed_table], abi_id: ["s30700", "s31100"] },
+    "308-309": { classTitle: "\ubaa8\ud5d8\uac00 (\uc57c\uc218\uc870\ub828\uc0ac/\uc0ac\uc81c)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [beastmaster_table, priest_table], abi_id: ["s30800", "s30900"] },
+    "308-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uc57c\uc218\uc870\ub828\uc0ac/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [beastmaster_table, thought_noble_table, beastmaster_table, accursed_table], abi_id: ["s30800", "s31100"] },
+    "309-310": { classTitle: "\ubaa8\ud5d8\uac00 (\uc0dd\uac01 \uadc0\uc871/\uc800\uc8fc\ubc1b\uc740 \uc790)", hd_col: mage_hp, ab_col: to_two_ab, focus_col: focus_mage, addit_cols: [priest_table, thought_noble_table, priest_table, accursed_table, thought_noble_table, accursed_table], abi_id: ["s31000", "s31100"] },
+}
 

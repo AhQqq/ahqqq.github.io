@@ -1,0 +1,281 @@
+[
+  {
+    "id": "warrior",
+    "can_be_full_class": true,
+    "name": "전사",
+    "eng_name" : "Warrior",    
+    "archetype": "warrior",
+    "spells": false,
+    "arts": false,
+    "bonus": [],
+    "art_prog": []
+  },
+  {
+    "id": "expert",
+    "can_be_full_class": true,
+    "name": "전문가",
+    "eng_name" : "Expert",
+    "archetype": "expert",
+    "spells": false,
+    "arts": false,
+    "bonus": [
+      {
+        "id": "quick_learner",
+        "action": "fixed_ability"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "high",
+    "can_be_full_class": true,
+    "name": "고마법사",
+    "eng_name" : "High Mage",
+    "archetype": "mage",
+    "spells": true,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "magic",
+        "action": "fixed_skill"
+      } 
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "necro",
+    "can_be_full_class": true,
+    "name": "사령술사",
+    "eng_name" : "Necromancer",    
+    "archetype": "mage",
+    "spells": true,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "magic",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "elem",
+    "can_be_full_class": true,
+    "name": "원소술사",
+    "eng_name" : "Elementalist",    
+    "archetype": "mage",
+    "spells": true,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "magic",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "mageslayer",
+    "can_be_full_class": false,
+    "incompatible_archetypes": ["mage"],
+    "name": "항마사",
+    "eng_name": "Mageslayer",
+    "archetype": "warrior",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "magic",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "bard",
+    "can_be_full_class": false,
+    "name": "음유시인",
+    "eng_name": "Bard",
+    "archetype": "expert",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "perform",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "wise",
+    "can_be_full_class": false,
+    "name": "현인",
+    "eng_name": "The Wise",
+    "archetype": "expert",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "duelist",
+    "can_be_full_class": false,
+    "name": "결투가",
+    "eng_name": "Duelist",
+    "archetype": "mage",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "flaw_of_fragility",
+        "action": "fixed_ability"
+      },
+      {
+        "id": "stab",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "skinshifter",
+    "can_be_full_class": false,
+    "name": "변신술사",
+    "eng_name": "Skinshifter",
+    "archetype": "mage",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "survive",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "healer",
+    "can_be_full_class": false,
+    "name": "치료사",
+    "eng_name": "Healer",
+    "archetype": "mage",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "heal",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "vowed",
+    "can_be_full_class": false,
+    "name": "구도자",
+    "eng_name": "Vowed",
+    "archetype": "mage",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "action": "choice_skill",
+        "count": 1,
+        "exclude": {
+          "ids": [
+            "stab", "punch", "shoot"
+          ]
+        } 
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "invoker",
+    "can_be_full_class": true,
+    "incompatible_classes": ["high", "elem", "necro"],
+    "name": "소언사",
+    "eng_name": "Invoker",
+    "archetype": "mage",
+    "spells": true,
+    "arts": false,
+    "bonus": [
+      {
+        "id": "magic",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "beastmaster",
+    "can_be_full_class": false,
+    "name": "야수조련사",
+    "eng_name": "Beastmaster",
+    "archetype": "mage",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "survive",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "priest",
+    "can_be_full_class": false,
+    "name": "사제",
+    "eng_name": "Priest",
+    "archetype": "mage",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "pray",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "thought_noble",
+    "can_be_full_class": false,
+    "name": "생각귀족",
+    "eng_name": "Thought Noble",
+    "archetype": "mage",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "notice",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  },
+  {
+    "id": "accursed",
+    "can_be_full_class": false,
+    "name": "저주받은 자",
+    "eng_name": "Accursed",
+    "archetype": "mage",
+    "spells": false,
+    "arts": true,
+    "bonus": [
+      {
+        "id": "magic",
+        "action": "fixed_skill"
+      }
+    ],
+    "art_prog": []
+  }
+
+]

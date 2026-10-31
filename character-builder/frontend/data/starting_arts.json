@@ -1,0 +1,52 @@
+[
+  {
+    "character_level": 1,
+    "classes": {
+      "high": {
+        "partial": { "fixed": [], "choice_groups":[], "choose": 1 },
+        "full": { "fixed": [], "choice_groups":[], "choose": 2 }
+      },
+      "necro": {
+        "partial": { "fixed": [], "choice_groups":[], "choose": 1 },
+        "full": { "fixed": [], "choice_groups":[], "choose": 1 }
+      },
+      "elem": {
+        "partial": { "fixed": ["elemental_resilience", "elemental_sparks"], "choice_groups":[], "choose": 1 },
+        "full": { "fixed": ["elemental_resilience", "elemental_sparks"], "choice_groups":[], "choose": 1 }
+      },
+      "accursed": {
+        "partial": { "fixed": [], "choice_groups":[{"choose":1, "options": ["accursed_blade", "accursed_bolt"]}], "choose": 1 }
+      },
+      "bard": {
+        "partial": { "fixed": ["a_thousand_tongues"], "choice_groups":[], "choose": 1 }
+      },
+      "beastmaster": {
+        "partial": { "fixed": ["bind_companion"], "choice_groups":[], "choose": 1 }
+      },
+      "duelist":{
+        "partial": { "fixed": ["favored_weapon"], "choice_groups":[], "choose": 1 }
+      },
+      "healer":{
+        "partial": { "fixed": ["healing_touch"], "choice_groups":[], "choose": 1 }
+      },
+      "mageslayer":{
+        "partial": { "fixed": ["antimage", "magebane"], "choice_groups":[], "choose": 0}
+      },
+      "priest":{
+        "partial": { "fixed": [], "choice_groups":[], "choose": 2}
+      },
+      "skinshifter":{
+        "partial": { "fixed": ["change_form"], "choice_groups":[], "choose": 1}
+      },
+      "thought_noble":{
+        "partial": { "fixed": ["open_mind"], "choice_groups":[], "choose": 1}
+      },
+      "vowed":{
+        "partial": { "fixed": ["martial_style", "unarmed_might", "unarmored_defense"], "choice_groups":[], "choose": 1}
+      },
+      "wise":{
+        "partial": { "fixed": [], "choice_groups":[], "choose": 1}
+      }
+    }
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "id": "accursed_blade",
+    "name": "저주받은 검",
+    "eng_name": "Accursed Blade",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "턴 행동으로 손에 심령술의 힘이 담긴 근접무기를 1d8 한손 무기, 혹은 2d6 양손 무기로 투영합니다. 둘 다 당신의 마법 기술을 피해량에 더하며, 2/15 충격을 갖고, 마법 + (근력, 민첩, 지력, 매력 중 제일 높은 수정치)를 공격 굴림에 추가합니다."
+  },
+  {
+    "id": "accursed_bolt",
+    "name": "저주받은 화살",
+    "eng_name": "Accursed Bolt",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "저주받은 검처럼 사용되며, 심령술의 힘을 가까운 거리에 휘두르는 것이 아니라 발사합니다. 피해량은 1d8 + 마법이며, 사정거리는 200 ft, 그리고 근접 거리로는 -4 페널티를 받으며 던질 수 있습니다. 이 화살들은 양손이 비어 있어야 던질 수 있습니다."
+  },
+  {
+    "id": "bewitching_distraction",
+    "name": "홀리는 방해",
+    "eng_name": "Bewitching Distraction",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "전투 중이 아닌 지능이 있는 대상에 대해 주요 행동으로 하루 동안 분발합니다. 대상은 정신 내성을 굴리며, 실패시 이번 한 장면동안 몽롱함에 빠져서 주변에 일어나는 일들을 파악하지 못하고 당신과 그 장면에서 일어났던 일들을 잊어버립니다. 위험은 이러한 몽롱함을 멈추지만, 잊는 것을 막지는 못합니다."
+  },
+  {
+    "id": "compelling_shriek",
+    "name": "강제하는 비명",
+    "eng_name": "Compelling Shriek",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "장면당 한 번, 주요 행동으로 하루 동안 분발해서 최대 7개까지의 단어를 포함한 명령을 소리칩니다. 지정된 대상들 중 이 말을 듣고 이해한 대상들은 정신 내성을 굴리고, 실패시 그들의 특성에 대해 너무 반대되는 것이 아닌 이상 그들은 명령이 된 행동을 한 라운드 동안 실행합니다."
+  },
+  {
+    "id": "devils_bargain",
+    "name": "악마와의 거래",
+    "eng_name": "Devil’s Bargain",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "다른 사람과 강요되지 않은 거래를 할 때 주요 행동으로 축성을 합니다. 거래 대상이 거래를 깨거나, 거래의 뜻에 반하는 행동을 할 경우 당신은 바로 알 수 있으며, 원한다면 대상에게 레벨 당 1d6의 피해를 줄 수 있습니다."
+  },
+  {
+    "id": "dire_pact",
+    "name": "끔찍한 계약",
+    "eng_name": "Dire Pact",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "적들은 당신의 저주받은 자의 기교에 대항하는 모든 판정에 당신의 마법 기술 만큼의 페널티를 받습니다. 그들이 만약 성공한다면 당신은 1의 기관계 부담을 얻습니다."
+  },
+  {
+    "id": "lying_face",
+    "name": "거짓말하는 얼굴",
+    "eng_name": "Lying Face",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "주요 행동으로 분발합니다. 분발하는 동안 당신은 대략적으로 크기가 비슷하고, 옷, 냄새, 목소리가 다른 인간형으로 변장할 수 있습니다."
+  },
+  {
+    "id": "night_black_eyes",
+    "name": "밤처럼 검은 눈",
+    "eng_name": "Night Black Eyes",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "당신은 완벽한 어둠속에서도 명확하게 볼 수 있습니다. 주요 행동으로 보이는 특정한 물건, 사람, 혹은 장소에 집중을 하면 그것에 마법이 부여됐는지 알 수 있습니다. 마법에 대한 세부적인 특징은 알 수 없습니다."
+  },
+  {
+    "id": "pacted_protection",
+    "name": "계약된 보호",
+    "eng_name": "Pacted Protection",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "해로운 에너지 중 한 종류를 고르십시오: 화염, 냉기, 산성, 전기 등등. 당신은 해당 에너지의 자연적인 정도의 양에 대해 면역이며, 해당 에너지와 연관된 마법적인 공격에 대해서는 절반의 피해를 받습니다."
+  },
+  {
+    "id": "rob_vitality",
+    "name": "생명력 탈취",
+    "eng_name": "Rob Vitality",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "장면당 한 번, 보이는 적을 대상으로 턴 행동으로 장면 동안 분발합니다. 대상은 육체 내성을 굴리고 실패시, 다음 번 주요 행동을 잃게 되며 그 즉시 당신에게 생깁니다."
+  },
+  {
+    "id": "scourging_curse",
+    "name": "재앙의 저주",
+    "eng_name": "Scourging Curse",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "주요 행동으로 장면 동안 분발해서 보이는 적을 지정합니다. 당신의 저주는 대상의 명중, 피해, 그리고 모든 내성굴림에 -1의 페널티를 레벨당 1 라운드 동안  부과합니다. 4레벨에 이 페널티는 -2가 되고 9레벨에는 -3이 됩니다. 이 저주는 어느 시점에서든 한 개만 활성화됩니다."
+  },
+  {
+    "id": "shadowed_steps",
+    "name": "그늘진 발자국",
+    "eng_name": "Shadowed Steps",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "이동 행동으로 장면 동안 분발해서 당신의 이동 거리까지 순간이동을 할 수 있습니다. 당신은 벽이나 물리적인 장애물을 통과할 수는 없지만 수직으로 순간이동하거나 높은 곳으로 이동할 수 있습니다."
+  },
+  {
+    "id": "snaring_speech",
+    "name": "속박의 말",
+    "eng_name": "Snaring Speech",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "라운드당 한 번, 다른 사람을 설득하거나 유혹하려는 판정에 실패한 경우, 즉시 행동으로 하루 동안 분발합니다. 대상은 정신 내성을 굴리고, 실패시 당신의 제안이 그들이 일반적으로 할법한 행동일 경우 동의합니다. 이 기교를 사용할 때 1 점의 기관계 부담을 받습니다."
+  },
+  {
+    "id": "sorcerous_battery",
+    "name": "마법전지",
+    "eng_name": "Sorcerous Battery",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "하루당 한 번, 턴 행동으로 하루 동안 분발합니다. 당신, 혹은 당신이 볼 수 있는 아군은 이전 라운드의 시작 이후 시전된 주문의 주문 슬롯을 회복합니다. 1점의 기관계 부담을 받습니다."
+  },
+  {
+    "id": "soul_consumption",
+    "name": "영혼 포식",
+    "eng_name": "Soul Consumption",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "당신이 저주받은 화살(Accursed Bolt) 혹은 저주받은 검(Accursed Blade)으로 지능이 있는 대상을 쓰러뜨리면 즉시 행동으로 하루 동안 분발합니다. 대상은 바로 사망하며 당신은 1d6 + 당신의 레벨 만큼 HP를 회복하며 누적된 기관계 부담 1점을 잃습니다."
+  },
+  {
+    "id": "tendrils_of_the_night",
+    "name": "밤의 덩굴손",
+    "eng_name": "Tendrils of the Night",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "턴 행동으로 분발합니다. 분발하는 동안 당신의 주위로 당신의 힘 만큼 물체들을 조작할 수 있는 20ft 길이의 촉수 여러 개, 또는 기이한 팔들이 여럿 돋아납니다. 다른 추가적인 행동을 얻지는 못하지만, 이 팔들로 장거리에서 근접전을 할 수 있습니다. 이 팔들은 당신의 AC를 가지고 있고 피해를 입으면 당신이 피해를 입습니다."
+  },
+  {
+    "id": "unseen_steps",
+    "name": "보이지 않는 발걸음",
+    "eng_name": "Unseen Steps",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "턴 행동으로 하루 동안 분발해서 당신의 레벨 + 1d6 라운드만큼 투명해집니다. 이 투명 상태는 당신이 공격을 하거나, 주문을 시전하거나, 다른 격렬하고 폭력적인 행동을 하기 전에 사라집니다."
+  },
+  {
+    "id": "weight_of_sin",
+    "name": "죄악의 무게",
+    "eng_name": "Weight of Sin",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "주요 행동으로 하루 동안 분발해서 보이는 적을 지정합니다. 대상은 육체 내성을 굴리고 실패시, 1d6+ 당신의 레벨만큼의 라운드동안 이동 행동을 잃습니다."
+  },
+  {
+    "id": "weeping_wounds",
+    "name": "우는 상처",
+    "eng_name": "Weeping Wounds",
+    "class_id": "accursed",
+    "class_name": "저주받은 자",
+    "description": "라운드당 한 번, 보이는 적이 피해를 입으면 즉시 행동으로 장면 동안 분발합니다. 대상은 육체 내성을 굴리고 실패시 당신의 레벨만큼의 라운드 동안 라운드마다 1d6 피해를 받습니다. 대상은 이 효과에 영향을 받는 도중 회복하거나 재생을 할 수 없습니다. 이 기교는 중첩되지 않습니다."
+  }
+]

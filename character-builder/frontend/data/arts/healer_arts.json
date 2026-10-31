@@ -1,0 +1,114 @@
+[
+  {
+    "id": "healing_touch",
+    "name": "치료의 손길",
+    "eng_name": "Healing Touch",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "즉시 행동으로 장면 동안 분발합니다; 남은 장면 동안 당신은 주요 행동으로 아군에게 손을 대서 2d6 + 치료 기술만큼 회복시킬 수 있습니다. 이 치료는 대상에게 적용될 때 마다 1점의 기관계 부담을 줍니다."
+  },
+  {
+    "id": "empowered_healer",
+    "name": "강화된 치료사",
+    "eng_name": "Empowered Healer",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "당신의 치료의 손길(Healing Touch)는 더 강해져서, 그 치료량에 당신의 레벨을 더합니다."
+  },
+  {
+    "id": "facile_healer",
+    "name": "손쉬운 치료사",
+    "eng_name": "Facile Healer",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "당신의 치료의 손길(Healing Touch)은 발전했습니다; 당신은 더 이상 이 능력의 사용에 분발을 할 필요가 없습니다."
+  },
+  {
+    "id": "far_healer",
+    "name": "원거리 치료사",
+    "eng_name": "Far Healer",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "당신의 치료의 손길(Healing Touch)은 더 좋아져서, 당신의 레벨당 10ft 밖의 보이는 대상에게 사용할 수 있습니다."
+  },
+  {
+    "id": "final_repose",
+    "name": "최후의 안정",
+    "eng_name": "Final Repose",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "보이고 살아있는 크리쳐를 대상으로 즉시 행동으로 하루 동안 분발합니다. 남은 장면 동안 대상은 당신의 치료 기술을 페널티로 받는 육체 내성 굴림을 굴립니다. 실패시, 대상이 이번 장면의 끝 이전에 HP가 0으로 떨어지면, 안정화나 부활의 가능성 없이 사망합니다."
+  },
+  {
+    "id": "healers_eye",
+    "name": "치료사의 눈",
+    "eng_name": "Healer’s Eye",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "턴 행동으로 분발합니다; 분발하는 동안 당신은 주요 행동으로 시각적으로 독과 질병을 감지하고, 크리쳐들을 대상으로 진단을 정확하게 내리며, 대상의 생리를 이해할 수 있고, 현재 HP를 알 수 있습니다. 분발하는 것의 부작용으로 당신은 살아있는 크리쳐를 빛의 유무나, 시야를 흐리게 하는 안개의 유무에 상관없이 감지할 수 있습니다."
+  },
+  {
+    "id": "limb_restoration",
+    "name": "사지 복구",
+    "eng_name": "Limb Restoration",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "이 기교는 전문적인 치료사만 숙달할 수 있기에 8레벨 이전에 배울 수 없습니다. 당신은 대상에 접촉해서 없는 사지나, 장기 를 재생하고, 아주 큰 상처 혹은 다른 물리적인 병인을 제거하기 위하여 하루 동안 최소 1점을 사용해서 남아있는 모든 분발 점수로 분발합니다. 대상의 기관계 부담은 자동적으로 최대치가 됩니다."
+  },
+  {
+    "id": "purge_ailment",
+    "name": "질병 소거",
+    "eng_name": "Purge Ailment",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "주요 행동으로 하루 동안 분발합니다. 당신이 만지는 아군은 하나의 질병이나 독이 치료됩니다. 독으로 인해 죽은 크리쳐에게 죽은지 6분 내에 사용하면 부활합니다. 마법적인 독과 질병은 난이도 8 이상의 지혜/치료 혹은 매력/치료 판정이 필요할 수도 있습니다. 7 레벨이 되면 당신은 장면 동안만 분발해도 이 능력을 사용할 수 있습니다."
+  },
+  {
+    "id": "refined_restoration",
+    "name": "정교한 복구",
+    "eng_name": "Refined Restoration",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "당신과 당신이 자기전 돌봐준 최대 12명의 아군은 편안한 취침 후 1점이 아닌 2점의 기관계 부담을 회복합니다."
+  },
+  {
+    "id": "revive_the_fallen",
+    "name": "쓰러진 자의 부활",
+    "eng_name": "Revive the Fallen",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "이 기교는 전문적인 치료사만 숙달할 수 있기에 8레벨 이전에 배울 수 없습니다. 최근에 죽은 대상을 살리려고 주요 행동으로 분발해서 대상에게 접촉합니다. 이 능력은 시전자의 레벨당 1분 내에 죽은 대상으로 사용해야하며, 조각나거나, 불태워지거나, 어찌됐던 찢긴 시체에게 작동하지 않습니다. 대상의 기관계 부담은 자동적으로 최대화되며, 대상은 24시간 동안 의식을 잃은 상태로 있다가 1 HP와 함께 깨어납니다."
+  },
+  {
+    "id": "swift_healer",
+    "name": "재빠른 치료사",
+    "eng_name": "Swift Healer",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "당신의 치료의 손길(Healing Touch)은 더 좋아져서, 캐릭터 레벨당 하루에 한 번 턴 행동으로 사용될 수 있습니다. 하지만 한 대상에게는 한 장면당 한 번밖에 사용을 못합니다."
+  },
+  {
+    "id": "the_healers_knife",
+    "name": "치료사의 칼",
+    "eng_name": "The Healer’s Knife",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "당신의 치료의 손길(Healing Touch)은 변화해서, 살아있는 대상에게 치료뿐 아니라 피해를 주게 할 수도 있습니다. 피해량은 치료량과 같으며, 대상이 아닌 당신이 기관계 부담을 1점 얻습니다. 눈치채지 못한 대상에게는 단순히 닿는 것 만으로 사용이 가능하나, 근접 전투 중 이 능력의 사용은 당신의 치료 기술을 명중 보너스로 하는 성공적인 격투 공격이 필요하며, 피해량에 해당 공격의 피해도 추가됩니다. 당신의 치료의 손길(Healing Touch)을 바꾸는 기교는 이 기교에 적용되지 않습니다. "
+  },
+  {
+    "id": "tireless_vigor",
+    "name": "지치지 않는 활력",
+    "eng_name": "Tireless Vigor",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "분발합니다; 분발하는 동안 당신의 먹고, 마시고, 숨쉬고, 자려는 욕구는 더 이상 커지지 않습니다. 당신은 지치지 않고 몸을 사용할 수 있으며, 매 시간당 잃은 HP를 1점 회복합니다."
+  },
+  {
+    "id": "vital_furnace",
+    "name": "생명력의 화로",
+    "eng_name": "Vital Furnace",
+    "class_id": "healer",
+    "class_name": "치료사",
+    "description": "당신의 엄청난 생명력은 당신이 입은 치명상이 아닌 모든 상처를 회복시킵니다. 당신의 HP를 0으로 만들지 않은 하나의 피해를 0으로 만들려면 즉시 행동으로 하루 동안 분발합니다. 별개로, 당신이 0 HP로 떨어지면 바로 안정화되며, 10분 뒤 1 HP로 일어납니다. 이 능력은 마법적인 교환이나 무언가의 힘을 사용해서 당신 스스로에게 일부러 가하는 피해에는 사용할 수 없습니다."
+  }
+]

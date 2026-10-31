@@ -1,2 +1,13 @@
 # Default ignored files
 /.idea/
+
+/ahqqq.github.io/
+/character/
+**/node_modules/
+**/.tsbuildinfo/
+**/dist/
+
+/integration-tests.log
+
+/.site/
+/qa-artifacts/

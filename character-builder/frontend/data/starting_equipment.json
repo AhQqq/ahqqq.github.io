@@ -1,0 +1,302 @@
+[
+  {
+    "id": "adventuring_peasant",
+    "name": "모험 중인 농노",
+    "englishName": "Adventuring Peasant",
+    "items": [
+      {
+        "id": "war_clothing",
+        "count": 1,
+        "encumbrance": 0
+      },
+      {
+        "id": "large_shield",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "light_spear",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "dagger",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "backpack",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "rations_1_week",
+        "count": 1,
+        "encumbrance": 4
+      },
+      {
+        "id": "mule_and_small_cart",
+        "count": 1,
+        "encumbrance": null
+      },
+      {
+        "id": "tinderbox_and_3_torches",
+        "count": 1,
+        "encumbrance": 1
+      }
+    ],
+    "currency": {
+      "silver": 0
+    }
+  },
+  {
+    "id": "armored_warrior",
+    "name": "무장한 전사",
+    "englishName": "Armored Warrior",
+    "items": [
+      {
+        "id": "partial_armor",
+        "count": 1,
+        "encumbrance": 2
+      },
+      {
+        "id": "large_shield",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "short_sword",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "dagger",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "backpack",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "tinderbox_and_3_torches",
+        "count": 1,
+        "encumbrance": 1
+      }
+    ],
+    "currency": {
+      "silver": 0
+    }
+  },
+  {
+    "id": "gentry_wayfarer",
+    "name": "기품있는 여행가",
+    "englishName": "Gentry Wayfarer",
+    "items": [
+      {
+        "id": "leather_coat",
+        "count": 1,
+        "encumbrance": 0
+      },
+      {
+        "id": "small_shield",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "short_sword",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "backpack",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "rations_1_week",
+        "count": 1,
+        "encumbrance": 4
+      },
+      {
+        "id": "waterskin",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "folded_fine_clothes",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "writing_kit_and_20_sheets",
+        "count": 1,
+        "encumbrance": 1
+      }
+    ],
+    "currency": {
+      "silver": 20
+    }
+  },
+  {
+    "id": "ranger_or_archer",
+    "name": "순찰자 혹은 궁수",
+    "englishName": "Ranger or Archer",
+    "items": [
+      {
+        "id": "leather_coat",
+        "count": 1,
+        "encumbrance": 0
+      },
+      {
+        "id": "longbow",
+        "count": 1,
+        "encumbrance": 2
+      },
+      {
+        "id": "arrows_20_and_quiver",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "dagger",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "hand_axe",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "backpack",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "cooking_gear_and_rations_1_week",
+        "count": 1,
+        "encumbrance": 5
+      },
+      {
+        "id": "waterskin",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "tinderbox_and_3_torches",
+        "count": 1,
+        "encumbrance": 1
+      }
+    ],
+    "currency": {
+      "silver": 20
+    }
+  },
+  {
+    "id": "roguish_wanderer",
+    "name": "불한당 방랑자",
+    "englishName": "Roguish Wanderer",
+    "items": [
+      {
+        "id": "leather_coat",
+        "count": 1,
+        "encumbrance": 0
+      },
+      {
+        "id": "small_shield",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "short_sword",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "throwing_knife",
+        "count": 5,
+        "encumbrance": 1
+      },
+      {
+        "id": "backpack",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "rations_1_week",
+        "count": 1,
+        "encumbrance": 4
+      },
+      {
+        "id": "waterskin",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "tinderbox_and_3_torches",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "grappling_hook_and_rope_50_ft",
+        "count": 1,
+        "encumbrance": 2
+      }
+    ],
+    "currency": {
+      "silver": 0
+    }
+  },
+  {
+    "id": "mage_healer_or_scholar",
+    "name": "마법사, 치료사, 학자",
+    "englishName": "Mage, Healer, or Scholar",
+    "items": [
+      {
+        "id": "dagger",
+        "count": 2,
+        "encumbrance": 2
+      },
+      {
+        "id": "staff",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "backpack",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "lantern_tinderbox_and_2_oil_flasks",
+        "count": 1,
+        "encumbrance": 3
+      },
+      {
+        "id": "writing_kit_and_20_sheets",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "rations_1_week",
+        "count": 1,
+        "encumbrance": 4
+      },
+      {
+        "id": "waterskin",
+        "count": 1,
+        "encumbrance": 1
+      },
+      {
+        "id": "healing_pouch",
+        "count": 1,
+        "encumbrance": 1
+      }
+    ],
+    "currency": {
+      "silver": 80
+    }
+  }
+]

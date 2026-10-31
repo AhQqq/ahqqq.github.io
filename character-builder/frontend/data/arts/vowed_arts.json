@@ -1,0 +1,132 @@
+[
+  {
+    "id": "martial_style",
+    "minimum_hit_dice": "1d6",
+    "name": "무예",
+    "eng_name": "Martial Style",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "클래스와 무관하게 당신의 HD는 1d6보다 낮아질 수 없습니다. 격투 기술로 공격할 때, 당신의 클래스 명중 보너스는 같은 레벨의 전문가 명중 보너스보다 낮아질 수 없습니다. 3레벨부터, 격투 기술로 가해지는 모든 공격은 마법 무기 취급을 받습니다."
+  },
+  {
+    "id": "unarmed_might",
+    "name": "비무장 무력",
+    "eng_name": "Unarmed Might",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "레벨이 오를 때 마다 성장표에 적힌 대로 비무장 공격 피해가 증가합니다. 평소와 같이 이 피해에 격투 기술 레벨을 더할 수 있지만, 공수가(Unarmed Combatant)와 같이 당신의 격투 피해를 강화하는 포커스는 당신한테 적용되지 않습니다. "
+  },
+  {
+    "id": "unarmored_defense",
+    "unarmored_base_ac": 13,
+    "name": "맨몸 방어술",
+    "eng_name": "Unarmored Defense",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "당신이 갑옷이나 방패를 착용하고 있지 않을 때, 당신의 기본 AC는 13 + 당신 레벨의 절반의 반내림이 됩니다. "
+  },
+  {
+    "id": "brutal_counter",
+    "name": "사나운 반격",
+    "eng_name": "Brutal Counter",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "당신을 대상으로 한 적의 근접 공격의 판정이 명중하든, 그렇지 않든 끝난 후 즉시 행동으로 장면 동안 분발합니다. 당신은 당신의 공격자에게 일반적인 물리 공격을 하거나 주요 행동으로 할 수 있는 공격적인 능력을 할 수 있습니다. 이 기교는 라운드 당 하나의 적에게 한 번씩만 사용할 수 있으나 방어 태세 중에도 사용할 수 있습니다."
+  },
+  {
+    "id": "faultless_awareness",
+    "name": "완벽한 지각",
+    "eng_name": "Faultless Awareness",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "당신의 뛰어난 지각능력은 당신을 기습에 면역으로 만들고, 깊은 수면 중에도 닥쳐오는 위험에 일반적으로 반응할 수 있게 일어납니다."
+  },
+  {
+    "id": "hurling_throw",
+    "name": "던져넘기기",
+    "eng_name": "Hurling Throw",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "당신이 공격을 명중시켰을 때, 즉시 행동으로 장면 동안 분발할 수 있습니다. 대상은 육체 내성 굴림을 하고, 실패시 당신이 원하는 방향으로 10ft만큼 내동댕이쳐져 넘어진 상태에서 당신이 명중시킨 공격의 피해를 입습니다. 육체 내성 굴림에 성공했다면, 대상은 공격의 피해만 입습니다. 이 기교는 라운드 당 적마다 한 번씩만 사용할 수 있으며, 대상은 물소보다 크면 안 됩니다."
+  },
+  {
+    "id": "the_inward_eye",
+    "name": "내면의 눈",
+    "eng_name": "The Inward Eye",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "턴 행동으로 분발합니다. 분발하는 동안, 당신은 신비적으로 어둠, 안개, 실명, 혹은 감은 눈과 상관 없이 시각과 동일한 감각으로 주변을 볼 수 있게 됩니다. "
+  },
+  {
+    "id": "leap_of_the_heavens",
+    "name": "천상답보",
+    "eng_name": "Leap of the Heavens",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "장면동안 분발 하여 이동 행동으로 이동 속도만큼 수평으로 뛰거나 그 반만큼 수직으로 도약합니다. 또한 당신은 즉시 행동으로 장면 동안 분발해서 높이와 상관 없이 낙하 피해를 없앨 수 있습니다."
+  },
+  {
+    "id": "masters_vigor",
+    "name": "대가의 생명력",
+    "eng_name": "Master’s Vigor",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "당신의 신체는 자연적으로 수명이 다할 때 까지 젊은이의 체력과 활력을 유지합니다. 자연적인 재생력으로 인해, 매 시간마다 잃은 HP 2점을 회복합니다."
+  },
+  {
+    "id": "mob_justice",
+    "name": "군중 정의",
+    "eng_name": "Mob Justice",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "즉시 행동으로 하루 동안 분발하여 한 장면동안 44페이지에 나와 있는 집단 공격 행동에 면역이 됩니다. 당신의 공격자는 이 전술을 남은 장면 동안 쓸 수 없으며 최소 두 명의 적과 근접 전투 중이면 충격 피해를 받지 않습니다. 하지만 격렬한 동작 때문에 이러한 효과에 있는 동안 당신은 주문 시전을 할 수 없습니다."
+  },
+  {
+    "id": "nimble_ascent",
+    "name": "기민한 등반",
+    "eng_name": "Nimble Ascent",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "턴 행동으로 장면 동안 분발합니다. 남은 장면동안 마법이 부여되었거나, 유리 같이 매끄러운 표면이 아닌 이상 돌출되었거나 평평한 수직 표면을 오를 수 있고, 험한 지형을 미끄러지거나 넘어지는 일 없이 최대 이동 속도로 지나갈 수 있습니다. 당신은 벽이나 천장에 매달릴 때 한 손만 이용해서 매달릴 수 있습니다."
+  },
+  {
+    "id": "purified_body",
+    "name": "정화된 신체",
+    "eng_name": "Purified Body",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "당신에게 영향을 끼치는 질병이나, 독을 치료하거나 다음 24시간동안 수면, 허기, 갈증, 호흡에 대한 요구를 없애려면 즉시 행동으로 하루 동안 분발합니다."
+  },
+  {
+    "id": "revivifying_breath",
+    "name": "부활의 호흡",
+    "eng_name": "Revivifying Breath",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "턴 행동으로 하루 동안 분발하여 1d6 + 당신의 레벨만큼의 HP를 회복합니다. 이 회복은 기관계 부담을 늘리지 않습니다. 이 능력은 HP가 0일 때도 당신의 턴에 사용할 수 있지만, 그렇게 한다면 남은 분발 점수를 전부 사용하게 됩니다.이 기교는 장면당 한 번만 사용할 수 있습니다. "
+  },
+  {
+    "id": "shattering_strike",
+    "name": "분쇄의 강타",
+    "eng_name": "Shattering Strike",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "하루 동안 분발하고, 한 라운드동안 몸을 미동하지 않고 준비합니다. 다음 라운드에 주요 행동으로 나무 문, 나무 벽, 혹은 비슷한 강도를 갖는 당신의 레벨당 1 ft 두께 물체에 사람 크기의 구멍을 뚫을 수 있습니다. 4레벨이 되면 이 능력으로 돌 벽을, 7레벨이 되면 이 능력으로 철벽이나 철문에 영향을 줄 수 있습니다. 이 공격은 움직일 수 있는 상대에게는 효과가 없지만, 움직일 수 없는 대상에게는 당신의 레벨당 1d12의 피해를 줍니다. "
+  },
+  {
+    "id": "style_weaponry",
+    "name": "유파 무기",
+    "eng_name": "Style Weaponry",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "검, 활, 도끼, 단검 등의 대략적인 무기 종류 세 가지를 선택합니다. 이 무기들을 사용할 때 명중 굴림에 접전이나 사격 대신 격투 기술을 쓸 수 있습니다. 격투 기술 레벨이 무기로 인한 공격의 피해에 추가되지는 않지만, 명중 굴림에 무예(Martial Style)의 이점들은 적용됩니다."
+  },
+  {
+    "id": "unobtrusive_step",
+    "name": "발견되지 않는 발걸음",
+    "eng_name": "Unobtrusive Step",
+    "class_id": "vowed",
+    "class_name": "구도자",
+    "description": "당신은 상당한 변장과 위장 기술을 가지고 있을 뿐더러, 당신을 발견하는 것은 극도로 어렵게 됩니다. 장면당 한 번 즉시 행동으로 하루 동안 분발해서 실패한 잠행 기술 판정이나 누군가를 흉내내는 판정을 다시 굴릴 수 있습니다."
+  }
+]

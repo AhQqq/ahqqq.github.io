@@ -1,0 +1,99 @@
+[
+  {
+    "id": "absolute_negation",
+    "name": "절대적 무효화",
+    "eng_name": "Absolute Negation",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "원하지 않는 주문이나 주문으로 인해 지속되는 효과에 의해 제한되거나 영향을 받으려고 할때 즉시 행동으로 분발합니다. 당신은 해당 효과를 무시할 수 있습니다."
+  },
+  {
+    "id": "antimage",
+    "name": "항마도",
+    "eng_name": "Antimage",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "당신은 무화자(Nullifier) 포커스의 레벨을 하나 얻습니다. 어째서인지 무화자의 레벨이 2라면, 다른 포커스를 하나 얻습니다.",
+    "focus_grants": ["nullifier1"]
+  },
+  {
+    "id": "dispel_enchantment",
+    "name": "마법 일소",
+    "eng_name": "Dispel Enchantment",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "주요 행동으로 아군을 만지면서 하루 동안 분발합니다. 당신의 손길은 신비를 근절하라 (Extirpate Arcana) 주문과 동일합니다. 이 기교는 크리쳐에게만 사용 가능하고 물건에는 사용할 수 없으며, 하루당 한 번 자신 혹은 주어진 대상에게 사용할 수 있습니다."
+  },
+  {
+    "id": "disrupt_sorcery",
+    "name": "주술 방해",
+    "eng_name": "Disrupt Sorcery",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "턴 행동으로 장면동안 분발합니다. 해당 라운드 동안 당신의 다음 공격의 대상은 남은 라운드동안 주문을 시전하거나 마법사 클래스의 기교를 사용하지 못합니다. 이 효과는 공격이 명중하지 않더라도 발생하며, 이미 활성화 되어 있는 기교는 취소되지 않습니다. 해당 공격이 아군 보호로 보호 받았다면, 대상은 효과를 받지 않습니다."
+  },
+  {
+    "id": "immaculate_body",
+    "name": "흠없는 육체",
+    "eng_name": "Immaculate Body",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "마법적인 변신, 저주, 혹은 잔여 마법으로 인한 페널티는 당신에게 최대 한 장면 동안만 적용됩니다. 이러한 해악은 당신을 죽일 수 없으며, 최악의 경우에도 1 HP로 떨어뜨립니다. 이러한 효과는 적대적인 주문뿐 아니라 모든 마법적인 효과에 적용됩니다."
+  },
+  {
+    "id": "immaculate_mind",
+    "name": "흠없는 정신",
+    "eng_name": "Immaculate Mind",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "마음에 영향을 끼치거나 마음을 읽는 주문에 대해 당신은 원한다면 면역이며, 자동적으로 환영이나 마법적인 투명함을 꿰뚫어 봅니다. 이 능력은 주문뿐 아니라 모든 마법적 효과에 적용됩니다."
+  },
+  {
+    "id": "know_your_prey",
+    "name": "사냥감을 알라",
+    "eng_name": "Know Your Prey",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "당신의 마법 기술은 최대 4레벨까지 1레벨  높은 것으로 취급됩니다. 이 효과는 당신의 분발 점수에 더해지며, 당신의 캐릭터 레벨이 제한하는 레벨보다 더 높은 마법 기술 레벨을 보유하게 해줍니다."
+  },
+  {
+    "id": "magebane",
+    "name": "마법살",
+    "eng_name": "Magebane",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "당신이 시전자에게 가하는 무기 피해, 충격 피해, 폭력적인 행동 등으로 인한 피해에 당신의 레벨의 절반을 반올림한 값을 추가합니다.  이 능력은 전사 클래스의 치명적인 공격(Killing Blow) 능력과 중첩되지 않습니다."
+  },
+  {
+    "id": "share_the_pain",
+    "name": "고통을 공유해라",
+    "eng_name": "Share the Pain",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "당신이 적대적인 주문의 대상이 되거나 그 범위 안에 있을때 즉시 행동으로 하루 동안 분발합니다. 정신 내성굴림을 굴립니다; 성공시, 주문의 시전자 또한 당신을 노린 주문의 효과를 받는 것으로 취급합니다. 이 기교는 라운드당 한 번 사용될 수 있습니다."
+  },
+  {
+    "id": "spellshield",
+    "name": "주문방패",
+    "eng_name": "Spellshield",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "주문이 당신에게 HP 피해를 입힐 경우, 저항이나 내성이 반영되기 전 자동적으로 피해량을 절반의 반내림한 값을 사용합니다."
+  },
+  {
+    "id": "ward_ally",
+    "name": "아군 방호",
+    "eng_name": "Ward Ally",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "30ft 내의 아군이 주문의 대상이 되었을 때 즉시 행동으로 장면 동안 분발합니다; 아군 대신 당신이 주문 효과의 대상이 됩니다. 당신이 이미 효과의 범위 안에 있다면 주문은 당신에게 두 번 적용됩니다. 이렇게 전이되는 효과에 당신의 방어나 기교를 적용시킬 수 있습니다."
+  },
+  {
+    "id": "witchfinder",
+    "name": "마녀탐색자",
+    "eng_name": "Witchfinder",
+    "class_id": "mageslayer",
+    "class_name": "항마사",
+    "description": "주요 행동으로 장면동안 분발합니다. 남은 장면 동안, 당신은 암시야 효과를 제외한 비전 형태의 감정 (Apprehending the Arcane Form) 주문의 효과를 받습니다."
+  }
+]

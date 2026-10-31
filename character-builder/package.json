@@ -1,0 +1,15 @@
+{
+  "name": "wwn_char-main",
+  "version": "1.0.0",
+  "description": "A web-based character builder for the *Worlds Without Number* tabletop roleplaying game. This tool guides players through the official character creation process and exports a structured character sheet.",
+  "main": "index.js",
+  "scripts": {
+	  "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

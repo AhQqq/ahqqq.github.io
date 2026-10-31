@@ -1,0 +1,13 @@
+{
+  "default_name": "모험가",
+  "groups": [
+    {
+      "name": "이원 마법사",
+      "pairs": [
+        ["elem", "high"],
+        ["elem", "necro"],
+        ["high", "necro"]
+      ]
+    }
+  ]
+}

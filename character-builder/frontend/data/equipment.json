@@ -1,0 +1,2593 @@
+[
+  {
+    "id": "arrows_20",
+    "name": "화살, 20발",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 2,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "화살, 20발",
+        "price": "은 2",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "backpack",
+    "name": "배낭",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 2,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1*"
+    },
+    "propertyIds": [
+      "negligible_load"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "배낭",
+        "price": "은 2",
+        "encumbrance": "1*"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "boots",
+    "name": "신발",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 2,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1*"
+    },
+    "propertyIds": [
+      "negligible_load"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "신발",
+        "price": "은 2",
+        "encumbrance": "1*"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "candle",
+    "name": "양초",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 1,
+      "currency": "copper"
+    },
+    "encumbrance": {
+      "value": null,
+      "raw": "**"
+    },
+    "propertyIds": [
+      "no_load_when_worn"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "양초",
+        "price": "동 1",
+        "encumbrance": "**"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "one_horse_cart",
+    "name": "수레, 말 한 마리용",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 50,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": null,
+      "raw": "-"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "수레, 말 한 마리용",
+        "price": "은 50",
+        "encumbrance": "-"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "common_clothes",
+    "name": "평범한 의복",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 25,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1*"
+    },
+    "propertyIds": [
+      "negligible_load"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "평범한 의복",
+        "price": "은 25",
+        "encumbrance": "1*"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "fine_clothes",
+    "name": "고급 의복",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 100,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1*"
+    },
+    "propertyIds": [
+      "negligible_load"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "고급 의복",
+        "price": "은 100",
+        "encumbrance": "1*"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "noble_clothes",
+    "name": "귀족 의상",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 500,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2*"
+    },
+    "propertyIds": [
+      "negligible_load"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "귀족 의상",
+        "price": "은 500",
+        "encumbrance": "2*"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "cooking_gear",
+    "name": "조리 도구",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 4,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "조리 도구",
+        "price": "은 4",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "crowbar",
+    "name": "쇠지레",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 4,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "쇠지레",
+        "price": "은 4",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "firewood_1_night",
+    "name": "장작, 하룻밤 분량",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 2,
+      "currency": "copper"
+    },
+    "encumbrance": {
+      "value": 4,
+      "raw": "4"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "장작, 하룻밤 분량",
+        "price": "동 2",
+        "encumbrance": "4"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "metal_flask_1_pint",
+    "name": "금속 병, 1파인트",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 3,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "금속 병, 1파인트",
+        "price": "은 3",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "grappling_hook",
+    "name": "등반용 갈고리",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 5,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "등반용 갈고리",
+        "price": "은 5",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "small_tool",
+    "name": "망치 또는 소형 수공구",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 2,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "망치 또는 소형 수공구",
+        "price": "은 2",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "healing_pouch",
+    "name": "치료사의 도구",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 4,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "치료사용 도구 주머니",
+        "price": "은 4",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "hurlant_ammunition_20",
+    "name": "발사기 탄환, 20발",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 20,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "발사기 탄환, 20발",
+        "price": "은 20",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "iron_spikes_10",
+    "name": "쇠못, 10개",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 1,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "쇠못, 10개",
+        "price": "은 1",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "lantern",
+    "name": "등불",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "등불",
+        "price": "은 10",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "hand_mirror",
+    "name": "손거울",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": null,
+      "raw": "*"
+    },
+    "propertyIds": [
+      "negligible_load"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "손거울",
+        "price": "은 10",
+        "encumbrance": "*"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "oil_1_pint",
+    "name": "기름, 1파인트",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 1,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1#"
+    },
+    "propertyIds": [
+      "bundle_of_three"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "기름, 1파인트",
+        "price": "은 1",
+        "encumbrance": "1#"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "paper_10_sheets",
+    "name": "종이 10장",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 1,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": null,
+      "raw": "*"
+    },
+    "propertyIds": [
+      "negligible_load"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "종이 10장",
+        "price": "은 1",
+        "encumbrance": "*"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "rations_1_day",
+    "name": "하루치 식량",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 5,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 4,
+      "raw": "4"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "하루치 식량",
+        "price": "은 5",
+        "encumbrance": "4"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "rope_50_ft",
+    "name": "50피트 밧줄",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 2,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "50피트 밧줄",
+        "price": "은 2",
+        "encumbrance": "2"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "sack",
+    "name": "자루",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 1,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "자루",
+        "price": "은 1",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "medium_tool",
+    "name": "삽 또는 중형 공구",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 4,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "삽 또는 중형 공구",
+        "price": "은 4",
+        "encumbrance": "2"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "tinderbox",
+    "name": "부싯깃 통",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 1,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": null,
+      "raw": "*"
+    },
+    "propertyIds": [
+      "negligible_load"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "부싯깃 통",
+        "price": "은 1",
+        "encumbrance": "*"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "torch",
+    "name": "횃불",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 2,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1#"
+    },
+    "propertyIds": [
+      "bundle_of_three"
+    ],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "횃불",
+        "price": "은 2",
+        "encumbrance": "1#"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "waterskin",
+    "name": "물주머니",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 1,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "물주머니",
+        "price": "은 1",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "writing_kit",
+    "name": "필기 도구",
+    "type": "item",
+    "category": "gear",
+    "price": {
+      "amount": 3,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gear_tbl",
+        "name": "필기 도구",
+        "price": "은 3",
+        "encumbrance": "1"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "artisan_tools",
+    "name": "장인의 공구",
+    "type": "bundle",
+    "category": "bundle",
+    "price": {
+      "amount": 50,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 5,
+      "raw": "5"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gearbundle_tbl",
+        "name": "장인의 공구",
+        "price": "은 50",
+        "encumbrance": "5"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "criminal_tools",
+    "name": "범죄 도구",
+    "type": "bundle",
+    "category": "bundle",
+    "price": {
+      "amount": 100,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 3,
+      "raw": "3"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gearbundle_tbl",
+        "name": "범죄 도구",
+        "price": "은 100",
+        "encumbrance": "3"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "dungeon_exploration_gear",
+    "name": "미궁 탐사 장비",
+    "type": "bundle",
+    "category": "bundle",
+    "price": {
+      "amount": 200,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 6,
+      "raw": "6"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gearbundle_tbl",
+        "name": "미궁 탐사 장비",
+        "price": "은 200",
+        "encumbrance": "6"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "noble_retainer_outfit",
+    "name": "귀족 가신용 복장",
+    "type": "bundle",
+    "category": "bundle",
+    "price": {
+      "amount": 1000,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gearbundle_tbl",
+        "name": "귀족 가신용 복장",
+        "price": "은 1000",
+        "encumbrance": "2"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "performer_gear",
+    "name": "공연자용 장비",
+    "type": "bundle",
+    "category": "bundle",
+    "price": {
+      "amount": 100,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 3,
+      "raw": "3"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gearbundle_tbl",
+        "name": "공연자용 장비",
+        "price": "은 100",
+        "encumbrance": "3"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "wilderness_exploration_gear",
+    "name": "야생 탐험 장비",
+    "type": "bundle",
+    "category": "bundle",
+    "price": {
+      "amount": 100,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 5,
+      "raw": "5"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "gearbundle_tbl",
+        "name": "야생 탐험 장비",
+        "price": "은 100",
+        "encumbrance": "5"
+      }
+    ],
+    "availability": "purchase"
+  },
+  {
+    "id": "hand_axe",
+    "name": "손도끼",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "thrown"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "손도끼",
+        "price": "10 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d6",
+      "shock": {
+        "damage": 1,
+        "maxAc": 15
+      },
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": {
+        "normal": 10,
+        "maximum": 30,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "war_axe",
+    "name": "전쟁 도끼",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 50,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [
+      "two_handed"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "전쟁 도끼",
+        "price": "50 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "weapon": {
+      "damage": "1d10",
+      "shock": {
+        "damage": 3,
+        "maxAc": 15
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "blackjack",
+    "name": "블랙잭",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 1,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "subtle",
+      "less_lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "블랙잭",
+        "price": "1 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d4",
+      "shock": null,
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "longbow",
+    "name": "장궁",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 20,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [
+      "two_handed",
+      "reload",
+      "lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "장궁",
+        "price": "20 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "weapon": {
+      "damage": "1d8",
+      "shock": null,
+      "attributes": [
+        "DEX"
+      ],
+      "range": {
+        "normal": 100,
+        "maximum": 600,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "shortbow",
+    "name": "단궁",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 20,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "two_handed",
+      "reload",
+      "lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "단궁",
+        "price": "20 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d6",
+      "shock": null,
+      "attributes": [
+        "DEX"
+      ],
+      "range": {
+        "normal": 50,
+        "maximum": 300,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "claw_blade",
+    "name": "발톱 칼날",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "subtle"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "발톱 칼날",
+        "price": "10 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d6",
+      "shock": {
+        "damage": 2,
+        "maxAc": 13
+      },
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "club",
+    "name": "몽둥이",
+    "type": "item",
+    "category": "weapon",
+    "price": null,
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "thrown",
+      "less_lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "몽둥이",
+        "price": "—",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d4",
+      "shock": null,
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": {
+        "normal": 10,
+        "maximum": 30,
+        "unit": "ft"
+      }
+    },
+    "availability": "grant_only"
+  },
+  {
+    "id": "great_club",
+    "name": "대형 몽둥이",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 1,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [
+      "two_handed"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "대형 몽둥이",
+        "price": "1 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "weapon": {
+      "damage": "1d10",
+      "shock": {
+        "damage": 2,
+        "maxAc": 15
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "crossbow",
+    "name": "쇠뇌",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "two_handed",
+      "slow_reload",
+      "lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "쇠뇌",
+        "price": "10 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d10",
+      "shock": null,
+      "attributes": [
+        "DEX"
+      ],
+      "range": {
+        "normal": 100,
+        "maximum": 300,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "dagger",
+    "name": "단검",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 3,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "subtle",
+      "lethal",
+      "thrown"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "단검",
+        "price": "3 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d4",
+      "shock": {
+        "damage": 1,
+        "maxAc": 15
+      },
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": {
+        "normal": 30,
+        "maximum": 60,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "halberd",
+    "name": "미늘창",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 50,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [
+      "two_handed",
+      "long"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "미늘창",
+        "price": "50 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "weapon": {
+      "damage": "1d10",
+      "shock": {
+        "damage": 2,
+        "maxAc": 15
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "great_hammer",
+    "name": "대형 망치",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 50,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [
+      "two_handed"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "대형 망치",
+        "price": "50 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "weapon": {
+      "damage": "1d10",
+      "shock": {
+        "damage": 2,
+        "maxAc": 18
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "war_hammer",
+    "name": "전쟁 망치",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 30,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "전쟁 망치",
+        "price": "30 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d8",
+      "shock": {
+        "damage": 1,
+        "maxAc": 18
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "great_hurlant",
+    "name": "발사기, 대",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 10000,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 15,
+      "raw": "15"
+    },
+    "propertyIds": [
+      "mounted",
+      "slow_reload",
+      "armor_piercing"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "발사기, 대",
+        "price": "10,000 sp",
+        "encumbrance": "15"
+      }
+    ],
+    "weapon": {
+      "damage": "3d10",
+      "shock": null,
+      "attributes": [
+        "DEX"
+      ],
+      "range": {
+        "normal": 600,
+        "maximum": 2400,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "hand_hurlant",
+    "name": "발사기, 소",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 1000,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "slow_reload",
+      "armor_piercing"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "발사기, 소",
+        "price": "1,000 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d12",
+      "shock": null,
+      "attributes": [
+        "DEX"
+      ],
+      "range": {
+        "normal": 30,
+        "maximum": 60,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "long_hurlant",
+    "name": "발사기, 중",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 4000,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [
+      "two_handed",
+      "slow_reload",
+      "armor_piercing",
+      "lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "발사기, 중",
+        "price": "4,000 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "weapon": {
+      "damage": "2d8",
+      "shock": null,
+      "attributes": [
+        "DEX"
+      ],
+      "range": {
+        "normal": 200,
+        "maximum": 600,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "mace",
+    "name": "철퇴",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 15,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "less_lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "철퇴",
+        "price": "15 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d6",
+      "shock": {
+        "damage": 1,
+        "maxAc": 18
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "pike",
+    "name": "장창",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [
+      "two_handed",
+      "long"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "장창",
+        "price": "10 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "weapon": {
+      "damage": "1d8",
+      "shock": {
+        "damage": 1,
+        "maxAc": 18
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "large_shield",
+    "name": "큰 방패",
+    "type": "item",
+    "category": "shield",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "less_lethal",
+      "shield_protection"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "방패, 대형",
+        "price": "—",
+        "encumbrance": "—"
+      },
+      {
+        "table": "armorTable",
+        "name": "대형 방패",
+        "price": "10 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d6",
+      "shock": {
+        "damage": 1,
+        "maxAc": 13
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase",
+    "shield": {
+      "baseAc": 14,
+      "armorBonus": 1
+    }
+  },
+  {
+    "id": "small_shield",
+    "name": "작은 방패",
+    "type": "item",
+    "category": "shield",
+    "price": {
+      "amount": 20,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "less_lethal",
+      "shield_protection"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "방패, 소형",
+        "price": "—",
+        "encumbrance": "—"
+      },
+      {
+        "table": "armorTable",
+        "name": "소형 방패",
+        "price": "20 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d4",
+      "shock": null,
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": null
+    },
+    "availability": "purchase",
+    "shield": {
+      "baseAc": 13,
+      "armorBonus": 1
+    }
+  },
+  {
+    "id": "heavy_spear",
+    "name": "무거운 창",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [
+      "two_handed"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "무거운 창",
+        "price": "10 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "weapon": {
+      "damage": "1d10",
+      "shock": {
+        "damage": 2,
+        "maxAc": 15
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "light_spear",
+    "name": "가벼운 창",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 5,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "thrown"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "가벼운 창",
+        "price": "5 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d6",
+      "shock": {
+        "damage": 2,
+        "maxAc": 13
+      },
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": {
+        "normal": 30,
+        "maximum": 60,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "throwing_knife",
+    "name": "투척검",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 3,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "numerous",
+      "subtle",
+      "thrown"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "투척검",
+        "price": "3 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d4",
+      "shock": null,
+      "attributes": [
+        "DEX"
+      ],
+      "range": {
+        "normal": 30,
+        "maximum": 60,
+        "unit": "ft"
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "staff",
+    "name": "봉",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 1,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "two_handed",
+      "less_lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "봉",
+        "price": "1 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d6",
+      "shock": {
+        "damage": 1,
+        "maxAc": 13
+      },
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "stiletto",
+    "name": "스틸레토",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [
+      "subtle",
+      "lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "스틸레토",
+        "price": "10 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d4",
+      "shock": {
+        "damage": 1,
+        "maxAc": 18
+      },
+      "attributes": [
+        "DEX"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "great_sword",
+    "name": "대검",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 250,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [
+      "two_handed"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "대검",
+        "price": "250 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "weapon": {
+      "damage": "1d10",
+      "shock": {
+        "damage": 2,
+        "maxAc": 15
+      },
+      "attributes": [
+        "STR"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "long_sword",
+    "name": "장검",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 100,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "장검",
+        "price": "100 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d8",
+      "shock": {
+        "damage": 2,
+        "maxAc": 13
+      },
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "short_sword",
+    "name": "소검",
+    "type": "item",
+    "category": "weapon",
+    "price": {
+      "amount": 10,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "소검",
+        "price": "10 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "weapon": {
+      "damage": "1d6",
+      "shock": {
+        "damage": 2,
+        "maxAc": 15
+      },
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": null
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "unarmed_attack",
+    "name": "비무장 공격",
+    "type": "item",
+    "category": "weapon",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "—"
+    },
+    "propertyIds": [
+      "less_lethal"
+    ],
+    "sources": [
+      {
+        "table": "weapon_tbl",
+        "name": "비무장 공격",
+        "price": "—",
+        "encumbrance": "—"
+      }
+    ],
+    "weapon": {
+      "damage": "1d2",
+      "shock": null,
+      "attributes": [
+        "STR",
+        "DEX"
+      ],
+      "range": null
+    },
+    "availability": "inherent"
+  },
+  {
+    "id": "unarmored",
+    "name": "맨 몸",
+    "type": "item",
+    "category": "armor",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "—"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "갑옷 없음",
+        "price": "—",
+        "encumbrance": "—"
+      }
+    ],
+    "armor": {
+      "baseAc": 10,
+      "category": "none",
+      "skillPenalties": {
+        "sneak": 0,
+        "exert": 0
+      }
+    },
+    "availability": "inherent"
+  },
+  {
+    "id": "war_clothing",
+    "name": "전쟁 의복",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 5,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 0,
+      "raw": "0"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "전쟁 의복",
+        "price": "5 sp",
+        "encumbrance": "0"
+      }
+    ],
+    "armor": {
+      "baseAc": 11,
+      "category": "light",
+      "skillPenalties": {
+        "sneak": 0,
+        "exert": 0
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "leather_coat",
+    "name": "가죽 외투",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 50,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 0,
+      "raw": "0"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "가죽 외투",
+        "price": "50 sp",
+        "encumbrance": "0"
+      }
+    ],
+    "armor": {
+      "baseAc": 12,
+      "category": "light",
+      "skillPenalties": {
+        "sneak": 0,
+        "exert": 0
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "linen_cuirass",
+    "name": "아마포 흉갑",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 20,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "아마포 흉갑",
+        "price": "20 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "armor": {
+      "baseAc": 13,
+      "category": "light",
+      "skillPenalties": {
+        "sneak": 0,
+        "exert": 0
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "war_coat",
+    "name": "전쟁용 외투",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 50,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 3,
+      "raw": "3"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "전쟁용 외투",
+        "price": "50 sp",
+        "encumbrance": "3"
+      }
+    ],
+    "armor": {
+      "baseAc": 14,
+      "category": "light",
+      "skillPenalties": {
+        "sneak": 0,
+        "exert": 0
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "partial_armor",
+    "name": "부분 갑옷",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 100,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "부분 갑옷",
+        "price": "100 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "armor": {
+      "baseAc": 14,
+      "category": "light",
+      "skillPenalties": {
+        "sneak": 0,
+        "exert": 0
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "mail_shirt",
+    "name": "사슬 조끼",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 250,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 1,
+      "raw": "1"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "사슬 조끼",
+        "price": "250 sp",
+        "encumbrance": "1"
+      }
+    ],
+    "armor": {
+      "baseAc": 14,
+      "category": "medium",
+      "skillPenalties": {
+        "sneak": -1,
+        "exert": 0
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "breastplate_and_pauldrons",
+    "name": "흉갑과 경갑",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 250,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "흉갑과 견갑",
+        "price": "250 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "armor": {
+      "baseAc": 15,
+      "category": "medium",
+      "skillPenalties": {
+        "sneak": -2,
+        "exert": 0
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "scale_armor",
+    "name": "비늘 갑옷",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 500,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 3,
+      "raw": "3"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "비늘 갑옷",
+        "price": "500 sp",
+        "encumbrance": "3"
+      }
+    ],
+    "armor": {
+      "baseAc": 16,
+      "category": "medium",
+      "skillPenalties": {
+        "sneak": -3,
+        "exert": 0
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "mail_armor",
+    "name": "사슬 갑옷",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 750,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "사슬 갑옷",
+        "price": "750 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "armor": {
+      "baseAc": 16,
+      "category": "heavy",
+      "skillPenalties": {
+        "sneak": -2,
+        "exert": -2
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "plate_armor",
+    "name": "판갑",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 1000,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 2,
+      "raw": "2"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "판갑",
+        "price": "1,000 sp",
+        "encumbrance": "2"
+      }
+    ],
+    "armor": {
+      "baseAc": 17,
+      "category": "heavy",
+      "skillPenalties": {
+        "sneak": -2,
+        "exert": -2
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "composite_armor",
+    "name": "합성 갑옷",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 2000,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 3,
+      "raw": "3"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "합성 갑옷",
+        "price": "2,000 sp",
+        "encumbrance": "3"
+      }
+    ],
+    "armor": {
+      "baseAc": 19,
+      "category": "heavy",
+      "skillPenalties": {
+        "sneak": -3,
+        "exert": -3
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "plate_mail",
+    "name": "판금 갑옷",
+    "type": "item",
+    "category": "armor",
+    "price": {
+      "amount": 2000,
+      "currency": "silver"
+    },
+    "encumbrance": {
+      "value": 3,
+      "raw": "3"
+    },
+    "propertyIds": [],
+    "sources": [
+      {
+        "table": "armorTable",
+        "name": "판금 갑옷",
+        "price": "2,000 sp",
+        "encumbrance": "3"
+      }
+    ],
+    "armor": {
+      "baseAc": 16,
+      "category": "heavy",
+      "skillPenalties": {
+        "sneak": -3,
+        "exert": -3
+      }
+    },
+    "availability": "purchase"
+  },
+  {
+    "id": "rations_1_week",
+    "name": "식량, 1주 치",
+    "type": "item",
+    "category": "gear",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "See package row"
+    },
+    "propertyIds": [],
+    "availability": "grant_only",
+    "sources": [
+      {
+        "table": "starting_packages",
+        "name": "식량, 1주 치",
+        "price": "Not listed",
+        "encumbrance": "See package row"
+      }
+    ]
+  },
+  {
+    "id": "mule_and_small_cart",
+    "name": "노새와 소형 수레",
+    "type": "bundle",
+    "category": "bundle",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "See package row"
+    },
+    "propertyIds": [],
+    "availability": "grant_only",
+    "sources": [
+      {
+        "table": "starting_packages",
+        "name": "노새와 소형 수레",
+        "price": "Not listed",
+        "encumbrance": "See package row"
+      }
+    ]
+  },
+  {
+    "id": "tinderbox_and_3_torches",
+    "name": "부싯깃 통과 횃불 세 개",
+    "type": "bundle",
+    "category": "bundle",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "See package row"
+    },
+    "propertyIds": [],
+    "availability": "grant_only",
+    "sources": [
+      {
+        "table": "starting_packages",
+        "name": "부싯깃 통과 횃불 세 개",
+        "price": "Not listed",
+        "encumbrance": "See package row"
+      }
+    ]
+  },
+  {
+    "id": "folded_fine_clothes",
+    "name": "잘 개인 고급 의복",
+    "type": "item",
+    "category": "gear",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "See package row"
+    },
+    "propertyIds": [],
+    "availability": "grant_only",
+    "sources": [
+      {
+        "table": "starting_packages",
+        "name": "잘 개인 고급 의복",
+        "price": "Not listed",
+        "encumbrance": "See package row"
+      }
+    ]
+  },
+  {
+    "id": "writing_kit_and_20_sheets",
+    "name": "필기도구와 종이 20장",
+    "type": "bundle",
+    "category": "bundle",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "See package row"
+    },
+    "propertyIds": [],
+    "availability": "grant_only",
+    "sources": [
+      {
+        "table": "starting_packages",
+        "name": "필기도구와 종이 20장",
+        "price": "Not listed",
+        "encumbrance": "See package row"
+      }
+    ]
+  },
+  {
+    "id": "arrows_20_and_quiver",
+    "name": "화살 20발과 화살통",
+    "type": "bundle",
+    "category": "bundle",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "See package row"
+    },
+    "propertyIds": [],
+    "availability": "grant_only",
+    "sources": [
+      {
+        "table": "starting_packages",
+        "name": "화살 20발과 화살통",
+        "price": "Not listed",
+        "encumbrance": "See package row"
+      }
+    ]
+  },
+  {
+    "id": "cooking_gear_and_rations_1_week",
+    "name": "조리도구와 식량, 1주 치",
+    "type": "bundle",
+    "category": "bundle",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "See package row"
+    },
+    "propertyIds": [],
+    "availability": "grant_only",
+    "sources": [
+      {
+        "table": "starting_packages",
+        "name": "조리도구와 식량, 1주 치",
+        "price": "Not listed",
+        "encumbrance": "See package row"
+      }
+    ]
+  },
+  {
+    "id": "grappling_hook_and_rope_50_ft",
+    "name": "갈고리와 밧줄 50피트",
+    "type": "bundle",
+    "category": "bundle",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "See package row"
+    },
+    "propertyIds": [],
+    "availability": "grant_only",
+    "sources": [
+      {
+        "table": "starting_packages",
+        "name": "갈고리와 밧줄 50피트",
+        "price": "Not listed",
+        "encumbrance": "See package row"
+      }
+    ]
+  },
+  {
+    "id": "lantern_tinderbox_and_2_oil_flasks",
+    "name": "등불, 부싯깃 통, 기름 두 병",
+    "type": "bundle",
+    "category": "bundle",
+    "price": null,
+    "encumbrance": {
+      "value": null,
+      "raw": "See package row"
+    },
+    "propertyIds": [],
+    "availability": "grant_only",
+    "sources": [
+      {
+        "table": "starting_packages",
+        "name": "등불, 부싯깃 통, 기름 두 병",
+        "price": "Not listed",
+        "encumbrance": "See package row"
+      }
+    ]
+  }
+]

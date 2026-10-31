@@ -1,0 +1,110 @@
+[
+	{
+		"id": "w+w",
+		"hd": "1d6+2",
+		"ab": "+1",
+		"focus": [
+			{
+				"id":"warrior",
+				"val": 1
+			},
+			{
+				"id":"free",
+				"val": 1
+			}
+		]
+	},
+	{
+		"id": "w+e",
+		"hd": "1d6+2",
+		"ab": "+1",
+		"focus": [
+			{
+				"id":"warrior",
+				"val": 1
+			},
+			{
+				"id":"expert",
+				"val": 1
+			},
+			{
+				"id":"free",
+				"val": 1
+			}
+		]
+	},
+	{
+		"id": "e+e",
+		"hd": "1d6",
+		"ab": "+0",
+		"focus": [
+			{
+				"id":"expert",
+				"val": 1
+			},
+			{
+				"id":"free",
+				"val": 1
+			}
+		]
+	},
+	{
+		"id": "m+e",
+		"hd": "1d6",
+		"ab": "+0",
+		"focus": [
+			{
+				"id":"expert",
+				"val": 1
+			},
+			{
+				"id":"free",
+				"val": 1
+			}
+		]
+	},
+	{
+		"id": "m+w",
+		"hd": "1d6+2",
+		"ab": "+1",
+		"focus": [
+			{
+				"id":"warrior",
+				"val": 1
+			},
+			{
+				"id":"free",
+				"val": 1
+			}
+		]
+	},
+	{
+		"id": "m+m",
+		"hd": "1d6-1",
+		"ab": "+0",
+		"focus": [
+			{
+				"id":"free",
+				"val": 1
+			}
+		]
+	},
+	{
+		"id": "am+e",
+		"hd": "1d6",
+		"ab": "+1",
+		"focus": [
+			{
+				"id":"expert",
+				"val": 1
+			},
+			{
+				"id":"free",
+				"val": 1
+			}
+		]
+	}
+
+
+
+]

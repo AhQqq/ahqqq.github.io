@@ -1,0 +1,98 @@
+[
+  {
+    "id": "two_handed",
+    "name": "양손",
+    "category": "weapon",
+    "description": "이 무기는 사용에 양손이 모두 필요합니다. 원거리 양손 무기는 적이 근접 거리에 있을 때 사용할 수 없습니다."
+  },
+  {
+    "id": "armor_piercing",
+    "name": "관통",
+    "category": "weapon",
+    "description": "이 무기는 명중 판정을 시행할 때 비마법 방어구를 무시합니다."
+  },
+  {
+    "id": "mounted",
+    "name": "고정",
+    "category": "weapon",
+    "description": "이 무기는 5분 이상의 시간을 들여 설치해야 사용할 수 있습니다."
+  },
+  {
+    "id": "long",
+    "name": "장병",
+    "category": "weapon",
+    "description": "이 무기는 10피트 거리의 적에게도 공격을 가할 수 있습니다. 다만 퇴각 행동을 강요하거나 원거리 무기를 방어하기 위해서는 여전히 5피트 이내에 있어야 합니다."
+  },
+  {
+    "id": "slow_reload",
+    "name": "느린 장전",
+    "category": "weapon",
+    "description": "주요 행동을 사용해 장전합니다."
+  },
+  {
+    "id": "less_lethal",
+    "name": "저살상",
+    "category": "weapon",
+    "description": "이 무기로 HP가 0이 되면 사용자의 선택에 따라 기절시킬 수 있습니다."
+  },
+  {
+    "id": "numerous",
+    "name": "다수",
+    "category": "weapon",
+    "description": "다섯 개가 하나의 준비된 물품으로 취급됩니다."
+  },
+  {
+    "id": "lethal",
+    "name": "고살상",
+    "category": "weapon",
+    "description": "처형 공격을 할 때 육체 내성에 -1의 페널티를 가하고 성공했을 때에도 피해를 두 배로 가합니다."
+  },
+  {
+    "id": "reload",
+    "name": "장전",
+    "category": "weapon",
+    "description": "이 무기는 장전에 이동 행동을 사용합니다. 사수의 사격 기술 레벨이 1 이상이라면 턴 행동으로 장전할 수 있습니다."
+  },
+  {
+    "id": "subtle",
+    "name": "은밀",
+    "category": "weapon",
+    "description": "평범한 의복 안에 숨기거나 장신구로 위장할 수 있습니다."
+  },
+  {
+    "id": "single_shot",
+    "name": "단발",
+    "category": "weapon",
+    "description": "장전에 10라운드가 걸리고, 장전 중 적이 근접 공격을 시도하면 허사가 됩니다."
+  },
+  {
+    "id": "thrown",
+    "name": "투척",
+    "category": "weapon",
+    "description": "근접 무기로 사용할 수도 있지만, 투척할 수 있습니다. 이때 충격 피해는 없습니다. 근접 거리의 적에게 투척을 시도할 수도 있지만, 명중 판정에 -4의 페널티를 받습니다."
+  },
+  {
+    "id": "negligible_load",
+    "name": "*",
+    "category": "encumbrance",
+    "description": "적당한 양에 한해 하중이 없습니다."
+  },
+  {
+    "id": "no_load_when_worn",
+    "name": "**",
+    "category": "encumbrance",
+    "description": "입고 있는 한 하중에 포함되지 않습니다."
+  },
+  {
+    "id": "bundle_of_three",
+    "name": "#",
+    "category": "encumbrance",
+    "description": "세 개를 하나로 묶을 수 있습니다."
+  },
+  {
+    "id": "shield_protection",
+    "name": "방패",
+    "category": "shield",
+    "description": "방패 이상의 AC를 제공하는 방어구와 방패를 동시에 착용하고 있다면 방패는 AC에 +1을 더해 줍니다. 방패를 든 캐릭터는 라운드의 첫 충격 피해를 무시합니다."
+  }
+]

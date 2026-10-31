@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="src.js"></script>
+<script>
+    $(function(){
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+    });
+</script>
+<head>
+    <link rel="stylesheet" href="style.css?v=20261031">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WWN-Equipment</title>
+</head>
+<body>
+<div id="header"></div>
+<h1>장비</h1>
+<ul class="header-card">
+{{gear_tbl}}
+</ul>
+<div class="listing">
+    <ul>
+        <li><p><b>*:</b> 적당한 양에 한해 하중이 없습니다.</p></li>
+        <li><p><b>**:</b> 입고 있는 한 하중에 포함되지 않습니다.</p></li>
+        <li><p><b>#:</b> 세 개를 하나로 묶을 수 있습니다.</p></li>
+    </ul>
+</div>
+<ul class="header-card">
+{{gearbundle_tbl}}
+</ul>
+<ul class="header-card">
+{{weapon_tbl}}
+</ul>
+
+<ul class="header-card">
+{{armorTable}}
+</ul>
+<div class="listing">
+    <ul>
+        <li><p><b>방패:</b> 방패 이상의 AC를 제공하는 방어구와 방패를 동시에 착용하고 있다면 방패는 AC에 +1을 더해 줍니다.
+            방패를 든 캐릭터는 라운드의 첫 충격 피해를 무시합니다.</p></li>
+    </ul>
+</div>
+{{properties}}
+<h1>시작 장비</h1>
+{{packages}}
+<div id="footer"></div>
+</body>
+</html>
