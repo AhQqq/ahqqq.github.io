@@ -20,7 +20,6 @@ jobs:
       - run: npm ci --prefix character-builder/backend
       - run: npm test
       - run: npm run build
-      - run: node scripts/package-site.mjs
       - uses: actions/upload-pages-artifact@v4
         with:
           path: .site

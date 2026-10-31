@@ -2,7 +2,7 @@
   "name": "wwn-website",
   "private": true,
   "scripts": {
-    "build": "npm run build:database && npm run build --prefix character-builder/frontend",
+    "build": "npm run build:database && npm run build --prefix character-builder/frontend && node scripts/package-site.mjs",
     "test": "npm test --prefix character-builder/backend && npm test --prefix character-builder/frontend",
     "build:database": "node scripts/build-database.mjs",
     "check:database": "node scripts/build-database.mjs --check"

@@ -1,5 +1,7 @@
 # Website integration
 
+Historical record of the integration. For current source locations, build commands and local preview instructions, see the [repository README](../../README.md).
+
 ## Agreed direction
 Start with small visual changes; support a unified design later. One homepage, character builder and reference database, with one maintained catalogue eventually serving both.
 

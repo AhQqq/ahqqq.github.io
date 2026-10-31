@@ -1,4 +1,4 @@
-@import '../../../theme.css';
+@import '../../../database/public/theme.css';
 
 * {
   box-sizing: border-box;

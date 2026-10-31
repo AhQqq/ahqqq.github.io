@@ -21,5 +21,7 @@ Backend
 
 ## Running Locally
 
+For the combined database and character builder, follow the [repository build and preview instructions](../README.md). The [audit notes and outstanding tasks](../docs/character-builder/) use source paths relative to this character-builder directory.
+
 Frontend & Backend
     npm run dev

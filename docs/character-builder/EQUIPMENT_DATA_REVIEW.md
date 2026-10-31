@@ -1,6 +1,6 @@
 # Equipment Data Review
 
-Source: [Equipment page](https://ahqqq.github.io/equipment.html), retrieved 2026-10-04. Raw table cells and property descriptions are preserved in `frontend/data/old/equipment_source.json`; the original starting packages remain in `frontend/data/old/starting_equipment.txt`.
+The equipment import used the reference page as it appeared on 2026-10-04. The import records preserve the raw table cells, property descriptions and original starting packages. [Equipment page](https://ahqqq.github.io/equipment.html) · [Raw equipment](../history/builder-sources/equipment_source.json) · [Starting packages](../history/builder-sources/starting_equipment.txt)
 
 The initial import preserved the webpage's translation and numbers. At the translator's subsequent request, clear name and property-wording differences were updated from `D:\Hub\Downloads\WWN_SRD\Main.tex` on 2026-10-04. Numerical values and encoded mechanics remain unchanged. Catalogue IDs are stable technical references, not proposed English translations.
 

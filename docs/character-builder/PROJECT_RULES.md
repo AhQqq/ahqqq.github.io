@@ -107,7 +107,7 @@ The backend validates only the active method against the selected background's J
 
 # Classes
 
-Class definitions are in `frontend/data/classes.json`. There is currently no `frontend/data/old/classes.json`; `frontend/data/old/` contains the earlier text and HTML source material.
+Class definitions are in the builder catalogue. The earlier HTML, equipment import and public text catalogues are available for comparison. [Class catalogue](../../character-builder/frontend/data/classes.json) · [Import sources](../history/builder-sources/) · [Public text catalogues](../../database/public/data/)
 
 Choose exactly two class slots. Store the class `id` for each slot, preserving duplicate IDs only for classes eligible to be full classes. Two copies of an eligible class form a full class; different class IDs form a combined class. A shared archetype does not make two different class IDs the same class.
 

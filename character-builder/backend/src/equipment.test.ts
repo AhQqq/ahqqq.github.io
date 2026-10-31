@@ -10,6 +10,9 @@ const data = <T>(name: string): T => JSON.parse(readFileSync(new URL(`../../fron
 const equipment = data<EquipmentDefinition[]>('equipment');
 const properties = data<EquipmentProperty[]>('equipment_properties');
 const packages = data<EquipmentPackage[]>('starting_equipment');
+const snapshot: { tables: Record<string, string[][]>; properties: EquipmentProperty[] } = JSON.parse(
+  readFileSync(new URL('../../../docs/history/builder-sources/equipment_source.json', import.meta.url), 'utf8'),
+);
 const cash = { method: 'silver', rolls: [1, 1, 1] };
 const packageChoice = (packageId: string) => ({ method: 'package', packageId });
 const evaluate = (purchases: unknown = [], loadout: unknown = emptyLoadout(), startingEquipment: unknown = cash, dexterity = 0) =>
@@ -23,7 +26,6 @@ test('Korean equipment labels and rule descriptions retain the AC abbreviation',
 });
 
 test('catalogue covers every archived table row and all properties without breaking packages', () => {
-  const snapshot = data<{ tables: Record<string, string[][]>; properties: EquipmentProperty[] }>('old/equipment_source');
   assert.equal(equipment.length, 86);
   assert.equal(new Set(equipment.map((item) => item.id)).size, equipment.length);
   assert.equal(properties.length, 16);
@@ -72,7 +74,6 @@ test('SRD equipment names resolve through stable IDs in existing starting packag
 });
 
 test('SRD property wording supersedes the archive without changing property identities', () => {
-  const snapshot = data<{ properties: EquipmentProperty[] }>('old/equipment_source');
   // Portable expectations from Main.tex, equipment chapter (2026-10-04).
   const descriptions: Record<string, string> = {
     armor_piercing: '이 무기는 명중 판정을 시행할 때 비마법 방어구를 무시합니다.',
