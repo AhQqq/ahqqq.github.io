@@ -52,7 +52,7 @@ export default function AppPages() {
   }, [hash, rulesOpen])
 
   return <>
-    <nav aria-label="사이트 탐색" style={{ padding: "1rem" }}><a href="/">홈</a> · <a href="/index.html">감사의 말</a></nav>
+    <nav aria-label="사이트 탐색" style={{ padding: "1rem" }}><a href="/index.html">감사의 말</a></nav>
     {/* Keep the draft, picker state, and open disclosures intact while reading rules. */}
     <div id="builder-page" hidden={rulesOpen} tabIndex={-1}><App /></div>
     {rulesOpen && <RulesPage returnTo={returnTo} />}

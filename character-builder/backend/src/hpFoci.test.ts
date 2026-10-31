@@ -17,7 +17,7 @@ test('Edge modifies resolved HD while Die Hard adds HP, retaining distinct sourc
     const result = evaluateCharacter(source);
     assert.equal(result.derived.hitDice, expected);
     assert.equal(result.derived.hitPoints, other === 'duelist' ? 6 : 8);
-    assert.ok(result.derived.hitDiceAdjustments.some((item) => item.abilityId === edge.focusId && item.name === '팔방의 날 유파'));
+    assert.ok(result.derived.hitDiceAdjustments.some((item) => item.abilityId === edge.focusId && item.name === '팔방연환'));
     assert.deepEqual(result.derived.hitPointBreakdown.sources, [{ ...hard, name: '끝까지 간다', value: 2 }]);
     const core = evaluatePreviewCore(source, data);
     const preview = evaluateCreationEffects(source, data, core, evaluateClassChoices(source.classChoices, data.CLASSES));

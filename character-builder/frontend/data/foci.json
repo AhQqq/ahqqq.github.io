@@ -1,7 +1,7 @@
 [
   {
     "id": "all_directions_edge_style1",
-    "name": "팔방의 날 유파",
+    "name": "팔방연환",
     "englishName": "All Directions Edge Style",
     "category": "기사 유파",
     "desc": "당신은 자신의 생명력을 절제되지 않은 폭력성이 담긴 기술의 연마와 맞바꿨습니다. 당신의 히트 주사위에 2점의 페널티가 생겨서, 일반적으로 1d6+2를 굴렸다면 이제는 1d6을 굴립니다. 이 포커스를 캐릭터 생성 이후에 가져간다면 당신의 최대 HP를 레벨당 2점씩 빼서 이 페널티를 반영하십시오.",
@@ -34,7 +34,7 @@
   },
   {
     "id": "all_directions_edge_style2",
-    "name": "팔방의 날 유파",
+    "name": "팔방연환",
     "englishName": "All Directions Edge Style",
     "category": "기사 유파",
     "desc": "",
@@ -59,7 +59,7 @@
   },
   {
     "id": "catalytic_soul_style1",
-    "name": "촉매혼 유파",
+    "name": "명혼궁",
     "englishName": "Catalytic Soul Style",
     "category": "기사 유파",
     "desc": "당신의 장거리 공격은 당신의 동료들의 생명력을 촉매로 해서 공통된 적들에게 영혼적 피해를 줍니다. 이 유파는 충격이 없는 장거리 무기에만 사용할 수 있습니다.",
@@ -86,7 +86,7 @@
   },
   {
     "id": "catalytic_soul_style2",
-    "name": "촉매혼 유파",
+    "name": "명혼궁",
     "englishName": "Catalytic Soul Style",
     "category": "기사 유파",
     "desc": "",
@@ -111,7 +111,7 @@
   },
   {
     "id": "ghost_archer_style1",
-    "name": "유령 궁수 유파",
+    "name": "환영궁",
     "englishName": "Ghost Archer Style",
     "category": "기사 유파",
     "desc": "당신은 활이라는 개념에 깊은 영혼적인 연결이 생겼습니다. 당신은 활이나 석궁이 아닌 모든 무기를 사용할 때 -4 명중 페널티를 받습니다.",
@@ -138,7 +138,7 @@
   },
   {
     "id": "ghost_archer_style2",
-    "name": "유령 궁수 유파",
+    "name": "환영궁",
     "englishName": "Ghost Archer Style",
     "category": "기사 유파",
     "desc": "",
@@ -163,7 +163,7 @@
   },
   {
     "id": "one_point_strike_style1",
-    "name": "일점격 유파",
+    "name": "일점통명",
     "englishName": "One Point Strike Style",
     "category": "기사 유파",
     "desc": "당신이 전투에서 기대는 것은 야만적인 힘과 세련되지 못한 속도가 아니라 맑은 생각입니다.",
@@ -194,7 +194,7 @@
   },
   {
     "id": "one_point_strike_style2",
-    "name": "일점격 유파",
+    "name": "일점통명",
     "englishName": "One Point Strike Style",
     "category": "기사 유파",
     "desc": "",
@@ -219,7 +219,7 @@
   },
   {
     "id": "pyre_of_heaven_style1",
-    "name": "천상의 화염 유파",
+    "name": "천화연신",
     "englishName": "Pyre of Heaven Style",
     "category": "기사 유파",
     "desc": "당신의 무기는 당신의 적만을 태우는 천상의 화염으로 불타고 있습니다. 이 화염은 당신의 영혼의 힘으로 불타고 있으며, 그로 인한 대가가 있습니다.",
@@ -250,7 +250,7 @@
   },
   {
     "id": "pyre_of_heaven_style2",
-    "name": "천상의 화염 유파",
+    "name": "천화연신",
     "englishName": "Pyre of Heaven Style",
     "category": "기사 유파",
     "desc": "",
@@ -275,7 +275,7 @@
   },
   {
     "id": "righteous_iron_style1",
-    "name": "의로운 강철 유파",
+    "name": "철의혼원",
     "englishName": "Righteous Iron Style",
     "category": "기사 유파",
     "desc": "당신은 무게에 상관없이 손쉽게 이동할 수 있도록 당신의 갑옷을 두번째 피부로 만드는 법을 배웠습니다. 이 유파는 중갑옷을 입을 때만 적용할 수 있으며, 1레벨 효과는 당신이 들고 다니는 방패로까지 확장되지 않습니다. 캐릭터 레벨이 1일 때 이 포커스를 가져가는 경우, 당신은 750 은화 가격 이하의 중갑 한 벌을 가지고 시작할 수 있습니다.",
@@ -302,7 +302,7 @@
   },
   {
     "id": "righteous_iron_style2",
-    "name": "의로운 강철 유파",
+    "name": "철의혼원",
     "englishName": "Righteous Iron Style",
     "category": "기사 유파",
     "desc": "",
@@ -323,7 +323,7 @@
   },
   {
     "id": "world_tree_lance_style1",
-    "name": "세계수의 창 유파",
+    "name": "건목신창",
     "englishName": "World Tree Lance Style",
     "category": "기사 유파",
     "desc": "당신의 창은 하늘의 기둥이며, 어떠한 적도 그 범위의 밖에 있지 않습니다. 이 유파는 창, 파이크, 혹은 비슷한 장병기 계열 무기에만 적용됩니다.",
@@ -350,7 +350,7 @@
   },
   {
     "id": "world_tree_lance_style2",
-    "name": "세계수의 창 유파",
+    "name": "건목신창",
     "englishName": "World Tree Lance Style",
     "category": "기사 유파",
     "desc": "",
@@ -375,7 +375,7 @@
   },
   {
     "id": "wrathful_mountain_style1",
-    "name": "진노하는 산 유파",
+    "name": "노악반진",
     "englishName": "Wrathful Mountain Style",
     "derived_bonus": {
       "base_attack_bonus": -2
@@ -408,7 +408,7 @@
   },
   {
     "id": "wrathful_mountain_style2",
-    "name": "진노하는 산 유파",
+    "name": "노악반진",
     "englishName": "Wrathful Mountain Style",
     "category": "기사 유파",
     "desc": "",
@@ -2533,7 +2533,7 @@
     "name": "언데드",
     "englishName": "Undead",
     "category": "다른 아인",
-    "desc": "당신은 자각이 있는 언데드로, 누가 자세히 조사하지 않는 이상 일반 사람처럼 생활할 수 있습니다. 아니면, 일반 사람을 완벽하게 모사할 수 있지만 약점 하나를 가지고 있을 수 있습니다. (Averse, Red Hunger, Sunscorch, Impure)",
+    "desc": "당신은 자각이 있는 언데드로, 누가 자세히 조사하지 않는 이상 일반 사람처럼 생활할 수 있습니다. 아니면, 일반 사람을 완벽하게 모사할 수 있지만 약점 하나를 가지고 있을 수 있습니다. 다음은 약점의 목록입니다 •기피(Averse). 특정 종교적 상징물, 소금으로 그어진 선, 자연적인 순리의 상징, 또는 성표는 당신을 막습니다. 이러한 상징물이 보여지면, 다가가려면 정신 내성에 성공해야합니다. 이런 기피성은 상징물을 가진 자, 또는 그의 동료가 공격하면 깨집니다. •배고픔(Red Hunger): 매주 1파운드이 인육, 또는 인간 혈액 1파인트를 마시지 않으면 최대 히트 포인트의 1/4를 잃습니다. 0 히트 포인트에서는 사망하거나, 신선한 음식이 다가오기 전까지 비활성 상태에 빠집니다. •태양광(Sunscorch): 태양빛, 흐르는 물, 또는 다른 구체적인 자연적인 법칙에 노출되면 매 라운드 1d10의 피해를 받습니다. •불순물(Impure): 은, 생목, 또는 구체적인 액막이성 물질로 만들어진 무기로 공격을 받으면 그 공격은 명중시 항상 최대 피해량을 입히고, AC에 상관없이 충격 피해를 줍니다." ,
     "src": "wwn",
     "type": "origin",
     "level": 1,

@@ -27,5 +27,9 @@
 #### WWN의 기본 룰 및 무료 배포판 번역을 해주신 blue_sphere님께 감사를 표합니다.
 
 ## 라이센스
-모든 원 내용과 데이터에 대한 저작권은 원작자인 Sine Nomine Publishing에 있습니다. 웹사이트와 이를 구동하는 코드 자체는 [MIT](https://choosealicense.com/licenses/mit/) 라이센스를 사용합니다.
+Worlds Without Number SRD에 포함된 원문은 [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)에 따라 제공됩니다. 이 저장소의 모든 게임 자료가 SRD에 포함되거나 CC0로 제공되는 것은 아닙니다. SRD에 포함되지 않은 원문 및 기타 제3자 자료의 권리는 각 권리자에게 있으며, 이 고지는 해당 자료의 이용·재배포 허락을 의미하지 않습니다.
+
+한국어 번역·편집 및 사이트 제작에는 아큐와 기여자들이 참여했습니다. 자료집 코드에는 [루트 LICENSE](LICENSE), 캐릭터 생성기 코드에는 [해당 LICENSE](character-builder/LICENSE)를 참고해 주세요. 코드 라이선스는 게임 원문이나 제3자 자료에 대한 이용 허락을 부여하지 않습니다.
+
+이 사이트는 Kevin Crawford 또는 Sine Nomine Publishing의 공식 제작물이나 승인된 서비스가 아닙니다.
 
