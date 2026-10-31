@@ -409,8 +409,8 @@ footer{
 body { grid-template-columns: minmax(0, 1fr); }
 body > *, #header { min-width: 0; max-width: 100%; }
 .nav-bar, .listing, .header-card, .card-wrapper, .card-wrapper-2 { max-width: 100%; }
-.nav-bar { grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); }
-.nav-bar a { padding: .75rem .25rem; }
+.nav-bar { display: flex; flex-wrap: wrap; justify-content: center; width: 120ch; }
+.nav-bar a { padding: .75rem .5rem; white-space: nowrap; }
 .header-card, .card-wrapper { grid-template-columns: repeat(auto-fit, minmax(min(30ch, 100%), 1fr)); }
 .card-wrapper-2 { grid-template-columns: repeat(auto-fit, minmax(min(50ch, 100%), 1fr)); }
 .card, .header-card { min-width: 0; overflow-wrap: anywhere; }
